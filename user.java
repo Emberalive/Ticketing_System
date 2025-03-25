@@ -7,8 +7,8 @@ public class user {
     public String getUsername() {
         return username;
     }
-    //encrypting the password
     public void setUsername(String username) {
+        //encrypting the password
         this.username = BCrypt.withDefaults().hashToString(12, username.toCharArray());
     }
     public String getPassword() {
