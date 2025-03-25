@@ -1,3 +1,5 @@
+package accounts;
+
 import at.favre.lib.crypto.bcrypt.BCrypt;
 
 public class IT_employee {
