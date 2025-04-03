@@ -1,0 +1,18 @@
+2025-04-03 13:30:56,302 [main] INFO  org.example.Account.Account - 
+Creating an account with username: user and role: user
+2025-04-03 13:30:56,324 [main] WARN  org.example.Account.Account - 
+Transaction rolled back.
+2025-04-03 13:30:56,324 [main] ERROR org.example.Account.Account - 
+Database err: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "users_pkey"
+  Detail: Key (username)=(user) already exists.
+2025-04-03 13:30:56,335 [main] INFO  org.example.Account.Account - 
+Connection closed
+2025-04-03 13:30:56,636 [main] INFO  org.example.Account.Account - 
+Creating an account with username: admin and role: employee
+2025-04-03 13:30:56,657 [main] WARN  org.example.Account.Account - 
+Transaction rolled back.
+2025-04-03 13:30:56,657 [main] ERROR org.example.Account.Account - 
+Database err: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "users_pkey"
+  Detail: Key (username)=(admin) already exists.
+2025-04-03 13:30:56,662 [main] INFO  org.example.Account.Account - 
+Connection closed
