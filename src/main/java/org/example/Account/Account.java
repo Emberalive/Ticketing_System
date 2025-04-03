@@ -11,9 +11,10 @@ import java.sql.SQLException;
 
 public class Account {
     private static final Logger logger = LogManager.getLogger(Account.class);
+    db_access db = new db_access();
+
     // registering the user into the database
     public void register(String username, String password, String role) {
-        db_access db = new db_access();
         Connection conn = db.getConnection();
         if (conn != null) {
             try {
@@ -31,10 +32,8 @@ public class Account {
                 logger.info("\nThe new user has been inserted into the database");
             } catch (SQLException e) {
                 try {
-                    if (conn != null) {
-                        conn.rollback(); // Rollback in case of error
-                        logger.warn("\nTransaction rolled back.");
-                    }
+                    conn.rollback(); // Rollback in case of error
+                    logger.warn("\nTransaction rolled back.");
                 } catch (SQLException rollbackEx) {
                     logger.error("\nDatabase err: {}", String.valueOf(rollbackEx));
                 }
@@ -49,6 +48,28 @@ public class Account {
             }
         } else {
             logger.info("\nConnection failed");
+        }
+    }
+
+    //allows a user to delete their account
+    public void deleteAccount(String username) {
+        Connection conn = db.getConnection();
+        try {
+            logger.info("\nDeleting an account with username: {}", username);
+            PreparedStatement stmt = conn.prepareStatement("DELETE FROM users WHERE username = ?");
+            stmt.setString(1, username);
+
+            stmt.executeUpdate();
+            conn.commit();
+
+            logger.info("\nThe account has been deleted from the database");
+        } catch (SQLException e){
+            logger.error("\nDatabase err: {}", String.valueOf(e));
+            try {
+                conn.close();
+            } catch (SQLException closeEx) {
+                logger.error("\nDatabase err: {}", String.valueOf(closeEx));
+            }
         }
     }
 }
