@@ -1,9 +1,13 @@
 package org.example.DBAccess;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class db_access {
+    private static final Logger logger = LogManager.getLogger(db_access.class);
     private static final String URL = "jdbc:postgresql://86.19.219.159:5432/itticketing";
     private static final String USER = "samuel";
     private static final String PASSWORD = "QwErTy1243!";
@@ -13,14 +17,13 @@ public class db_access {
         try {
             conn = DriverManager.getConnection(URL, USER, PASSWORD);
             if (conn != null && conn.isValid(2)) {
-                System.out.println("Connected to PostgreSQL successfully!");
+                logger.info("Database connection established!");
                 conn.setAutoCommit(false);
             } else {
-                System.out.println("Failed to connect to PostgreSQL!");
+                logger.info("Database connection not established!");
             }
         } catch (SQLException e) {
-            System.out.println("Connection failed!" + e);
-            e.printStackTrace();
+            logger.error("Database error: {}", String.valueOf(e));
         }
         return conn;
     }

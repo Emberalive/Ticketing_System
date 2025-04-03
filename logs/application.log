@@ -38,3 +38,7 @@ Connection closed
 Deleting an account with username: user
 2025-04-03 14:22:36,515 [main] INFO  org.example.Account.Account - 
 The account has been deleted from the database
+
+
+2025-04-03 22:59:15,834 [org.example.Main.main()] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-03 23:00:01,594 [org.example.Main.main()] INFO  org.example.DBAccess.db_access - Database connection established!
