@@ -1,3 +1,5 @@
+package org.example;
+
 public class Ticket {
     private int ticketID;
     private String issue;

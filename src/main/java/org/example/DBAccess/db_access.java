@@ -1,4 +1,4 @@
-package BDAccess;
+package org.example.DBAccess;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -8,10 +8,13 @@ public class db_access {
     private static final String USER = "samuel";
     private static final String PASSWORD = "QwErTy1243!";
 
-    public static void main(String[] args) {
-        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
+    public static Connection getConnection() {
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection(URL, USER, PASSWORD);
             if (conn != null && conn.isValid(2)) {
                 System.out.println("Connected to PostgreSQL successfully!");
+                conn.setAutoCommit(false);
             } else {
                 System.out.println("Failed to connect to PostgreSQL!");
             }
@@ -19,5 +22,6 @@ public class db_access {
             System.out.println("Connection failed!" + e);
             e.printStackTrace();
         }
+        return conn;
     }
 }
