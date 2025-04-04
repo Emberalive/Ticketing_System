@@ -1,68 +1,87 @@
 package org.example.UserView;
 
-import javafx.application.Application;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.collections.transformation.FilteredList;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.layout.*;
-import javafx.stage.Stage;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class UserView extends Application {
-    public void initializeUI (Stage stage) {
-        // Sample data
-        ObservableList<String> items = FXCollections.observableArrayList(
-                "Dashboard", "Profile", "Settings", "Logout", "Help", "Reports", "Analytics"
-        );
+public class UserView extends JFrame {
+    private JTextField searchField;
+    private JList<String> listView;
+    private JLabel userLabel;
+
+    public UserView() {
+        // Initialize JFrame
+        setTitle("User Dashboard");
+        setSize(500, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new BorderLayout());
+
+        // Sample data (List of items for the side menu)
+        String[] items = {"Dashboard", "Profile", "Settings", "Logout", "Help", "Reports", "Analytics"};
+
+        // Left side list
+        listView = new JList<>(items);
+        listView.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        JScrollPane listScrollPane = new JScrollPane(listView);
+        listScrollPane.setPreferredSize(new Dimension(150, 0));  // Width for the list
+        add(listScrollPane, BorderLayout.WEST);
+
+        // Right side panel with a search bar and label
+        JPanel rightPanel = new JPanel();
+        rightPanel.setLayout(new BorderLayout());
+        JPanel topPanel = new JPanel();
+        topPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
 
         // Search bar
-        TextField searchField = new TextField();
-        searchField.setPromptText("Search...");
-
-        // Filtered list
-        FilteredList<String> filteredItems = new FilteredList<>(items, p -> true);
-        searchField.textProperty().addListener((obs, oldVal, newVal) -> {
-            String lower = newVal.toLowerCase();
-            filteredItems.setPredicate(item -> item.toLowerCase().contains(lower));
-        });
-
-        // ListView
-        ListView<String> listView = new ListView<>(filteredItems);
-        listView.setPrefWidth(150);
+        searchField = new JTextField(20);
+        searchField.setToolTipText("Search...");
 
         // Username label
-        Label userLabel = new Label("Welcome, Alice!");
-        userLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 14px;");
+        userLabel = new JLabel("Welcome, Alice!");
+        userLabel.setFont(new Font("Arial", Font.BOLD, 14));
 
-        // Top bar with search and username
-        HBox topBar = new HBox(10, searchField, userLabel);
-        topBar.setAlignment(Pos.CENTER_RIGHT);
-        HBox.setHgrow(searchField, Priority.ALWAYS);
+        // Add components to the top panel
+        topPanel.add(searchField);
+        topPanel.add(userLabel);
+        rightPanel.add(topPanel, BorderLayout.NORTH);
 
-        // Right-hand side content area
-        VBox rightPane = new VBox(10, topBar);
-        rightPane.setPadding(new Insets(10));
-        rightPane.setAlignment(Pos.TOP_RIGHT);
+        // Add the right panel to the center
+        add(rightPanel, BorderLayout.CENTER);
 
-        // Root layout: Split left and right
-        BorderPane root = new BorderPane();
-        root.setLeft(listView);
-        root.setCenter(rightPane);
+        // Implement search filter logic
+        searchField.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String searchText = searchField.getText().toLowerCase();
+                String[] items = {"Dashboard", "Profile", "Settings", "Logout", "Help", "Reports", "Analytics"};
+                DefaultListModel<String> filteredListModel = new DefaultListModel<>();
+                for (String item : items) {
+                    if (item.toLowerCase().contains(searchText)) {
+                        filteredListModel.addElement(item);
+                    }
+                }
+                listView.setModel(filteredListModel);
+            }
+        });
 
-        Scene scene = new Scene(root, 500, 300);
-        stage.setScene(scene);
-        stage.setTitle("JavaFX Dashboard");
-        stage.show();
+        // Make the frame visible
+        setVisible(true);
     }
-    @Override
-    public void start(Stage stage) {
-        // Call the UI setup method
-        initializeUI(stage);
+
+    public void setVisibleUI(boolean visible) {
+        setVisible(visible);
     }
-    public static void main(String[] args) {
-        launch();
+
+    public JTextField getSearchField() {
+        return searchField;
+    }
+
+    public JList<String> getListView() {
+        return listView;
+    }
+
+    public JLabel getUserLabel() {
+        return userLabel;
     }
 }

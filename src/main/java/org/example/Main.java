@@ -2,15 +2,29 @@ package org.example;
 
 import javafx.application.Application;
 import org.example.LoginView.Login;
+import org.example.UserView.UserController;
+import org.example.UserView.UserModel;
+import org.example.UserView.UserView;
 
 public class Main {
     public static void main(String[] args) {
+
+        // Initialize the model, view, and controller
+        UserModel model = new UserModel();
+        UserView view = new UserView();
+        UserController controller = new UserController(model, view);
+
+        // Start the GUI through the controller
+        controller.startGUI();
+    }
+
+
+
 //        Account account = new Account();
 //        Console console = System.console();
 //        String username;
 //        String password;
 
-        Application.launch(Login.class, args);
 
 //        if (console != null) {
 //            BCrypt.Result result;
@@ -40,4 +54,3 @@ public class Main {
 //            System.out.println("Thanks for using the Ticketing System!");
 //        }
     }
-}
