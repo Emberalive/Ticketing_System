@@ -11,12 +11,14 @@ public class Ticket {
     public void setId(String id) {
         this.id = id;
     }
+
     public String getIssue() {
         return issue;
     }
     public void setIssue(String issue) {
         this.issue = issue;
     }
+
     public int getTicketID() {
         return ticketID;
     }
