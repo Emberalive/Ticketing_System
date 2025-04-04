@@ -42,3 +42,11 @@ The account has been deleted from the database
 
 2025-04-03 22:59:15,834 [org.example.Main.main()] INFO  org.example.DBAccess.db_access - Database connection established!
 2025-04-03 23:00:01,594 [org.example.Main.main()] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-04 13:59:16,359 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-04 13:59:17,468 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-04 13:59:17,613 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-04 13:59:17,747 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-04 13:59:17,914 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-04 13:59:35,038 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-04 13:59:38,220 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-04 13:59:38,546 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!

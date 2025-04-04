@@ -83,32 +83,4 @@ public class Account {
             }
         }
     }
-    public BCrypt.Result login(String username, String password) {
-        Connection conn = db.getConnection();
-        String hashedPassword = "";
-        BCrypt.Result result = null;
-        try {
-            PreparedStatement stmt = conn.prepareStatement("SELECT * FROM users WHERE username = ? ");
-            stmt.setString(1, username);
-            ResultSet rs = stmt.executeQuery();
-            if (rs.next()) {
-                hashedPassword = rs.getString(2);
-            }
-        } catch (SQLException e){
-            logger.error("\nDatabase err: {}", String.valueOf(e));
-            System.out.println("\nThere is no account with username: " + username);
-        } finally {
-            try {
-                if (conn != null) conn.close();
-            } catch (SQLException closeEx) {
-                logger.error("\nDatabase err: {}", String.valueOf(closeEx));
-            }
-        }
-        if (hashedPassword.trim().isEmpty()) {
-            System.out.println("\nThere is no account with username: " + username);
-        } else {
-             result = BCrypt.verifyer().verify(password.toCharArray(), hashedPassword);
-        }
-        return result;
-    }
 }
