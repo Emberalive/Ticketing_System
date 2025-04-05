@@ -17,11 +17,11 @@ public class IT_employee {
     public String getPassword() {
         return ItPassword;
     }
-    public void setPassword(String password) {
+    public boolean setPassword(String password) {
         //encrypting the password
         this.ItPassword = BCrypt.withDefaults().hashToString(12, password.toCharArray());
-        acc.register(getUsername(), getPassword(), role);
-
+        boolean success = acc.register(getUsername(), getPassword(), role);
+        return success;
     }
 }
 

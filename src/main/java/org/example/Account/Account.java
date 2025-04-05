@@ -18,7 +18,8 @@ public class Account {
     Main main = new Main();
 
     // registering the user into the database
-    public void register(String username, String password, String role) {
+    public boolean register(String username, String password, String role) {
+        boolean success = false;
         Connection conn = db.getConnection();
         if (conn != null) {
             try {
@@ -34,6 +35,7 @@ public class Account {
                 conn.commit();
 
                 logger.info("\nThe new user has been inserted into the database");
+                success = true;
             } catch (SQLException e) {
                 try {
                     conn.rollback(); // Rollback in case of error
@@ -53,6 +55,7 @@ public class Account {
         } else {
             logger.info("\nConnection failed");
         }
+        return success;
     }
 
     //allows a user to delete their account

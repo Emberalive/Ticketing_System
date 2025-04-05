@@ -1,4 +1,4 @@
-package org.example.LoginView;
+package org.example.Login;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.apache.logging.log4j.LogManager;

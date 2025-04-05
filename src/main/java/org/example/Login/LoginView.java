@@ -1,13 +1,10 @@
-package org.example.LoginView;
+package org.example.Login;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.Register.RegisterController;
-import org.example.Register.RegisterModel;
 import org.example.Register.RegisterView;
 
 import javax.swing.*;
-import java.util.Arrays;
 
 public class LoginView extends JFrame{
     private static final Logger logger = LogManager.getLogger(LoginView.class);

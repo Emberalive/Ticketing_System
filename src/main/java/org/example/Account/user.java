@@ -2,7 +2,6 @@ package org.example.Account;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 
-
 public class user {
     Account acc = new Account();
     private String username;
@@ -19,13 +18,11 @@ public class user {
     public String getPassword() {
         return password;
     }
-    public void setPassword(String password) {
+    public boolean setPassword(String password) {
         //encrypting the password
         this.password = BCrypt.withDefaults().hashToString(12, password.toCharArray());
         //registering the user
-        acc.register(getUsername(), getPassword(), role);
-    }
-    public String getRole() {
-        return role;
+        boolean success = acc.register(getUsername(), getPassword(), role);
+        return success;
     }
 }

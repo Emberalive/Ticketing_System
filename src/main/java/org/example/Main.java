@@ -1,18 +1,13 @@
 package org.example;
 
 import org.example.Account.user;
-import org.example.LoginView.LoginController;
-import org.example.LoginView.LoginModel;
-import org.example.LoginView.LoginView;
+import org.example.Login.LoginController;
+import org.example.Login.LoginModel;
+import org.example.Login.LoginView;
 
 
 public class Main {
     public static void main(String[] args) {
-
-        user usr = new user();
-        usr.setUsername("user");
-        usr.setPassword("pass");
-
         // Initialize the model, view, and controller
         LoginModel model = new LoginModel();
         LoginView view = new LoginView();

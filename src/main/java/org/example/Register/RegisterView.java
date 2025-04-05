@@ -52,11 +52,12 @@ public class RegisterView extends JFrame {
 
             user usr = new user();
             usr.setUsername(username);
-            usr.setPassword(password);
-            String role = usr.getRole();
-
-            Account account = new Account();
-            account.register(username, password, role);
+            boolean success = usr.setPassword(password);
+            if (success) {
+                this.setVisible(false);
+            } else {
+                JOptionPane.showMessageDialog(this, "User was not inserted - account may exists already with username: " + username);
+            }
         });
 
     }
