@@ -54,6 +54,8 @@ public class RegisterView extends JFrame {
             usr.setUsername(username);
             boolean success = usr.setPassword(password);
             if (success) {
+                JOptionPane.showMessageDialog(this, "Registration Successful");
+
                 this.setVisible(false);
             } else {
                 JOptionPane.showMessageDialog(this, "User was not inserted - account may exists already with username: " + username);
