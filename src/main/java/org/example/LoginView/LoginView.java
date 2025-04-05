@@ -2,6 +2,9 @@ package org.example.LoginView;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.example.Register.RegisterController;
+import org.example.Register.RegisterModel;
+import org.example.Register.RegisterView;
 
 import javax.swing.*;
 import java.util.Arrays;
@@ -29,6 +32,7 @@ public class LoginView extends JFrame{
         JLabel passwordLabel = new JLabel("Password");
         passwordField = new JPasswordField();
         JButton login = new JButton("Login");
+        JButton register = new JButton("Register");
 
         titleLabel.setBounds(200, 0, 100, 25);
 
@@ -38,7 +42,8 @@ public class LoginView extends JFrame{
         passwordLabel.setBounds(50, 100, 100, 30); // x, y, width, height
         passwordField.setBounds(150, 100, 200, 30); // x, y, width, height
 
-        login.setBounds(150, 150, 150, 30);
+        login.setBounds(37, 150, 150, 30);
+        register.setBounds(213, 150, 150, 30);
 
         //adding the components
         add(titleLabel);
@@ -47,6 +52,7 @@ public class LoginView extends JFrame{
         add(passwordLabel);
         add(passwordField);
         add(login);
+        add(register);
 
 
         login.addActionListener(ev ->{
@@ -55,6 +61,12 @@ public class LoginView extends JFrame{
             String password = new String(passwordField.getPassword());
 
             controller.startLogin(username, password);
+        });
+
+        register.addActionListener(ev ->{
+            RegisterView view = new RegisterView();
+
+            view.setVisible(true);
         });
     }
 }

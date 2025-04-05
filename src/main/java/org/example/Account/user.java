@@ -25,4 +25,7 @@ public class user {
         //registering the user
         acc.register(getUsername(), getPassword(), role);
     }
+    public String getRole() {
+        return role;
+    }
 }
