@@ -47,9 +47,9 @@ public class LoginView extends JFrame{
         add(passwordField);
         add(login);
 
-        controller = new LoginController(model, this);
 
         login.addActionListener(ev ->{
+            controller = new LoginController(model, this);
             String username = usernameField.getText();
             String password = Arrays.toString(passwordField.getPassword());
 

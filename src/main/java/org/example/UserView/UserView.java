@@ -64,9 +64,6 @@ public class UserView extends JFrame {
                 listView.setModel(filteredListModel);
             }
         });
-
-        // Make the frame visible
-        setVisible(true);
     }
 
     public void setVisibleUI(boolean visible) {

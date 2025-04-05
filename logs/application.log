@@ -50,3 +50,38 @@ The account has been deleted from the database
 2025-04-04 13:59:35,038 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
 2025-04-04 13:59:38,220 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
 2025-04-04 13:59:38,546 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 12:37:46,628 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 12:38:02,049 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 12:39:39,825 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 12:39:50,610 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 12:42:28,077 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 12:42:29,113 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 12:42:29,406 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 12:42:29,732 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 12:50:40,481 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 12:50:49,935 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 12:53:53,183 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 12:54:28,055 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 12:54:32,170 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 12:54:39,780 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 12:58:04,215 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 12:58:11,394 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 12:59:11,123 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 13:00:02,482 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 13:00:22,676 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 13:00:46,781 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 13:01:23,136 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 13:07:01,832 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 13:07:30,712 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 13:07:41,363 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 13:08:58,206 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 14:27:55,647 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 14:28:05,887 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 14:29:29,344 [AWT-EventQueue-0] INFO  org.example.LoginView.LoginModel - Login attempt for user: admin
+2025-04-05 14:29:29,633 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 14:29:29,651 [AWT-EventQueue-0] INFO  org.example.LoginView.LoginModel - Verifying user: admin
+2025-04-05 14:29:29,886 [AWT-EventQueue-0] INFO  org.example.LoginView.LoginModel - Login failed
+2025-04-05 14:31:33,147 [AWT-EventQueue-0] INFO  org.example.LoginView.LoginModel - Login attempt for user: admin
+2025-04-05 14:31:33,457 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-05 14:31:33,484 [AWT-EventQueue-0] INFO  org.example.LoginView.LoginModel - Verifying user: admin
+2025-04-05 14:31:33,713 [AWT-EventQueue-0] INFO  org.example.LoginView.LoginModel - Login failed
