@@ -17,7 +17,7 @@ public class LoginModel {
     private static final Logger logger = LogManager.getLogger(LoginModel.class);
     db_access db = new db_access();
 
-    public void login(String username, String password) {
+    public void login(String username, String password, LoginView loginView) {
         logger.info("Login attempt for user: {}", username); // <--- NEW
         Connection conn = db.getConnection();
         String hashedPassword = "";
@@ -27,7 +27,7 @@ public class LoginModel {
             stmt.setString(1, username);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                hashedPassword = rs.getString("password");
+                hashedPassword = rs.getString(2);
             } else {
                 logger.warn("No user found with username: {}", username);
                 return; // Exit early — no need to continue
@@ -42,18 +42,17 @@ public class LoginModel {
                 logger.error("\nDatabase err: {}", String.valueOf(closeEx));
             }
         }
-        verifyUser(username, hashedPassword, password);
+        verifyUser(username, hashedPassword, password, loginView);
     }
-    public void verifyUser(String username, String hashedPassword, String password) {
+    public void verifyUser(String username, String hashedPassword, String password, LoginView loginView) {
         logger.info("Verifying user: {}", username); // <--- NEW
-        BCrypt.Result result = null;
 
-        if (hashedPassword.trim().isEmpty()) {
-            System.out.println("\nThere is no account with username: " + username);
-        } else {
-            result = BCrypt.verifyer().verify(password.toCharArray(), hashedPassword);
-            System.out.println("\nUser found with username: " + username);
+        if (hashedPassword == null || hashedPassword.trim().isEmpty()) {
+            logger.warn("\nThere is no account with username: {}", username);
+            return;
         }
+
+        BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), hashedPassword);
         if (result != null && result.verified) {
             System.out.println("\nUser logged in!");
             logger.info("Login successful");
@@ -62,9 +61,29 @@ public class LoginModel {
             UserView userView = new UserView();
             UserController userController = new UserController(userModel, userView);
 
+            loginView.setVisible(false);
+
             userController.startGUI();
         } else {
-            logger.info("Login failed");
+            logger.info("Login failed: incorrect password for user: {}", username);
         }
     }
 }
+
+
+
+// Implement search filter logic
+//        searchField.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                String searchText = searchField.getText().toLowerCase();
+//                String[] items = {"Dashboard", "Profile", "Settings", "Logout", "Help", "Reports", "Analytics"};
+//                DefaultListModel<String> filteredListModel = new DefaultListModel<>();
+//                for (String item : items) {
+//                    if (item.toLowerCase().contains(searchText)) {
+//                        filteredListModel.addElement(item);
+//                    }
+//                }
+//                listView.setModel(filteredListModel);
+//            }
+//        });

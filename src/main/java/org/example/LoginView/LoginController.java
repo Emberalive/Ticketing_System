@@ -14,7 +14,7 @@ public class LoginController {
         this.view = view;
     }
 
-    public void startLogin(String username, String password) { model.login(username, password); }
+    public void startLogin(String username, String password) { model.login(username, password, view); }
 
     public void startGUI() {
         view.setVisible(true);

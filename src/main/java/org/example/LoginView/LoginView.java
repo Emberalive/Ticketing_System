@@ -10,6 +10,7 @@ public class LoginView extends JFrame{
     private static final Logger logger = LogManager.getLogger(LoginView.class);
     private JTextField usernameField;
     private JPasswordField passwordField;
+    LoginView view;
     LoginModel model = new LoginModel();
     LoginController controller;
 
@@ -51,7 +52,7 @@ public class LoginView extends JFrame{
         login.addActionListener(ev ->{
             controller = new LoginController(model, this);
             String username = usernameField.getText();
-            String password = Arrays.toString(passwordField.getPassword());
+            String password = new String(passwordField.getPassword());
 
             controller.startLogin(username, password);
         });
