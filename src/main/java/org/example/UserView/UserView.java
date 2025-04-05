@@ -11,7 +11,7 @@ public class UserView extends JFrame {
     private JList<String> listView;
     private JLabel userLabel;
 
-    public UserView() {
+    public UserView(String username) {
         // Initialize JFrame
         setTitle("User Dashboard");
         setSize(500, 300);
@@ -54,7 +54,7 @@ public class UserView extends JFrame {
 //        searchField.setToolTipText("Search...");
 
         // Username label
-        userLabel = new JLabel("Welcome, Alice!");
+        userLabel = new JLabel("Welcome, " + username + "!");
         userLabel.setFont(new Font("Arial", Font.BOLD, 14));
 
         // Add components to the top panel

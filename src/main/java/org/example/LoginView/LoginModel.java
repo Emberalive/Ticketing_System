@@ -58,7 +58,7 @@ public class LoginModel {
             logger.info("Login successful");
             //initialize the UserController to start the GUI
             UserModel userModel = new UserModel();
-            UserView userView = new UserView();
+            UserView userView = new UserView(username);
             UserController userController = new UserController(userModel, userView);
 
             loginView.setVisible(false);
