@@ -23,7 +23,7 @@ public class Simple_Queue {
     //Adding items to the queue
     public void enQueue(Ticket ticket) {
         if (isFull()) {
-            logger.warn("Queue is full! Cannot enqueue Ticket " + ticket);
+            logger.warn("Queue is full! Cannot enqueue Ticket {}", ticket);
             return;
         }
         queue[rear] = ticket;

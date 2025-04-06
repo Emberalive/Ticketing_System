@@ -1,32 +1,47 @@
-## Why Use a Capacity? What’s the Benefit?
+# Bucket Queue & Simple Queue
 
-Even though dynamic queues are flexible, a fixed capacity can be helpful in some specific ways -> especially in systems like IT ticketing.
+This repository contains implementations of a Bucket Queue and a Simple Queue in Java. The Bucket Queue is used for managing tickets with multiple priority levels, while the Simple Queue is a basic data structure for managing a queue of tickets.
+## Overview
+### Bucket Queue
 
-Here’s why:
-Protects the system from overload
+The Bucket Queue manages four priority levels (1 to 4), with each priority having its own queue. Tickets are added to the appropriate priority queue, and when dequeuing, the system will process tickets starting from the highest priority.
 
-    You don’t want to take in millions of tickets at once and crash your server.
+    Priority 1: Highest priority.
 
-    Capacity acts like a flood gate — once it’s full, you can reject new tickets, log them, or handle them differently.
+    Priority 4: Lowest priority.
 
-Helps with memory control
+### Simple Queue
 
-    Arrays with fixed sizes are memory-efficient and fast.
+The Simple Queue is an array-based queue implementation. It stores tickets and supports basic queue operations such as enqueue (adding tickets), dequeue (removing tickets), and peek (viewing the front item). The queue operates on a first-in-first-out (FIFO) basis.
+## Classes
+### Bucket_Queue Class
 
-    No need to reallocate or resize the array like dynamic structures do.
+The Bucket_Queue class manages multiple Simple_Queue instances, each corresponding to a specific priority. It provides methods for enqueuing and dequeuing tickets based on their priority.
+Methods:
 
-Can help prioritize more clearly
+    enqueue(Ticket ticket): Adds a ticket to the appropriate queue based on its priority.
 
-    You might decide:
+    dequeue(Ticket ticket): Removes a ticket from the appropriate priority queue.
 
-        “Only 100 tickets can be active at once”
+    peek(int priority): Returns the ticket at the front of the specified priority queue without removing it.
 
-        “Lower priority tickets get dropped if the queue is full”
+    print_ifEmpty(): Logs a warning if there are no tickets in the queue.
 
-    That gives your system a clear priority-based discipline, which matters a lot in real-time or time-sensitive systems.
+    invalid_priority(int priority): Logs a warning when an invalid priority is provided.
 
-Predictable performance
+### Simple_Queue Class
 
-    Fixed-size arrays mean your queue's performance (insert/remove) is very consistent.
+The Simple_Queue class is an array-based queue that handles the basic queue operations for tickets. It supports enqueuing, dequeuing, peeking, and checking if the queue is empty or full.
+Methods:
 
-    Dynamic structures might slow down during resizing or garbage collection.
+    enQueue(Ticket ticket): Adds a ticket to the queue.
+
+    deQueue(): Removes the front ticket from the queue.
+
+    peek(): Returns the front ticket without removing it.
+
+    isEmpty(): Checks if the queue is empty.
+
+    isFull(): Checks if the queue is full.
+
+    getSize(): Returns the number of tickets currently in the queue.
