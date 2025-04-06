@@ -1,4 +1,4 @@
-package org.example.UserView;
+package org.example.user;
 
 import java.sql.Connection;
 

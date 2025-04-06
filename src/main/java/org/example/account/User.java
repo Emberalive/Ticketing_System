@@ -1,13 +1,11 @@
-package org.example.Account;
+package org.example.account;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 
-public class user {
+public class User {
     Account acc = new Account();
     private String username;
     private String password;
-    // this allows me to know if it is a user or an admin
-    private String role = "user";
 
     public String getUsername() {
         return username;
@@ -21,8 +19,9 @@ public class user {
     public boolean setPassword(String password) {
         //encrypting the password
         this.password = BCrypt.withDefaults().hashToString(12, password.toCharArray());
-        //registering the user
-        boolean success = acc.register(getUsername(), getPassword(), role);
-        return success;
+        //registering the User
+        // this allows me to know if it is a User or an admin
+        String role = "User";
+        return acc.register(getUsername(), getPassword(), role);
     }
 }

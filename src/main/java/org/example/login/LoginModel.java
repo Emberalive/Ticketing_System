@@ -1,12 +1,12 @@
-package org.example.Login;
+package org.example.login;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.DBAccess.db_access;
-import org.example.UserView.UserController;
-import org.example.UserView.UserModel;
-import org.example.UserView.UserView;
+import org.example.db_access.Db_Access;
+import org.example.user.UserController;
+import org.example.user.UserModel;
+import org.example.user.UserView;
 
 import javax.swing.*;
 import java.sql.Connection;
@@ -16,10 +16,10 @@ import java.sql.SQLException;
 
 public class LoginModel {
     private static final Logger logger = LogManager.getLogger(LoginModel.class);
-    db_access db = new db_access();
+    Db_Access db = new Db_Access();
 
     public void login(String username, String password, LoginView loginView) {
-        logger.info("Login attempt for user: {}", username); // <--- NEW
+        logger.info("Login attempt for User: {}", username); // <--- NEW
         Connection conn = db.getConnection();
         String hashedPassword = "";
         try {
@@ -29,8 +29,8 @@ public class LoginModel {
             if (rs.next()) {
                 hashedPassword = rs.getString(2);
             } else {
-                logger.warn("No user found with username: {}", username);
-                JOptionPane.showMessageDialog(loginView, "No user found with username: "+ username);
+                logger.warn("No User found with username: {}", username);
+                JOptionPane.showMessageDialog(loginView, "No User found with username: "+ username);
 
                 return;
             }
@@ -46,7 +46,7 @@ public class LoginModel {
         verifyUser(username, hashedPassword, password, loginView);
     }
     public void verifyUser(String username, String hashedPassword, String password, LoginView loginView) {
-        logger.info("Verifying user: {}", username); // <--- NEW
+        logger.info("Verifying User: {}", username); // <--- NEW
 
         if (hashedPassword == null || hashedPassword.trim().isEmpty()) {
             logger.warn("\nThere is no account with username: {}", username);
@@ -65,7 +65,7 @@ public class LoginModel {
 
             userController.startGUI();
         } else {
-            logger.info("Login failed: incorrect password for user: {}", username);
+            logger.info("Login failed: incorrect password for User: {}", username);
         }
     }
 }

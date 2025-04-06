@@ -1,10 +1,8 @@
-package org.example.UserView;
+package org.example.user;
 
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class UserView extends JFrame {
     private JTextField searchField;

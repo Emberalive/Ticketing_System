@@ -1,9 +1,8 @@
 package org.example;
 
-import org.example.Account.user;
-import org.example.Login.LoginController;
-import org.example.Login.LoginModel;
-import org.example.Login.LoginView;
+import org.example.login.LoginController;
+import org.example.login.LoginModel;
+import org.example.login.LoginView;
 
 
 public class Main {

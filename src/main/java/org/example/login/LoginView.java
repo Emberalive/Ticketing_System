@@ -1,8 +1,8 @@
-package org.example.Login;
+package org.example.login;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.Register.RegisterView;
+import org.example.register.RegisterView;
 
 import javax.swing.*;
 

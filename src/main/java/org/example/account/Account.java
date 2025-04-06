@@ -1,32 +1,30 @@
-package org.example.Account;
+package org.example.account;
 
-import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.DBAccess.db_access;
+import org.example.db_access.Db_Access;
 import org.example.Main;
 
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Account {
     private static final Logger logger = LogManager.getLogger(Account.class);
-    db_access db = new db_access();
+    Db_Access db = new Db_Access();
     Main main = new Main();
 
-    // registering the user into the database
+    // registering the User into the database
     public boolean register(String username, String password, String role) {
         boolean success = false;
         Connection conn = db.getConnection();
         if (conn != null) {
             try {
                 logger.info("\nCreating an account with username: {} and role: {}", username, role);
-                //create the insert statement to insert the user to the database
+                //create the insert statement to insert the User to the database
                 PreparedStatement pstmt = conn.prepareStatement("INSERT INTO users (username, password, role) VALUES (?, ?, ?)");
-                //setting the username and password of the user for the query
+                //setting the username and password of the User for the query
                 pstmt.setString(1, username);
                 pstmt.setString(2, password);
                 pstmt.setString(3, role);
@@ -34,7 +32,7 @@ public class Account {
                 pstmt.executeUpdate();
                 conn.commit();
 
-                logger.info("\nThe new user has been inserted into the database");
+                logger.info("\nThe new User has been inserted into the database");
                 success = true;
             } catch (SQLException e) {
                 try {
@@ -58,7 +56,7 @@ public class Account {
         return success;
     }
 
-    //allows a user to delete their account
+    //allows a User to delete their account
     public void deleteAccount(String username) {
         Connection conn = db.getConnection();
         try {

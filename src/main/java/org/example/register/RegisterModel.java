@@ -1,4 +1,4 @@
-package org.example.Register;
+package org.example.register;
 
 public class RegisterModel {
 }

@@ -1,10 +1,8 @@
-package org.example.Register;
+package org.example.register;
 
-import org.example.Account.Account;
-import org.example.Account.user;
+import org.example.account.User;
 
 import javax.swing.*;
-import java.sql.SQLException;
 
 public class RegisterView extends JFrame {
     private JTextField usernameField;
@@ -50,7 +48,7 @@ public class RegisterView extends JFrame {
             String username = usernameField.getText();
             String password = passwordField.getText();
 
-            user usr = new user();
+            User usr = new User();
             usr.setUsername(username);
             boolean success = usr.setPassword(password);
             if (success) {

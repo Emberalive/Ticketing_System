@@ -39,7 +39,7 @@
                     <arguments>
                         <argument>--module-path</argument>
                         <argument>${java.home}/lib</argument> <!-- Path to JDK, or to your JavaFX SDK -->
-                        <argument>org.example.UserView.UserView</argument>
+                        <argument>org.example.user.UserView</argument>
                         <argument>javafx.controls,javafx.fxml</argument> <!-- Specify JavaFX modules -->
                     </arguments>
                 </configuration>

@@ -1,4 +1,4 @@
-package org.example.DBAccess;
+package org.example.db_access;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -6,8 +6,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class db_access {
-    private static final Logger logger = LogManager.getLogger(db_access.class);
+public class Db_Access {
+    private static final Logger logger = LogManager.getLogger(Db_Access.class);
     private static final String URL = "jdbc:postgresql://86.19.219.159:5432/itticketing";
     private static final String USER = "samuel";
     private static final String PASSWORD = "QwErTy1243!";
