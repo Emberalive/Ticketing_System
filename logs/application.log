@@ -1,0 +1,4 @@
+2025-04-06 19:14:58,641 [AWT-EventQueue-0] INFO  org.example.Login.LoginModel - Login attempt for user: user
+2025-04-06 19:14:58,929 [AWT-EventQueue-0] INFO  org.example.DBAccess.db_access - Database connection established!
+2025-04-06 19:14:58,949 [AWT-EventQueue-0] INFO  org.example.Login.LoginModel - Verifying user: user
+2025-04-06 19:14:59,175 [AWT-EventQueue-0] INFO  org.example.Login.LoginModel - Login successful

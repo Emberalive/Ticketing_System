@@ -8,6 +8,7 @@ import org.example.UserView.UserController;
 import org.example.UserView.UserModel;
 import org.example.UserView.UserView;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -21,7 +22,6 @@ public class LoginModel {
         logger.info("Login attempt for user: {}", username); // <--- NEW
         Connection conn = db.getConnection();
         String hashedPassword = "";
-        BCrypt.Result result = null;
         try {
             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM users WHERE username = ? ");
             stmt.setString(1, username);
@@ -30,11 +30,12 @@ public class LoginModel {
                 hashedPassword = rs.getString(2);
             } else {
                 logger.warn("No user found with username: {}", username);
-                return; // Exit early — no need to continue
+                JOptionPane.showMessageDialog(loginView, "No user found with username: "+ username);
+
+                return;
             }
         } catch (SQLException e){
             logger.error("\nDatabase err: {}", String.valueOf(e));
-            System.out.println("\nThere is no account with username: " + username);
         } finally {
             try {
                 conn.close();
@@ -54,7 +55,6 @@ public class LoginModel {
 
         BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), hashedPassword);
         if (result != null && result.verified) {
-            System.out.println("\nUser logged in!");
             logger.info("Login successful");
             //initialize the UserController to start the GUI
             UserModel userModel = new UserModel();
