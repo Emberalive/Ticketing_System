@@ -4,6 +4,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.Ticket;
 
+import java.time.LocalDate;
+
 public class Simple_Queue {
     private static final Logger logger = LogManager.getLogger(Simple_Queue.class);
     private final Ticket[] queue;  //array that holds the queue
@@ -23,12 +25,13 @@ public class Simple_Queue {
     //Adding items to the queue
     public void enQueue(Ticket ticket) {
         if (isFull()) {
-            logger.warn("Queue is full! Cannot enqueue Ticket {}", ticket);
+            logger.warn("Queue is full! Cannot enqueue Ticket {}", ticket.printTicket());
             return;
         }
         queue[rear] = ticket;
         rear = (rear + 1) % capacity;
         size++;
+        logger.info("Enqueued ticket: {}", ticket.printTicket());
     }
 
     //removing items from the queue
@@ -38,9 +41,9 @@ public class Simple_Queue {
             return;
         }
         Ticket ticket = queue[front];
-        front = (front + 1) % capacity;
+        front = (front - 1) % capacity;
         size--;
-        logger.info("Dequeued Ticket {}", ticket);
+        logger.info("Dequeued Ticket {}", ticket.printTicket());
     }
 
     //view the  front item without removing it
@@ -49,10 +52,30 @@ public class Simple_Queue {
             logger.warn("Queue is empty! Cannot peek.");
             return null;
         }
+        logger.info("Peeking Ticket {}", queue[front].printTicket());
         return queue[front];
     }
 
-    //checks if the queue is emppty
+    public Ticket searchTicket(int ticketID) {
+        if (isEmpty()){
+            logger.warn("Queue is empty! Cannot search ticket.{}", ticketID);
+            return null;
+        }
+        logger.info("Searching Ticket {}", ticketID);
+        for (int i = 0; i == size; i++) {
+            int index = (front + i) % capacity;
+            Ticket ticket = queue[index];
+
+            if (ticket.getTicketID() == ticketID) {
+                logger.info("Found Ticket: {}", ticket.printTicket());
+                return ticket;
+            }
+        }
+        logger.info("Ticket {} not found.", ticketID);
+        return null;
+    }
+
+    //checks if the queue is empty
     public boolean isEmpty() {
         return size == 0;
     }
@@ -61,9 +84,4 @@ public class Simple_Queue {
     public boolean isFull() {
         return size == capacity;
     }
-
-//    //gets the size of the queue
-//    public int getSize() {
-//        return size;
-//    }
 }

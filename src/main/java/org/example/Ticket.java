@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.dataStructures.bucket.Bucket_Queue;
+
 import java.time.LocalDate;
 
 public class Ticket {
@@ -8,16 +10,18 @@ public class Ticket {
     private int priority;
     private String status;
     private String userName;
-    private LocalDate creationDate;
+    private final LocalDate creationDate;
     private String employee;
 
-    public Ticket(int ticketID, String issue, String priority, String status, String userName, LocalDate creationDate) {
-        this.ticketID = ticketID;
+    public Ticket(String issue, int priority, String status, String userName, String employee, Bucket_Queue dataStruct) {
+        this.ticketID = dataStruct.getCounter() + 1;
+        dataStruct.setCounter(ticketID);
         this.issue = issue;
-        this.priority = Integer.parseInt(priority);
+        this.priority = priority;
         this.status = status;
         this.userName = userName;
-        this.creationDate = creationDate;
+        this.creationDate = LocalDate.now();
+        this.employee = employee;
     }
 
     //created setters and getters for employee
@@ -68,11 +72,14 @@ public class Ticket {
         this.userName = userID;
     }
 
-    //getting and setting the ticket creationDate
+    //creating the getter the ticket creationDate
     public LocalDate getCreationDate() {
         return creationDate;
     }
-    public void setCreationDate() {
-        this.creationDate = LocalDate.now();
+
+    // allows me to print the ticket in the logs
+    public String printTicket() {
+        //concatenating all the values in one string
+        return "Ticket{ (ID: " + ticketID + ") (Date: " + creationDate + ") (Issue: " + issue + ") (Username: " + userName + ") (Status: " + status + ") (Handled By: " + employee + ")}";
     }
 }
