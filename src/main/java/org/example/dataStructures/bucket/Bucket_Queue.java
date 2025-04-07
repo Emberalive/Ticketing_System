@@ -44,7 +44,7 @@ public class Bucket_Queue {
             log_ifEmpty();
         }
     }
-    public void peek(int priority) {
+    public void peek() {
         if (!priority_1.isEmpty()) {
             priority_1.peek();
         } else if (!priority_2.isEmpty()) {
