@@ -62,8 +62,8 @@ public class Simple_Queue {
         return size == capacity;
     }
 
-    //gets the size of the queue
-    public int getSize() {
-        return size;
-    }
+//    //gets the size of the queue
+//    public int getSize() {
+//        return size;
+//    }
 }

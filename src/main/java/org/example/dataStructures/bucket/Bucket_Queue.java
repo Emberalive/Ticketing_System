@@ -31,50 +31,34 @@ public class Bucket_Queue {
                 break;
         }
     }
-    public Ticket dequeue(Ticket ticket) {
-        int priority = ticket.getPriority();
-        switch (priority) {
-            case 1:
-                priority_1.deQueue();
-                break;
-            case 2:
-                priority_2.deQueue();
-                break;
-            case 3:
-                priority_3.deQueue();
-                break;
-            case 4:
-                priority_4.deQueue();
-                break;
-            default:
-                invalid_priority(priority);
-                break;
+    public void dequeue() {
+        if (!priority_1.isEmpty()) {
+            priority_1.deQueue();
+        } else if (!priority_2.isEmpty()) {
+            priority_2.deQueue();
+        } else if (!priority_3.isEmpty()) {
+            priority_3.deQueue();
+        } else if (!priority_4.isEmpty()) {
+            priority_4.deQueue();
+        } else {
+            log_ifEmpty();
         }
-
-        return ticket;
     }
-    public Ticket peek(int priority) {
-        Ticket ticket = null;
-        switch (priority) {
-            case 1:
-                ticket =priority_1.peek();
-                break;
-            case 2:
-                ticket =priority_2.peek();
-                break;
-            case 3:
-                ticket =priority_3.peek();
-                break;
-            case 4:
-                ticket =priority_4.peek();
-            default:
-                print_ifEmpty();
-                break;
+    public void peek(int priority) {
+        if (!priority_1.isEmpty()) {
+            priority_1.peek();
+        } else if (!priority_2.isEmpty()) {
+            priority_2.peek();
+        } else if (!priority_3.isEmpty()) {
+            priority_3.peek();
+        } else if (!priority_4.isEmpty()) {
+            priority_4.peek();
+        } else {
+            log_ifEmpty();
         }
-        return ticket;
     }
 
-    public void print_ifEmpty() {
+    public void log_ifEmpty() {
         logger.warn("There are no tickets to dequeue");
     }
 
