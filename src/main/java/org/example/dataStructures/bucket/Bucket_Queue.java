@@ -18,19 +18,15 @@ public class Bucket_Queue {
         switch (priority) {
             case 1:
                 priority_1.enQueue(ticket);
-                counter++;
                 break;
             case 2:
                 priority_2.enQueue(ticket);
-                counter++;
                 break;
             case 3:
                 priority_3.enQueue(ticket);
-                counter++;
                 break;
             case 4:
                 priority_4.enQueue(ticket);
-                counter++;
                 break;
             default:
                 invalid_priority(priority);
