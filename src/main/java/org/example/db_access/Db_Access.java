@@ -1,10 +1,10 @@
 package org.example.db_access;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.example.Ticket;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
+import java.time.LocalDate;
 
 public class Db_Access {
     private static final Logger logger = LogManager.getLogger(Db_Access.class);
@@ -26,5 +26,47 @@ public class Db_Access {
             logger.error("Database error: {}", String.valueOf(e));
         }
         return conn;
+    }
+    public void insertTicket(Ticket ticket) {
+        Connection conn = getConnection();
+        int ticketID = ticket.getTicketID();
+        String issue = ticket.getIssue();
+        int priority = ticket.getPriority();
+        String status = ticket.getStatus();
+        String username = ticket.getUserID();
+        LocalDate date = ticket.getCreationDate();
+        String employee = ticket.getEmployee();
+        if (conn != null) {
+            try {
+                logger.info("Inserting ticket...{}", ticketID);
+                conn.setAutoCommit(false);
+
+                PreparedStatement stmnt = conn.prepareStatement("INSERT INTO ticket (ID, issue, priority, status, username, date, employee) VALUES (?, ?, ?, ?, ?, ?, ?)");
+                stmnt.setInt(1, ticketID);
+                stmnt.setString(2, issue);
+                stmnt.setInt(3, priority);
+                stmnt.setString(4, status);
+                stmnt.setString(5, username);
+                stmnt.setDate(6, Date.valueOf((date)));
+                stmnt.setString(7, employee);
+                stmnt.executeUpdate();
+                conn.commit();
+
+                logger.info("Inserted ticket ID: {}", ticket.printTicket());
+            } catch (SQLException ex) {
+                logger.error(ex.getMessage());
+                try {
+                    conn.rollback();
+                } catch (SQLException ex1) {
+                    logger.error(ex1.getMessage());
+                } finally {
+                    try {
+                        conn.close();
+                    } catch (SQLException close) {
+                        logger.error(close.getMessage());
+                    }
+                }
+            }
+        }
     }
 }

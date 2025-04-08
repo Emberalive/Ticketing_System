@@ -1,10 +1,12 @@
 package org.example;
 
 import org.example.dataStructures.bucket.Bucket_Queue;
+import org.example.db_access.Db_Access;
 
 import java.time.LocalDate;
 
 public class Ticket {
+    Db_Access db = new Db_Access();
     private int ticketID;
     private String issue;
     private int priority;
@@ -22,6 +24,7 @@ public class Ticket {
         this.userName = userName;
         this.creationDate = LocalDate.now();
         this.employee = employee;
+        db.insertTicket(this);
     }
 
     //created setters and getters for employee

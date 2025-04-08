@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.dataStructures.bucket.Bucket_Queue;
+import org.example.db_access.Db_Access;
 import org.example.login.LoginController;
 import org.example.login.LoginModel;
 import org.example.login.LoginView;
@@ -8,13 +9,14 @@ import org.example.login.LoginView;
 
 public class Main {
     public static void main(String[] args) {
+        Db_Access db = new Db_Access();
         Bucket_Queue dataStruct = new Bucket_Queue();
 
         String issue = "erectile dysfunction";
         int priority = 1;
         int ticketID = 1;
-        String status = "active";
-        String username = "erectile";
+        String status = "inactive";
+        String username = "samm";
         String employee = "bob";
 
         Ticket ticket = new Ticket(issue, priority, status, username, employee, dataStruct);
@@ -25,7 +27,6 @@ public class Main {
 
         Ticket ticket4 = new Ticket(issue, priority, status, username, employee, dataStruct);
 
-        System.out.println("adding the ticket to the queue"+ ticket);
         dataStruct.enqueue(ticket);
         dataStruct.enqueue(ticket2);
         dataStruct.enqueue(ticket3);
@@ -33,7 +34,7 @@ public class Main {
 
         dataStruct.peek();
 
-        Ticket foundTicket = dataStruct.searchTicket(4);
+        Ticket foundTicket = dataStruct.searchTicket(ticketID);
 
         dataStruct.dequeue();
         System.out.println("dequeue the ticket from the queue" + ticket.printTicket());

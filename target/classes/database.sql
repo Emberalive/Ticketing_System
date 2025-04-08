@@ -11,6 +11,7 @@ CREATE TABLE ticket (
     status VARCHAR(10) NOT NULL,
     username VARCHAR(50)NOT NULL,
     date date NOT NULL,
+    employee VARCHAR(50) NOT NULL,
     PRIMARY KEY(ID, username),
     FOREIGN KEY (username) REFERENCES users(username)
 );
