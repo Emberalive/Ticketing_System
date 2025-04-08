@@ -118,7 +118,8 @@ public class Bucket_Queue {
         Connection conn = db.getConnection();
         if (conn != null) {
             try {
-                PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM ticket");
+                logger.info("Filling Tickets from the Database");
+                PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM ticket WHERE status IN ('active', 'inactive') ORDER BY id ASC;");
 
                 ResultSet rs = stmnt.executeQuery();
                 while (rs.next()) {

@@ -3,8 +3,10 @@ package org.example.dataStructures.bucket;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.Ticket;
+import org.example.db_access.Db_Access;
 
 public class Simple_Queue {
+    Db_Access db = new Db_Access();
     private static final Logger logger = LogManager.getLogger(Simple_Queue.class);
     private final Ticket[] queue;  //array that holds the queue
     private int front;  //Points to the front item
@@ -39,6 +41,10 @@ public class Simple_Queue {
             return;
         }
         Ticket ticket = queue[front];
+        //getting the ticket id and using that to update the ticket in the database before it is removed
+        int ticketID = ticket.getTicketID();
+        db.updateStatusWhenCompleted(ticketID, "Completed");
+
         front = (front + 1) % capacity;
         size--;
         logger.info("Dequeued Ticket {}", ticket.printTicket());
@@ -56,7 +62,7 @@ public class Simple_Queue {
 
     public Ticket searchTicket(int ticketID) {
         if (isEmpty()){
-            logger.warn("Queue is empty! Cannot search ticket.{}", ticketID);
+            logger.warn("Queue is empty! Cannot search ticket: {}", ticketID);
             return null;
         } else {
             for (int i = 0; i < size; i++) {

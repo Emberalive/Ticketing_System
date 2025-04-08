@@ -1,32 +1,47 @@
-2025-04-08 20:35:33,917 [main] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-08 20:35:33,935 [main] WARN  org.example.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
-2025-04-08 20:35:34,039 [main] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-08 20:35:34,056 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Counter intial: 0
-2025-04-08 20:35:34,165 [main] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-08 20:35:34,165 [main] INFO  org.example.db_access.Db_Access - Inserting ticket...1
-2025-04-08 20:35:34,186 [main] INFO  org.example.db_access.Db_Access - Inserted ticket ID: Ticket{ (ID: 1) (Date: 2025-04-08) (Issue: password reset) (Username: samm) (Status: inactive) (Handled By: bob)}
-2025-04-08 20:35:34,194 [main] INFO  org.example.Ticket - Inserted ticket with ID: 1
-2025-04-08 20:35:34,301 [main] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-08 20:35:34,316 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Counter intial: 1
-2025-04-08 20:35:34,412 [main] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-08 20:35:34,412 [main] INFO  org.example.db_access.Db_Access - Inserting ticket...2
-2025-04-08 20:35:34,438 [main] INFO  org.example.db_access.Db_Access - Inserted ticket ID: Ticket{ (ID: 2) (Date: 2025-04-08) (Issue: password reset) (Username: samm) (Status: inactive) (Handled By: bob)}
-2025-04-08 20:35:34,452 [main] INFO  org.example.Ticket - Inserted ticket with ID: 2
-2025-04-08 20:35:34,553 [main] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-08 20:35:34,559 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Counter intial: 2
-2025-04-08 20:35:34,672 [main] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-08 20:35:34,672 [main] INFO  org.example.db_access.Db_Access - Inserting ticket...3
-2025-04-08 20:35:34,695 [main] INFO  org.example.db_access.Db_Access - Inserted ticket ID: Ticket{ (ID: 3) (Date: 2025-04-08) (Issue: password reset) (Username: samm) (Status: inactive) (Handled By: bob)}
-2025-04-08 20:35:34,706 [main] INFO  org.example.Ticket - Inserted ticket with ID: 3
-2025-04-08 20:35:34,813 [main] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-08 20:35:34,822 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Counter intial: 3
-2025-04-08 20:35:34,933 [main] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-08 20:35:34,933 [main] INFO  org.example.db_access.Db_Access - Inserting ticket...4
-2025-04-08 20:35:34,955 [main] INFO  org.example.db_access.Db_Access - Inserted ticket ID: Ticket{ (ID: 4) (Date: 2025-04-08) (Issue: password reset) (Username: samm) (Status: inactive) (Handled By: bob)}
-2025-04-08 20:35:34,967 [main] INFO  org.example.Ticket - Inserted ticket with ID: 4
-2025-04-08 20:35:34,967 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: 1) (Date: 2025-04-08) (Issue: password reset) (Username: samm) (Status: inactive) (Handled By: bob)}
-2025-04-08 20:35:34,967 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: 2) (Date: 2025-04-08) (Issue: password reset) (Username: samm) (Status: inactive) (Handled By: bob)}
-2025-04-08 20:35:34,967 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: 3) (Date: 2025-04-08) (Issue: password reset) (Username: samm) (Status: inactive) (Handled By: bob)}
-2025-04-08 20:35:34,967 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: 4) (Date: 2025-04-08) (Issue: password reset) (Username: samm) (Status: inactive) (Handled By: bob)}
-2025-04-08 20:35:34,967 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Peeking Ticket Ticket{ (ID: 1) (Date: 2025-04-08) (Issue: password reset) (Username: samm) (Status: inactive) (Handled By: bob)}
-2025-04-08 20:35:34,967 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Dequeued Ticket Ticket{ (ID: 1) (Date: 2025-04-08) (Issue: password reset) (Username: samm) (Status: inactive) (Handled By: bob)}
+2025-04-08 23:19:12,429 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-08 23:19:12,430 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-08 23:19:12,447 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '20') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:12,447 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '19') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:12,447 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '18') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:12,447 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '17') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:12,447 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '16') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:12,447 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '15') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:12,447 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '14') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:12,447 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '13') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:12,448 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '12') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:12,448 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '11') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:12,448 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '10') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:12,448 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '9') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:12,448 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '8') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:12,448 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '7') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:12,448 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '6') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:12,448 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '5') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:12,448 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '4') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:12,448 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '3') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:12,448 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '2') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'active') (Handled By: 'bob')}
+2025-04-08 23:19:12,541 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-08 23:19:12,555 [main] INFO  org.example.db_access.Db_Access - Updated ticket: 20's status to: 'Completed'
+2025-04-08 23:19:12,564 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Dequeued Ticket Ticket{ (ID: '20') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:49,286 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-08 23:19:49,288 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-08 23:19:49,311 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '2') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'active') (Handled By: 'bob')}
+2025-04-08 23:19:49,311 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '3') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:49,311 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '4') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:49,311 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '5') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:49,311 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '6') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:49,311 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '7') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:49,311 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '8') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:49,311 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '9') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:49,312 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '10') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:49,312 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '11') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:49,312 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '12') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:49,312 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '13') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:49,312 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '14') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:49,312 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '15') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:49,312 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '16') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:49,312 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '17') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:49,312 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '18') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:49,312 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '19') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'inactive') (Handled By: 'bob')}
+2025-04-08 23:19:49,390 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-08 23:19:49,453 [main] INFO  org.example.db_access.Db_Access - Updated ticket: 2's status to: 'Completed'
+2025-04-08 23:19:49,463 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Dequeued Ticket Ticket{ (ID: '2') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'active') (Handled By: 'bob')}

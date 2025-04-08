@@ -70,4 +70,35 @@ public class Db_Access {
             }
         }
     }
+
+    //This method updates the status of a ticket using its id, by searching it in the database,this is so that when a ticket has been completed the user can see that the ticket
+    //has been completed even though it is not in the Bucket_Queue
+    public void updateStatusWhenCompleted (int ticketID, String status) {
+        Connection conn = getConnection();
+        if (conn != null) {
+            try {
+                PreparedStatement stmnt = conn.prepareStatement("UPDATE ticket SET status = ? WHERE id = ?");
+                stmnt.setString(1, status);
+                stmnt.setInt(2, ticketID);
+                stmnt.executeUpdate();
+                conn.commit();
+                logger.info("Updated ticket: {}'s status to: '{}'", ticketID, status);
+
+            } catch (SQLException e) {
+                try{
+                    conn.rollback();
+                } catch (SQLException ex1) {
+                    logger.error("Database Error on rollback: {}", ex1.getMessage());
+                }
+                logger.error("Database Error when updating ticket Status: {}", e.getMessage());
+            } finally {
+                try{
+                    conn.close();
+                } catch (SQLException close) {
+                    logger.error("Database Error on closing connection: {}", close.getMessage());
+                }
+            }
+        }
+    }
+
 }
