@@ -33,7 +33,7 @@ public class Main {
 
         dataStruct.peek();
 
-        Ticket foundTicket = dataStruct.searchTicket(ticketID);
+        Ticket foundTicket = dataStruct.searchTicket(4);
 
         dataStruct.dequeue();
         System.out.println("dequeue the ticket from the queue" + ticket.printTicket());

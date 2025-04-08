@@ -60,17 +60,19 @@ public class Simple_Queue {
         if (isEmpty()){
             logger.warn("Queue is empty! Cannot search ticket.{}", ticketID);
             return null;
-        }
-        logger.info("Searching Ticket {}", ticketID);
-        for (int i = 0; i == size; i++) {
-            int index = (front + i) % capacity;
-            Ticket ticket = queue[index];
-
-            if (ticket.getTicketID() == ticketID) {
-                logger.info("Found Ticket: {}", ticket.printTicket());
-                return ticket;
+        } else {
+            logger.info("Searching Ticket {}", ticketID);
+            for (int i = 0; i <= size; i++) {
+                int index = (front + i) % capacity;
+                Ticket ticket = queue[index];
+                System.out.println(ticket.printTicket());
+                if (ticket.getTicketID() == ticketID) {
+                    logger.info("Found Ticket: {}", ticket.printTicket());
+                    return ticket;
+                }
             }
         }
+
         logger.info("Ticket {} not found.", ticketID);
         return null;
     }
