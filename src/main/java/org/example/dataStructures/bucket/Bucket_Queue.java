@@ -71,6 +71,7 @@ public class Bucket_Queue {
 
     public Ticket searchTicket(int ticketID) {
         Ticket foundTicket = null;
+        logger.info("Searching Ticket {}", ticketID);
 
         foundTicket = priority_1.searchTicket(ticketID);
         if (foundTicket != null) {return foundTicket;}
@@ -92,7 +93,7 @@ public class Bucket_Queue {
         Connection conn = db.getConnection();
         if (conn != null) {
             try {
-                PreparedStatement stmnt = conn.prepareStatement("SELECT ID FROM ticket WHERE ID = (SELECT MAX(ID) FROM ticket)");
+                PreparedStatement stmnt = conn.prepareStatement("SELECT MAX(id) FROM ticket");
                 conn.setAutoCommit(false);
 
                 ResultSet rs = stmnt.executeQuery();
@@ -106,7 +107,7 @@ public class Bucket_Queue {
                 try {
                     conn.close();
                 } catch (SQLException ex) {
-                    logger.error("Database Error: {}", String.valueOf(ex));
+                    logger.error("Database Error closing Connection: {}", String.valueOf(ex));
                 }
             }
         }
@@ -129,7 +130,7 @@ public class Bucket_Queue {
                     LocalDate date = rs.getDate("date").toLocalDate();
                     String employee =rs.getString("employee");
 
-                    Ticket ticket = new Ticket(issue, priority, status, username, employee, dataStruct, id, date);
+                    Ticket ticket = new Ticket(issue, priority, status, username, employee, id, date, dataStruct);
                     dataStruct.enqueue(ticket);
                 }
             } catch (SQLException exc) {

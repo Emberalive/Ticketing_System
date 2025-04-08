@@ -4,8 +4,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.Ticket;
 
-import java.time.LocalDate;
-
 public class Simple_Queue {
     private static final Logger logger = LogManager.getLogger(Simple_Queue.class);
     private final Ticket[] queue;  //array that holds the queue
@@ -61,7 +59,6 @@ public class Simple_Queue {
             logger.warn("Queue is empty! Cannot search ticket.{}", ticketID);
             return null;
         } else {
-            logger.info("Searching Ticket {}", ticketID);
             for (int i = 0; i < size; i++) {
                 int index = (front + i) % capacity;
                 Ticket ticket = queue[index];
@@ -71,7 +68,6 @@ public class Simple_Queue {
                 }
             }
         }
-        logger.info("Ticket {} not found.", ticketID);
         return null;
     }
 

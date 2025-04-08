@@ -5,7 +5,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE ticket (
-    ID VARCHAR(15) NOT NULL,
+    ID int NOT NULL,
     issue VARCHAR(300) NOT NULL,
     priority int NOT NULL,
     status VARCHAR(10) NOT NULL,

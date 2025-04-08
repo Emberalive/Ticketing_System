@@ -1,11 +1,15 @@
 package org.example;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.example.dataStructures.bucket.Bucket_Queue;
 import org.example.db_access.Db_Access;
 
 import java.time.LocalDate;
 
 public class Ticket {
+    private static final Logger logger = LogManager.getLogger(Ticket.class);
+
     Db_Access db = new Db_Access();
     private int ticketID;
     private String issue;
@@ -15,29 +19,32 @@ public class Ticket {
     private final LocalDate creationDate;
     private String employee;
 
-    public Ticket(String issue, int priority, String status, String userName, String employee, Bucket_Queue dataStruct, int ticketID, LocalDate creationDate) {
-        boolean ticketExist = db.getTickets(this);
+    // Constructor for creating new tickets (no ID or creationDate passed)
+    public Ticket(String issue, int priority, String status, String userName, String employee, Bucket_Queue dataStruct) {
         this.issue = issue;
         this.priority = priority;
         this.status = status;
         this.userName = userName;
         this.employee = employee;
+        this.creationDate = LocalDate.now();
 
+        // Insert into DB and update ticketID
+        dataStruct.setCounterIntial(); // syncs counter with DB
+        this.ticketID = dataStruct.getCounter() + 1;
+        dataStruct.setCounter(ticketID); // updates counter in memory
+        db.insertTicket(this);
+        logger.info("Inserted ticket with ID: {}", this.ticketID);
+    }
 
-        if (!ticketExist) {
-            this.creationDate = LocalDate.now();
-        } else {
-            this.creationDate = creationDate;
-        }
-
-        if (!ticketExist) {
-            db.insertTicket(this);
-            dataStruct.setCounterIntial();
-            this.ticketID = dataStruct.getCounter() + 1;
-            dataStruct.setCounter(ticketID);
-        } else {
-            this.ticketID = ticketID;
-        }
+    // Constructor for existing tickets loaded from DB
+    public Ticket(String issue, int priority, String status, String userName, String employee, int ticketID, LocalDate creationDate, Bucket_Queue dataStruct) {
+        this.issue = issue;
+        this.priority = priority;
+        this.status = status;
+        this.userName = userName;
+        this.employee = employee;
+        this.ticketID = ticketID;
+        this.creationDate = creationDate;
     }
 
     //created setters and getters for employee

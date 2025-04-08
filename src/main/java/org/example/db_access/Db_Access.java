@@ -84,12 +84,12 @@ public class Db_Access {
                     conn.rollback();
                 } catch (SQLException ex1) {
                     logger.error(ex1.getMessage());
-                } finally {
-                    try {
-                        conn.close();
-                    } catch (SQLException close) {
-                        logger.error(close.getMessage());
-                    }
+                }
+            } finally {
+                try {
+                    conn.close();
+                } catch (SQLException close) {
+                    logger.error(close.getMessage());
                 }
             }
         }

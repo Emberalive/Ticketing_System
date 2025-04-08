@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="INFO">
     <Appenders>
-<!--        <File name="FileAppender" fileName="logs/application.log">-->
-<!--            <PatternLayout>-->
-<!--                <Pattern>%d [%t] %-5level %c - %msg%n</Pattern>-->
-<!--            </PatternLayout>-->
-<!--        </File>-->
-        <Console name="fileAppender" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d [%t] %-5level %logger - %msg%n"/>
-        </Console>
+        <File name="fileAppender" fileName="logs/application.log">
+            <PatternLayout>
+                <Pattern>%d [%t] %-5level %c - %msg%n</Pattern>
+            </PatternLayout>
+        </File>
     </Appenders>
-
+    <!--        <Console name="fileAppender" target="SYSTEM_OUT">-->
+    <!--            <PatternLayout pattern="%d [%t] %-5level %logger - %msg%n"/>-->
+    <!--        </Console>-->
     <Loggers>
         <Root level="info">
             <AppenderRef ref="fileAppender"/>
