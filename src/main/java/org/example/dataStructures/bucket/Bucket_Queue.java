@@ -3,8 +3,16 @@ package org.example.dataStructures.bucket;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.Ticket;
+import org.example.db_access.Db_Access;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDate;
 
 public class Bucket_Queue {
+    Db_Access db = new Db_Access();
     private static final Logger logger = LogManager.getLogger(Bucket_Queue.class);
     private int counter = 0;
 
@@ -81,6 +89,57 @@ public class Bucket_Queue {
         return null;
     }
 
+    public void setCounterIntial () {
+        Connection conn = db.getConnection();
+        if (conn != null) {
+            try {
+                PreparedStatement stmnt = conn.prepareStatement("SELECT ID FROM ticket WHERE ID = (SELECT MAX(ID) FROM ticket)");
+                conn.setAutoCommit(false);
+
+                ResultSet rs = stmnt.executeQuery();
+                if (rs.next()) {
+                    this.counter = rs.getInt(1);
+                }
+                rs.close();
+            } catch (SQLException ex) {
+                logger.error("Database error, Getting Counter: {}", String.valueOf(ex));
+            } finally {
+                try {
+                    conn.close();
+                } catch (SQLException ex) {
+                    logger.error("Database Error: {}", String.valueOf(ex));
+                }
+            }
+        }
+    }
+
+    public Bucket_Queue fillFromDB() {
+        Bucket_Queue dataStruct = new Bucket_Queue();
+        Connection conn = db.getConnection();
+        if (conn != null) {
+            try {
+                PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM ticket");
+
+                ResultSet rs = stmnt.executeQuery();
+                while (rs.next()) {
+                    int id = rs.getInt("id");
+                    String issue = rs.getString("issue");
+                    int priority = rs.getInt("priority");
+                    String status = rs.getString("status");
+                    String username = rs.getString("username");
+                    LocalDate date = rs.getDate("date").toLocalDate();
+                    String employee =rs.getString("employee");
+
+                    Ticket ticket = new Ticket(issue, priority, status, username, employee, dataStruct);
+                    dataStruct.enqueue(ticket);
+                }
+            } catch (SQLException exc) {
+                logger.error("Database Error: {}", String.valueOf(exc));
+            }
+        }
+        return dataStruct;
+    }
+
     public void log_ifEmpty() {
         logger.warn("There are no tickets to dequeue");
     }
@@ -93,7 +152,7 @@ public class Bucket_Queue {
         return counter;
     }
 
-    public void setCounter(int counter) {
+    public void setCounter (int counter) {
         this.counter = counter;
     }
-}
+    }

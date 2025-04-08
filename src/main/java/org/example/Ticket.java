@@ -16,6 +16,7 @@ public class Ticket {
     private String employee;
 
     public Ticket(String issue, int priority, String status, String userName, String employee, Bucket_Queue dataStruct) {
+        dataStruct.setCounterIntial();
         this.ticketID = dataStruct.getCounter() + 1;
         dataStruct.setCounter(ticketID);
         this.issue = issue;
