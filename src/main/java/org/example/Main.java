@@ -13,6 +13,8 @@ public class Main {
 
         dataStruct.peek();
 
+        Ticket searchTicket = dataStruct.searchTicket(4);
+
 //        Db_Access db = new Db_Access();
 //        Bucket_Queue dataStruct = new Bucket_Queue();
 //

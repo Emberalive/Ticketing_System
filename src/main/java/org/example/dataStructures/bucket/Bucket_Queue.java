@@ -71,21 +71,20 @@ public class Bucket_Queue {
 
     public Ticket searchTicket(int ticketID) {
         Ticket foundTicket = null;
-        if (!priority_1.isEmpty()) {
-            foundTicket = priority_1.searchTicket(ticketID);
-            return foundTicket;
-        } else if (!priority_2.isEmpty()) {
-            foundTicket = priority_2.searchTicket(ticketID);
-            return foundTicket;
-        } else if (!priority_3.isEmpty()) {
-            foundTicket = priority_3.searchTicket(ticketID);
-            return foundTicket;
-        } else if (!priority_4.isEmpty()) {
-            foundTicket = priority_4.searchTicket(ticketID);
-            return foundTicket;
-        } else {
-            log_ifEmpty();
-        }
+
+        foundTicket = priority_1.searchTicket(ticketID);
+        if (foundTicket != null) {return foundTicket;}
+
+        foundTicket = priority_2.searchTicket(ticketID);
+        if (foundTicket != null) {return foundTicket;}
+
+        foundTicket = priority_3.searchTicket(ticketID);
+        if (foundTicket != null) {return foundTicket;}
+
+        foundTicket = priority_4.searchTicket(ticketID);
+        if (foundTicket != null) {return foundTicket;}
+
+        log_ifEmpty();
         return null;
     }
 
@@ -130,7 +129,7 @@ public class Bucket_Queue {
                     LocalDate date = rs.getDate("date").toLocalDate();
                     String employee =rs.getString("employee");
 
-                    Ticket ticket = new Ticket(issue, priority, status, username, employee, dataStruct);
+                    Ticket ticket = new Ticket(issue, priority, status, username, employee, dataStruct, id, date);
                     dataStruct.enqueue(ticket);
                 }
             } catch (SQLException exc) {

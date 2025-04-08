@@ -15,17 +15,29 @@ public class Ticket {
     private final LocalDate creationDate;
     private String employee;
 
-    public Ticket(String issue, int priority, String status, String userName, String employee, Bucket_Queue dataStruct) {
-        dataStruct.setCounterIntial();
-        this.ticketID = dataStruct.getCounter() + 1;
-        dataStruct.setCounter(ticketID);
+    public Ticket(String issue, int priority, String status, String userName, String employee, Bucket_Queue dataStruct, int ticketID, LocalDate creationDate) {
+        boolean ticketExist = db.getTickets(this);
         this.issue = issue;
         this.priority = priority;
         this.status = status;
         this.userName = userName;
-        this.creationDate = LocalDate.now();
         this.employee = employee;
-        db.insertTicket(this);
+
+
+        if (!ticketExist) {
+            this.creationDate = LocalDate.now();
+        } else {
+            this.creationDate = creationDate;
+        }
+
+        if (!ticketExist) {
+            db.insertTicket(this);
+            dataStruct.setCounterIntial();
+            this.ticketID = dataStruct.getCounter() + 1;
+            dataStruct.setCounter(ticketID);
+        } else {
+            this.ticketID = ticketID;
+        }
     }
 
     //created setters and getters for employee

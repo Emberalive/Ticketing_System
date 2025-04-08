@@ -41,7 +41,7 @@ public class Simple_Queue {
             return;
         }
         Ticket ticket = queue[front];
-        front = (front - 1) % capacity;
+        front = (front + 1) % capacity;
         size--;
         logger.info("Dequeued Ticket {}", ticket.printTicket());
     }
@@ -62,17 +62,15 @@ public class Simple_Queue {
             return null;
         } else {
             logger.info("Searching Ticket {}", ticketID);
-            for (int i = 0; i <= size; i++) {
+            for (int i = 0; i < size; i++) {
                 int index = (front + i) % capacity;
                 Ticket ticket = queue[index];
-                System.out.println(ticket.printTicket());
                 if (ticket.getTicketID() == ticketID) {
                     logger.info("Found Ticket: {}", ticket.printTicket());
                     return ticket;
                 }
             }
         }
-
         logger.info("Ticket {} not found.", ticketID);
         return null;
     }
