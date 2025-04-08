@@ -28,30 +28,6 @@ public class Db_Access {
         return conn;
     }
 
-    public boolean getTickets (Ticket ticket) {
-        Connection conn = getConnection();
-        try {
-            PreparedStatement stmnt = conn.prepareStatement("select ID from ticket");
-            ResultSet rs = stmnt.executeQuery();
-            while (rs.next()) {
-                int ticketID = rs.getInt("id");
-                if (ticket.getTicketID() == ticketID) {
-                    return true;
-                }
-            }
-            rs.close();
-        }catch (SQLException e) {
-            logger.error("Database error: {}", String.valueOf(e));
-        } finally {
-            try {
-                conn.close();
-            }catch (SQLException ex) {
-                logger.error("Database error: {}", String.valueOf(ex));
-            }
-        }
-        return false;
-    }
-
     public void insertTicket(Ticket ticket) {
         Connection conn = getConnection();
         int ticketID = ticket.getTicketID();
