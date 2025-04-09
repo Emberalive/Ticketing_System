@@ -108,7 +108,7 @@ public Ticket[] getUserTickets(String username) {
 
     if (conn != null) {
         try {
-            System.out.println("Getting user tickets from the Database");
+            logger.info("Getting user tickets from the Database");
 
             PreparedStatement stmnt = conn.prepareStatement(
                     "SELECT * FROM ticket WHERE username = ?",
@@ -125,12 +125,10 @@ public Ticket[] getUserTickets(String username) {
             // reset to before first to start iteration
             rs.beforeFirst();
 
-            System.out.println("Rows: " + rowCount);
-
             Ticket[] tickets = new Ticket[rowCount];
             int index = 0;
 
-            System.out.println("Moving tickets to the userView");
+            logger.info("Moving tickets to the userView");
             while (rs.next()) {
                 System.out.println(rs.getString("issue"));
                 String issue = rs.getString("issue");
@@ -146,11 +144,17 @@ public Ticket[] getUserTickets(String username) {
 
                 tickets[index++] = ticket;
             }
-
+            rs.close();
             return tickets;
 
         } catch (SQLException e) {
             logger.error("Database error Getting User Tickets: {}", e.getMessage());
+        }  finally {
+            try {
+                conn.close();
+            } catch (SQLException close) {
+                logger.error("Database error on closing connection: {}", close.getMessage());
+            }
         }
     }
     return null;
