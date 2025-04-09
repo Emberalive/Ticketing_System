@@ -14,16 +14,15 @@ public class Ticket {
     private int ticketID;
     private String issue;
     private int priority;
-    private String status;
+    private String status = "InActive";
     private String userName;
     private final LocalDate creationDate;
     private String employee;
 
     // Constructor for creating new tickets (no ID or creationDate passed)
-    public Ticket(String issue, int priority, String status, String userName, String employee, Bucket_Queue dataStruct) {
+    public Ticket(String issue, int priority, String userName, String employee, Bucket_Queue dataStruct) {
         this.issue = issue;
         this.priority = priority;
-        this.status = status;
         this.userName = userName;
         this.employee = employee;
         this.creationDate = LocalDate.now();

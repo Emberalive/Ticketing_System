@@ -8,17 +8,17 @@ import org.example.login.LoginView;
 
 
 public class Main {
+    private final Bucket_Queue bucket_queue = new Bucket_Queue();
+
     public static void main(String[] args) {
-        Bucket_Queue dataStruct = new Bucket_Queue().fillFromDB();
 
 
 //        String issue = "password reset";
 //        int priority = 1;
-//        String status = "inactive";
 //        String username = "samm";
 //        String employee = "bob";
-//
-//        Ticket ticket = new Ticket(issue, priority, status, username, employee, dataStruct);
+
+//        Ticket ticket = new Ticket(issue, priority, username, employee, dataStruct);
 //
 //        Ticket ticket2 = new Ticket(issue, priority, status, username, employee, dataStruct);
 //
@@ -40,5 +40,9 @@ public class Main {
 
         // Start the GUI through the controller
         controller.startGUI();
+    }
+
+    public Bucket_Queue getBucket() {
+        return bucket_queue.fillFromDB();
     }
 }
