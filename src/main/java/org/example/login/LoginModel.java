@@ -3,6 +3,9 @@ package org.example.login;
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.example.Employee.EmployeeController;
+import org.example.Employee.EmployeeModel;
+import org.example.Employee.EmployeeView;
 import org.example.db_access.Db_Access;
 import org.example.user.UserController;
 import org.example.user.UserModel;
@@ -19,15 +22,17 @@ public class LoginModel {
     Db_Access db = new Db_Access();
 
     public void login(String username, String password, LoginView loginView) {
-        logger.info("Login attempt for User: {}", username); // <--- NEW
+        logger.info("Login attempt for User: {}", username);
         Connection conn = db.getConnection();
         String hashedPassword = "";
+        String role = "";
         try {
             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM users WHERE username = ? ");
             stmt.setString(1, username);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
                 hashedPassword = rs.getString(2);
+                role = rs.getString(3);
             } else {
                 logger.warn("No User found with username: {}", username);
                 JOptionPane.showMessageDialog(loginView, "No User found with username: "+ username);
@@ -43,10 +48,10 @@ public class LoginModel {
                 logger.error("\nDatabase err: {}", String.valueOf(closeEx));
             }
         }
-        verifyUser(username, hashedPassword, password, loginView);
+        verifyUser(username, hashedPassword, password, loginView, role);
     }
-    public void verifyUser(String username, String hashedPassword, String password, LoginView loginView) {
-        logger.info("Verifying User: {}", username); // <--- NEW
+    public void verifyUser(String username, String hashedPassword, String password, LoginView loginView, String role) {
+        logger.info("Verifying User: {}", username);
 
         if (hashedPassword == null || hashedPassword.trim().isEmpty()) {
             logger.warn("\nThere is no account with username: {}", username);
@@ -56,34 +61,29 @@ public class LoginModel {
         BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), hashedPassword);
         if (result != null && result.verified) {
             logger.info("Login successful");
-            //initialize the UserController to start the GUI
-            UserModel userModel = new UserModel();
-            UserView userView = new UserView(username);
-            UserController userController = new UserController(userModel, userView);
+            if (role.equals("employee")) {
+                logger.info("Opening Employee: {}'s Account", username);
+                EmployeeModel employeeModel = new EmployeeModel();
+                EmployeeView employeeView = new EmployeeView(username);
+                EmployeeController employeeController = new EmployeeController(employeeView ,employeeModel);
 
-            loginView.setVisible(false);
+                loginView.setVisible(false);
 
-            userController.startGUI();
+                employeeController.startGUI();
+            } else if (role.equals("user")) {
+                logger.info("Opening User: {}'s Account", username);
+                //initialize the UserController to start the GUI
+                UserModel userModel = new UserModel();
+                UserView userView = new UserView(username);
+                UserController userController = new UserController(userModel, userView);
+
+                loginView.setVisible(false);
+
+                userController.startGUI();
+            }
         } else {
+            JOptionPane.showMessageDialog(loginView, "Invalid Password");
             logger.info("Login failed: incorrect password for User: {}", username);
         }
     }
 }
-
-
-
-// Implement search filter logic
-//        searchField.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                String searchText = searchField.getText().toLowerCase();
-//                String[] items = {"Dashboard", "Profile", "Settings", "Logout", "Help", "Reports", "Analytics"};
-//                DefaultListModel<String> filteredListModel = new DefaultListModel<>();
-//                for (String item : items) {
-//                    if (item.toLowerCase().contains(searchText)) {
-//                        filteredListModel.addElement(item);
-//                    }
-//                }
-//                listView.setModel(filteredListModel);
-//            }
-//        });

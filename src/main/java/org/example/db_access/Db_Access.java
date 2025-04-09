@@ -2,8 +2,7 @@ package org.example.db_access;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.Ticket;
-import org.example.dataStructures.bucket.Bucket_Queue;
-import org.example.dataStructures.bucket.Simple_Queue;
+
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -130,7 +129,6 @@ public Ticket[] getUserTickets(String username) {
 
             logger.info("Moving tickets to the userView");
             while (rs.next()) {
-                System.out.println(rs.getString("issue"));
                 String issue = rs.getString("issue");
                 int ticketID = rs.getInt("id");
                 int priority = rs.getInt("priority");
@@ -159,6 +157,61 @@ public Ticket[] getUserTickets(String username) {
     }
     return null;
 }
+
+    public Ticket[] getAllTickets() {
+        Connection conn = getConnection();
+
+        if (conn != null) {
+            try {
+                logger.info("Getting user tickets from the Database");
+
+                PreparedStatement stmnt = conn.prepareStatement(
+                        "SELECT * FROM ticket",
+                        //This allows me to get the length of the result set as well as take the result set and put it into a list for the userView
+                        ResultSet.TYPE_SCROLL_INSENSITIVE,
+                        ResultSet.CONCUR_READ_ONLY
+                );
+                ResultSet rs = stmnt.executeQuery();
+
+                // Move to last row to get count
+                rs.last();
+                int rowCount = rs.getRow();
+                // reset to before first to start iteration
+                rs.beforeFirst();
+
+                Ticket[] tickets = new Ticket[rowCount];
+                int index = 0;
+
+                logger.info("Moving tickets to the userView");
+                while (rs.next()) {
+                    String issue = rs.getString("issue");
+                    int ticketID = rs.getInt("id");
+                    int priority = rs.getInt("priority");
+                    String status = rs.getString("status");
+                    String user = rs.getString("username");
+                    LocalDate date = rs.getDate("date").toLocalDate();
+                    String employee = rs.getString("employee");
+
+                    Ticket ticket = new Ticket(issue, priority, status, user, employee, ticketID, date);
+                    logger.info("Getting ticket: {} for Employee", ticket.printTicket());
+
+                    tickets[index++] = ticket;
+                }
+                rs.close();
+                return tickets;
+
+            } catch (SQLException e) {
+                logger.error("Database error Getting User Tickets: {}", e.getMessage());
+            }  finally {
+                try {
+                    conn.close();
+                } catch (SQLException close) {
+                    logger.error("Database error on closing connection: {}", close.getMessage());
+                }
+            }
+        }
+        return null;
+    }
 
 
 }

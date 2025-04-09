@@ -1,33 +1,32 @@
-package org.example.user;
+package org.example.Employee;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.Main;
 import org.example.Ticket;
-import org.example.dataStructures.bucket.Bucket_Queue;
-import org.example.dataStructures.bucket.Simple_Queue;
 import org.example.db_access.Db_Access;
 
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 
-public class UserView extends JFrame {
-    private static final Logger logger = LogManager.getLogger(UserView.class);
+public class EmployeeView extends JFrame {
+    private static final Logger logger = LogManager.getLogger(org.example.user.UserView.class);
     Db_Access db = new Db_Access();
     private JTextField searchField;
     private JList<String> listView;
     private JLabel userLabel;
 
-    public UserView(String username) {
+    public EmployeeView(String username) {
         // Initialize JFrame
-        setTitle("User Dashboard");
+        setTitle("Employee Dashboard");
         setSize(720, 350);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
+
+
         // Left side list
-        listView = new JList<>(updateUserTickets(username));
+        listView = new JList<>(updateTickets());
         listView.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         JScrollPane listScrollPane = new JScrollPane(listView);
         listScrollPane.setPreferredSize(new Dimension(340, 0));  // Width for the list
@@ -51,63 +50,35 @@ public class UserView extends JFrame {
         // Right side panel with a search bar and label
         JPanel rightPanel = new JPanel();
         rightPanel.setLayout(new BorderLayout());
+
         JPanel topPanel = new JPanel();
         topPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
 
-        JPanel bottomPanel = new JPanel();
-        bottomPanel.setLayout(null);
-        bottomPanel.setPreferredSize(new Dimension(370, 300));
-
-        JLabel issueLabel = new JLabel("Issue");
-        JTextField issueField = new JTextField();
-        JLabel priorityLabel = new JLabel("Priority");
-        JTextField priorityField = new JTextField();
-        JButton addTicket = new JButton("Create Ticket");
-        addTicket.addActionListener(e -> {
-            Main main = new Main();
-            String issue = issueField.getText();
-            int priority = Integer.parseInt(priorityField.getText());
-            Ticket ticket = new Ticket(issue, priority, username, "Bob", main.getBucket());
-            main.getBucket().enqueue(ticket);
-
-            //updates the list of tickets with the newly inserted one
-            listView.setListData(updateUserTickets(username));
-
-            logger.info("Adding Ticket");
-        });
-
-        addTicket.setBounds(90, 250, 200, 30);
-        issueField.setBounds(150, 150, 200, 30);
-        priorityField.setBounds(150, 200, 200, 30);
-
-        priorityLabel.setBounds(75, 200, 125, 30);
-        issueLabel.setBounds(75, 150, 125, 30);
-
-
-
-
-        bottomPanel.add(issueLabel);
-        bottomPanel.add(priorityLabel);
-        bottomPanel.add(issueField);
-        bottomPanel.add(priorityField);
-        bottomPanel.add(addTicket);
         // Username label
         userLabel = new JLabel("Welcome, " + username + "!");
         userLabel.setFont(new Font("Arial", Font.BOLD, 14));
-
         // Add components to the top panel
-//        topPanel.add(searchField);
         topPanel.add(userLabel);
         rightPanel.add(topPanel, BorderLayout.NORTH);
-        rightPanel.add(bottomPanel, BorderLayout.SOUTH);
+
+        JPanel bottomPanel = new JPanel();
+        bottomPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
+
+        JButton updateTickets = new JButton("Update Tickets");
+        updateTickets.setFont(new Font("Arial", Font.BOLD, 14));
+        updateTickets.addActionListener(e -> {
+            listView.setListData(updateTickets());
+        });
+        bottomPanel.add(updateTickets);
 
         // Add the right panel to the center
+        rightPanel.add(bottomPanel, BorderLayout.SOUTH);
         add(rightPanel, BorderLayout.CENTER);
     }
 
-    public String[] updateUserTickets(String username) {
+    public String[] updateTickets() {
         //list that holds the users Tickets
-        Ticket[] userTicketsList = getUserTickets(username);
+        Ticket[] userTicketsList = getTickets();
         //list that holds the users ticket data
         String[] userTickets = new String[userTicketsList.length];
 
@@ -117,18 +88,17 @@ public class UserView extends JFrame {
             //getting ticket data
             int userID = ticket.getTicketID();
             String status = ticket.getStatus();
-            String employee = ticket.getEmployee();
+            String user = ticket.getUserID();
             //concatenating ticket data
-            String ticketForUser = "(ID: " + userID + ") (Status: " + status + ") (Employee: " + employee + ")";
+            String ticketForUser = "(ID: " + userID + ") (Status: " + status + ") (User: " + user + ")";
             //adding ticket data to the list that is shown in the GUI
             userTickets[i] = ticketForUser;
-//            updateUserList(username);
         }
         return userTickets;
     }
 
-    public Ticket[] getUserTickets (String username) {
-        return db.getUserTickets(username);
+    public Ticket[] getTickets () {
+        return db.getAllTickets();
     }
 
     public void setVisibleUI(boolean visible) {
