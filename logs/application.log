@@ -1111,3 +1111,32 @@
 2025-04-09 15:51:42,411 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '28') (Date: '2025-04-09') (Issue: 'Blah Blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for Employee
 2025-04-09 15:51:42,411 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '29') (Date: '2025-04-09') (Issue: 'Blah Blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for Employee
 2025-04-09 15:51:42,411 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '30') (Date: '2025-04-09') (Issue: 'Blah Blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for Employee
+2025-04-09 15:54:23,106 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 15:54:23,108 [AWT-EventQueue-0] INFO  org.example.account.Account - 
+Creating an account with username: bobby and role: User
+2025-04-09 15:54:23,128 [AWT-EventQueue-0] INFO  org.example.account.Account - 
+The new User has been inserted into the database
+2025-04-09 15:54:23,135 [AWT-EventQueue-0] INFO  org.example.account.Account - 
+Connection closed
+2025-04-09 15:54:30,070 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: Bobby
+2025-04-09 15:54:30,182 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 15:54:30,196 [AWT-EventQueue-0] WARN  org.example.login.LoginModel - No User found with username: Bobby
+2025-04-09 15:54:35,225 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: bobby
+2025-04-09 15:54:35,329 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 15:54:35,347 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: bobby
+2025-04-09 15:54:35,571 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-09 15:54:43,900 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: bobby
+2025-04-09 15:54:43,989 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 15:54:44,004 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: bobby
+2025-04-09 15:54:44,227 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-09 15:55:03,001 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 15:55:03,001 [AWT-EventQueue-0] INFO  org.example.account.Account - 
+Creating an account with username: bobb and role: User
+2025-04-09 15:55:03,009 [AWT-EventQueue-0] INFO  org.example.account.Account - 
+The new User has been inserted into the database
+2025-04-09 15:55:03,014 [AWT-EventQueue-0] INFO  org.example.account.Account - 
+Connection closed
+2025-04-09 15:55:10,437 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: bobb
+2025-04-09 15:55:10,524 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 15:55:10,540 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: bobb
+2025-04-09 15:55:10,763 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
