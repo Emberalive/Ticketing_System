@@ -7,6 +7,9 @@ import org.example.Ticket;
 import org.example.dataStructures.bucket.Bucket_Queue;
 import org.example.dataStructures.bucket.Simple_Queue;
 import org.example.db_access.Db_Access;
+import org.example.login.LoginController;
+import org.example.login.LoginModel;
+import org.example.login.LoginView;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -54,6 +57,18 @@ public class UserView extends JFrame {
         JPanel topPanel = new JPanel();
         topPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
 
+        JButton logout = new JButton("Log out");
+        logout.addActionListener(e -> {
+            this.dispose();
+
+           LoginModel model = new LoginModel();
+           LoginView view = new LoginView();
+           LoginController controller = new LoginController(model, view);
+
+           controller.startGUI();
+        });
+
+
         JPanel bottomPanel = new JPanel();
         bottomPanel.setLayout(null);
         bottomPanel.setPreferredSize(new Dimension(370, 300));
@@ -76,6 +91,10 @@ public class UserView extends JFrame {
             logger.info("Adding Ticket");
         });
 
+        JLabel searchLabel = new JLabel("Search");
+        searchField = new JTextField();
+        searchField.setBounds(65, 30, 270, 30);
+        searchLabel.setBounds(20, 30, 100, 30);
         addTicket.setBounds(90, 250, 200, 30);
         issueField.setBounds(150, 150, 200, 30);
         priorityField.setBounds(150, 200, 200, 30);
@@ -84,8 +103,8 @@ public class UserView extends JFrame {
         issueLabel.setBounds(75, 150, 125, 30);
 
 
-
-
+        bottomPanel.add(searchLabel);
+        bottomPanel.add(searchField);
         bottomPanel.add(issueLabel);
         bottomPanel.add(priorityLabel);
         bottomPanel.add(issueField);
@@ -96,6 +115,7 @@ public class UserView extends JFrame {
         userLabel.setFont(new Font("Arial", Font.BOLD, 14));
 
         // Add components to the top panel
+        topPanel.add(logout);
 //        topPanel.add(searchField);
         topPanel.add(userLabel);
         rightPanel.add(topPanel, BorderLayout.NORTH);
