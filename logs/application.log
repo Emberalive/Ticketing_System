@@ -1140,3 +1140,26 @@ Connection closed
 2025-04-09 15:55:10,524 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
 2025-04-09 15:55:10,540 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: bobb
 2025-04-09 15:55:10,763 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-09 15:59:23,269 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: bobb
+2025-04-09 15:59:23,576 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 15:59:23,598 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: bobb
+2025-04-09 15:59:23,850 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-09 15:59:23,850 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening User: bobb's Account
+2025-04-09 15:59:23,960 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 15:59:23,960 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-09 15:59:23,968 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-09 15:59:30,717 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 15:59:30,718 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-09 15:59:30,819 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 15:59:30,925 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 15:59:30,925 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Inserting ticket...31
+2025-04-09 15:59:30,943 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Inserted ticket ID: Ticket{ (ID: '31') (Date: '2025-04-09') (Issue: 'blah') (Username: 'bobb') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-09 15:59:30,954 [AWT-EventQueue-0] INFO  org.example.Ticket - Inserted ticket with ID: 31
+2025-04-09 15:59:31,046 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 15:59:31,046 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-09 15:59:31,057 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '31') (Date: '2025-04-09') (Issue: 'blah') (Username: 'bobb') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-09 15:59:31,143 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 15:59:31,144 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-09 15:59:31,152 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-09 15:59:31,154 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '31') (Date: '2025-04-09') (Issue: 'blah') (Username: 'bobb') (Status: 'InActive') (Handled By: 'Bob')} for user: bobb
+2025-04-09 15:59:31,159 [AWT-EventQueue-0] INFO  org.example.user.UserView - Adding Ticket

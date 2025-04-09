@@ -69,24 +69,23 @@ public class Bucket_Queue {
         }
     }
 
-    public Ticket searchTicket(int ticketID) {
-        Ticket foundTicket = null;
-        logger.info("Searching Ticket {}", ticketID);
+    public Ticket searchTicket(Ticket ticket) {
+        int ticketID = ticket.getTicketID();
+        int priority = ticket.getPriority();
 
-        foundTicket = priority_1.searchTicket(ticketID);
-        if (foundTicket != null) {return foundTicket;}
-
-        foundTicket = priority_2.searchTicket(ticketID);
-        if (foundTicket != null) {return foundTicket;}
-
-        foundTicket = priority_3.searchTicket(ticketID);
-        if (foundTicket != null) {return foundTicket;}
-
-        foundTicket = priority_4.searchTicket(ticketID);
-        if (foundTicket != null) {return foundTicket;}
-
-        log_ifEmpty();
-        return null;
+        switch (priority) {
+            case 1:
+                return priority_1.searchTicket(ticketID);
+            case 2:
+                return priority_2.searchTicket(ticketID);
+            case 3:
+                return priority_3.searchTicket(ticketID);
+            case 4:
+                return priority_4.searchTicket(ticketID);
+            default:
+                invalid_priority(priority);
+                return null;
+        }
     }
 
     public void setCounterIntial () {
