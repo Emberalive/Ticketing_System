@@ -37,7 +37,7 @@ public class Ticket {
     }
 
     // Constructor for existing tickets loaded from DB
-    public Ticket(String issue, int priority, String status, String userName, String employee, int ticketID, LocalDate creationDate, Bucket_Queue dataStruct) {
+    public Ticket(String issue, int priority, String status, String userName, String employee, int ticketID, LocalDate creationDate) {
         this.issue = issue;
         this.priority = priority;
         this.status = status;

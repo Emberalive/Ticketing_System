@@ -77,6 +77,10 @@ public class Simple_Queue {
         return null;
     }
 
+    public int getSize() {
+        return size;
+    }
+
     //checks if the queue is empty
     public boolean isEmpty() {
         return size == 0;

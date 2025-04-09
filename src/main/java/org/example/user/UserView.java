@@ -1,10 +1,15 @@
 package org.example.user;
 
+import org.example.Ticket;
+import org.example.dataStructures.bucket.Simple_Queue;
+import org.example.db_access.Db_Access;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 
 public class UserView extends JFrame {
+    Db_Access db = new Db_Access();
     private JTextField searchField;
     private JList<String> listView;
     private JLabel userLabel;
@@ -17,10 +22,27 @@ public class UserView extends JFrame {
         setLayout(new BorderLayout());
 
         // Sample data (List of items for the side menu)
-        String[] items = {"ticket 1", "ticket 2", "ticket 3", "ticket 4", "ticket 5", "ticket 6", "ticket 7"};
+
+        Ticket[] userTicketsQueue = db.getUserTickets(username);
+        String[] userTickets = new String[userTicketsQueue.length];
+
+
+        for (int i = 0; i < userTicketsQueue.length; i++) {
+//            Ticket ticket = userTicketsQueue.peek();
+//            userTicketsQueue.deQueue();
+//            int ticketID = ticket.getTicketID();
+//            userTickets[i] = String.valueOf(ticketID);
+//            System.out.println(userTickets[i]);
+            Ticket ticket = userTicketsQueue[i];
+            int userID = ticket.getTicketID();
+            String status = ticket.getStatus();
+            String employee = ticket.getEmployee();
+            String ticketForUser = "ID: " + userID + " Status: " + status + " Employee: " + employee;
+            userTickets[i] = ticketForUser;
+        }
 
         // Left side list
-        listView = new JList<>(items);
+        listView = new JList<>(userTickets);
         listView.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         JScrollPane listScrollPane = new JScrollPane(listView);
         listScrollPane.setPreferredSize(new Dimension(150, 0));  // Width for the list

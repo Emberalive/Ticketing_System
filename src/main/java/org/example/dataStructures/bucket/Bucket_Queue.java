@@ -122,6 +122,7 @@ public class Bucket_Queue {
                 PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM ticket WHERE status IN ('active', 'inactive') ORDER BY id ASC;");
 
                 ResultSet rs = stmnt.executeQuery();
+
                 while (rs.next()) {
                     int id = rs.getInt("id");
                     String issue = rs.getString("issue");
@@ -131,7 +132,7 @@ public class Bucket_Queue {
                     LocalDate date = rs.getDate("date").toLocalDate();
                     String employee =rs.getString("employee");
 
-                    Ticket ticket = new Ticket(issue, priority, status, username, employee, id, date, dataStruct);
+                    Ticket ticket = new Ticket(issue, priority, status, username, employee, id, date);
                     dataStruct.enqueue(ticket);
                 }
             } catch (SQLException exc) {

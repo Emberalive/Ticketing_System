@@ -31,14 +31,14 @@ public class Main {
 //        dataStruct.enqueue(ticket3);
 //        dataStruct.enqueue(ticket4);
 
-        dataStruct.dequeue();
+//        dataStruct.dequeue();
 
-//        // Initialize the model, view, and controller
-//        LoginModel model = new LoginModel();
-//        LoginView view = new LoginView();
-//        LoginController controller = new LoginController(model, view);
-//
-//        // Start the GUI through the controller
-//        controller.startGUI();
+        // Initialize the model, view, and controller
+        LoginModel model = new LoginModel();
+        LoginView view = new LoginView();
+        LoginController controller = new LoginController(model, view);
+
+        // Start the GUI through the controller
+        controller.startGUI();
     }
 }
