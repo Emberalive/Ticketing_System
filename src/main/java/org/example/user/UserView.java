@@ -17,27 +17,25 @@ public class UserView extends JFrame {
     public UserView(String username) {
         // Initialize JFrame
         setTitle("User Dashboard");
-        setSize(500, 300);
+        setSize(720, 350);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        // Sample data (List of items for the side menu)
+        //list that holds the users Tickets
+        Ticket[] userTicketsList = db.getUserTickets(username);
+        //list that holds the users ticket data
+        String[] userTickets = new String[userTicketsList.length];
 
-        Ticket[] userTicketsQueue = db.getUserTickets(username);
-        String[] userTickets = new String[userTicketsQueue.length];
-
-
-        for (int i = 0; i < userTicketsQueue.length; i++) {
-//            Ticket ticket = userTicketsQueue.peek();
-//            userTicketsQueue.deQueue();
-//            int ticketID = ticket.getTicketID();
-//            userTickets[i] = String.valueOf(ticketID);
-//            System.out.println(userTickets[i]);
-            Ticket ticket = userTicketsQueue[i];
+        for (int i = 0; i < userTicketsList.length; i++) {
+            //getting the ticket
+            Ticket ticket = userTicketsList[i];
+            //getting ticket data
             int userID = ticket.getTicketID();
             String status = ticket.getStatus();
             String employee = ticket.getEmployee();
-            String ticketForUser = "ID: " + userID + " Status: " + status + " Employee: " + employee;
+            //concatenating ticket data
+            String ticketForUser = "(ID: " + userID + ") (Status: " + status + ") (Employee: " + employee + ")";
+            //adding ticket data to the list that is shown in the GUI
             userTickets[i] = ticketForUser;
         }
 
@@ -45,7 +43,7 @@ public class UserView extends JFrame {
         listView = new JList<>(userTickets);
         listView.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         JScrollPane listScrollPane = new JScrollPane(listView);
-        listScrollPane.setPreferredSize(new Dimension(150, 0));  // Width for the list
+        listScrollPane.setPreferredSize(new Dimension(340, 0));  // Width for the list
         add(listScrollPane, BorderLayout.WEST);
         // Set custom ListCellRenderer with a border
         listView.setCellRenderer(new DefaultListCellRenderer() {

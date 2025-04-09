@@ -1,48 +1,269 @@
-2025-04-09 13:56:24,673 [main] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-09 13:56:24,675 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
-2025-04-09 13:56:28,800 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
-2025-04-09 13:56:28,882 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-09 13:56:28,900 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
-2025-04-09 13:56:29,126 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
-2025-04-09 13:56:29,208 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-09 13:58:15,149 [main] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-09 13:58:15,150 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
-2025-04-09 13:58:21,860 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
-2025-04-09 13:58:21,949 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-09 13:58:21,975 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
-2025-04-09 13:58:22,205 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
-2025-04-09 13:58:22,290 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-09 13:58:48,851 [main] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-09 13:58:48,852 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
-2025-04-09 13:58:53,634 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
-2025-04-09 13:58:53,722 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-09 13:58:53,739 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
-2025-04-09 13:58:53,968 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
-2025-04-09 13:58:54,069 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-09 14:00:30,788 [main] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-09 14:00:30,790 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
-2025-04-09 14:00:38,330 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
-2025-04-09 14:00:38,426 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-09 14:00:38,448 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
-2025-04-09 14:00:38,678 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
-2025-04-09 14:00:38,771 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-09 14:00:38,785 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,785 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '14') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,785 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,785 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,785 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,785 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '18') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,785 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,785 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,785 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '20') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,786 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,786 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,786 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,786 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,786 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,787 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,787 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,787 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,787 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '10') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,788 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
-2025-04-09 14:00:38,788 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:50,719 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:10:50,720 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-09 14:10:55,720 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-09 14:10:55,817 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:10:55,837 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-09 14:10:56,068 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-09 14:10:56,147 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:10:56,147 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-09 14:10:56,159 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-09 14:10:56,160 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,160 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '14') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,160 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,160 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,160 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,160 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '18') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,161 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,161 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,161 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '20') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,161 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,161 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,161 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,161 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,161 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,161 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,161 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,162 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,162 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '10') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,162 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:10:56,162 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:26,193 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:11:26,194 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-09 14:11:32,381 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-09 14:11:32,489 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:11:32,506 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-09 14:11:32,737 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-09 14:11:32,823 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:11:32,823 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-09 14:11:32,832 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-09 14:11:32,833 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,833 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '14') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,833 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,833 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,833 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,833 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '18') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,834 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,834 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,834 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '20') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,834 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,834 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,834 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,834 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,835 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,835 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,835 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,835 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,835 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '10') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,836 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:11:32,836 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:36,137 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:12:36,138 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-09 14:12:40,703 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-09 14:12:40,788 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:12:40,816 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-09 14:12:41,046 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-09 14:12:41,132 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:12:41,132 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-09 14:12:41,141 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-09 14:12:41,141 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,142 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '14') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,142 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,142 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,142 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,142 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '18') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,142 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,142 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,142 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '20') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,142 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,142 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,143 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,143 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,143 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,143 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,143 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,143 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,143 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '10') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,143 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:12:41,143 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:27,538 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:13:27,540 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-09 14:13:33,231 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-09 14:13:33,328 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:13:33,343 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-09 14:13:33,569 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login failed: incorrect password for User: samm
+2025-04-09 14:13:36,771 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-09 14:13:36,861 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:13:36,875 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-09 14:13:37,103 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login failed: incorrect password for User: samm
+2025-04-09 14:13:45,799 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-09 14:13:45,880 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:13:45,892 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-09 14:13:46,120 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-09 14:13:46,192 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:13:46,192 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-09 14:13:46,203 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-09 14:13:46,204 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,204 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '14') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,204 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,204 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,204 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,205 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '18') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,205 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,205 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,205 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '20') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,205 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,205 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,205 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,206 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,206 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,206 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,206 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,206 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,206 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '10') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,206 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:13:46,206 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:08,036 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:14:08,037 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-09 14:14:12,060 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-09 14:14:12,157 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:14:12,180 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-09 14:14:12,408 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-09 14:14:12,490 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:14:12,490 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-09 14:14:12,497 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-09 14:14:12,498 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,498 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '14') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,498 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,498 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,498 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,498 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '18') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,498 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,499 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,499 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '20') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,499 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,499 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,499 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,499 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,499 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,499 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,499 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,500 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,500 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '10') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,500 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:12,500 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:41,483 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:14:41,484 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-09 14:14:45,575 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-09 14:14:45,661 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:14:45,686 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-09 14:14:45,913 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-09 14:14:46,007 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:14:46,007 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-09 14:14:46,022 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-09 14:14:46,023 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,023 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '14') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,023 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,023 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,024 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,024 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '18') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,024 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,024 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,024 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '20') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,024 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,024 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,024 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,024 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,024 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,025 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,025 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,025 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,025 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '10') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,025 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:46,025 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:14:57,974 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:14:57,975 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-09 14:15:02,414 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-09 14:15:02,511 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:15:02,533 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-09 14:15:02,763 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-09 14:15:02,863 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:15:02,863 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-09 14:15:02,872 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-09 14:15:02,873 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,873 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '14') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,873 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,873 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,873 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,873 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '18') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,874 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,874 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,874 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '20') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,874 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,874 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,874 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,874 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,875 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,875 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,875 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,875 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,875 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '10') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,876 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:15:02,876 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:02,846 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:16:02,847 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-09 14:16:10,742 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-09 14:16:10,828 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:16:10,855 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-09 14:16:11,085 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-09 14:16:11,201 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:16:11,201 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-09 14:16:11,229 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-09 14:16:11,230 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,230 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '14') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,231 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,231 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,231 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,231 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '18') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,231 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,231 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,231 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '20') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,231 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,232 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,232 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,232 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,232 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,232 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,232 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,232 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,233 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '10') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,233 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:11,233 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:29,462 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:16:29,463 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-09 14:16:34,544 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-09 14:16:34,654 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:16:34,684 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-09 14:16:34,913 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-09 14:16:35,001 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-09 14:16:35,002 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-09 14:16:35,011 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-09 14:16:35,012 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,012 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '14') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,012 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,012 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,012 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,013 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '18') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,013 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,013 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,013 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '20') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,013 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,013 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,013 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,014 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,014 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,014 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,014 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,014 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,014 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '10') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,014 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
+2025-04-09 14:16:35,015 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-08') (Issue: 'password reset') (Username: 'samm') (Status: 'Completed') (Handled By: 'bob')} for user: samm
