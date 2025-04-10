@@ -12,13 +12,11 @@ import java.sql.SQLException;
 
 public class Account {
     private static final Logger logger = LogManager.getLogger(Account.class);
-    Db_Access db = new Db_Access();
-    Main main = new Main();
 
     // registering the User into the database
     public boolean register(String username, String password, String role) {
         boolean success = false;
-        Connection conn = db.getConnection();
+        Connection conn = Db_Access.getConnection();
         if (conn != null) {
             try {
                 logger.info("\nCreating an account with username: {} and role: {}", username, role);
@@ -47,7 +45,7 @@ public class Account {
                     conn.close();
                     logger.info("\nConnection closed");
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                    logger.warn("Database error when closing connection: {}", String.valueOf(e));   ;
                 }
             }
         } else {
@@ -58,7 +56,7 @@ public class Account {
 
     //allows a User to delete their account
     public void deleteAccount(String username) {
-        Connection conn = db.getConnection();
+        Connection conn = Db_Access.getConnection();
         try {
             logger.info("\nDeleting an account with username: {}", username);
             PreparedStatement stmt = conn.prepareStatement("DELETE FROM users WHERE username = ?");

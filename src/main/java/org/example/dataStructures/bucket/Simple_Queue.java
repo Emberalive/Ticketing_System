@@ -5,6 +5,8 @@ import org.apache.logging.log4j.Logger;
 import org.example.Ticket;
 import org.example.db_access.Db_Access;
 
+import java.nio.file.LinkOption;
+
 public class Simple_Queue {
     Db_Access db = new Db_Access();
     private static final Logger logger = LogManager.getLogger(Simple_Queue.class);
@@ -25,13 +27,13 @@ public class Simple_Queue {
     //Adding items to the queue
     public void enQueue(Ticket ticket) {
         if (isFull()) {
-            logger.warn("Queue is full! Cannot enqueue Ticket {}", ticket.printTicket());
+            logger.warn("Queue is full! Cannot enqueue Ticket {}", ticket.loggTicket());
             return;
         }
         queue[rear] = ticket;
         rear = (rear + 1) % capacity;
         size++;
-        logger.info("Enqueued ticket: {}", ticket.printTicket());
+        logger.info("Enqueued ticket: {}", ticket.loggTicket());
     }
 
     //removing items from the queue
@@ -47,7 +49,7 @@ public class Simple_Queue {
 
         front = (front + 1) % capacity;
         size--;
-        logger.info("Dequeued Ticket {}", ticket.printTicket());
+        logger.info("Dequeued Ticket {}", ticket.loggTicket());
     }
 
     //view the  front item without removing it
@@ -56,11 +58,12 @@ public class Simple_Queue {
             logger.warn("Queue is empty! Cannot peek.");
             return null;
         }
-        logger.info("Peeking Ticket {}", queue[front].printTicket());
+        logger.info("Peeking Ticket {}", queue[front].loggTicket());
         return queue[front];
     }
 
     public Ticket searchTicket(int ticketID) {
+        logger.info("Searching Ticket {}", ticketID);
         if (isEmpty()){
             logger.warn("Queue is empty! Cannot search ticket: {}", ticketID);
             return null;
@@ -68,12 +71,12 @@ public class Simple_Queue {
             for (int i = 0; i < size; i++) {
                 int index = (front + i) % capacity;
                 Ticket ticket = queue[index];
-                if (ticket.getTicketID() == ticketID) {
-                    logger.info("Found Ticket: {}", ticket.printTicket());
+                if (ticket != null && ticket.getTicketID() == ticketID) {
                     return ticket;
                 }
             }
         }
+        logger.warn("Ticket not found: {}", ticketID);
         return null;
     }
 

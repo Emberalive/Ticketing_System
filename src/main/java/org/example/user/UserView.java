@@ -4,8 +4,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.Main;
 import org.example.Ticket;
-import org.example.dataStructures.bucket.Bucket_Queue;
-import org.example.dataStructures.bucket.Simple_Queue;
 import org.example.db_access.Db_Access;
 import org.example.login.LoginController;
 import org.example.login.LoginModel;
@@ -16,6 +14,7 @@ import javax.swing.border.Border;
 import java.awt.*;
 
 public class UserView extends JFrame {
+    private static int priority;
     private static final Logger logger = LogManager.getLogger(UserView.class);
     Db_Access db = new Db_Access();
     private JTextField searchField;
@@ -25,7 +24,7 @@ public class UserView extends JFrame {
     public UserView(String username) {
         // Initialize JFrame
         setTitle("User Dashboard");
-        setSize(720, 350);
+        setSize(1000, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
@@ -51,6 +50,47 @@ public class UserView extends JFrame {
             }
         });
 
+        JButton priority1 = new JButton("Security Issue");
+        JButton priority2 = new JButton("Network Issue");
+        JButton priority3 = new JButton("app installation");
+        JButton priority4 = new JButton("Device configuration");
+
+        priority1.addActionListener(e -> {
+            priority = 1;
+            priority1.setEnabled(false);
+            priority2.setEnabled(false);
+            priority3.setEnabled(false);
+            priority4.setEnabled(false);
+        });
+        priority2.addActionListener(e -> {
+            priority = 2;
+            priority1.setEnabled(false);
+            priority2.setEnabled(false);
+            priority3.setEnabled(false);
+            priority4.setEnabled(false);
+        });
+        priority3.addActionListener(e -> {
+            priority = 3;
+            priority1.setEnabled(false);
+            priority2.setEnabled(false);
+            priority3.setEnabled(false);
+            priority4.setEnabled(false);
+        });
+        priority4.addActionListener(e -> {
+            priority = 4;
+            priority1.setEnabled(false);
+            priority2.setEnabled(false);
+            priority3.setEnabled(false);
+            priority4.setEnabled(false);
+        });
+
+        //        priorityField.setBounds(150, 250, 200, 30);
+
+        priority1.setBounds(10, 150, 150, 30);
+        priority2.setBounds(170, 150, 150, 30);
+        priority3.setBounds(10, 200, 150, 30);
+        priority4.setBounds(170, 200, 200, 30);
+
         // Right side panel with a search bar and label
         JPanel rightPanel = new JPanel();
         rightPanel.setLayout(new BorderLayout());
@@ -59,6 +99,7 @@ public class UserView extends JFrame {
 
         JButton logout = new JButton("Log out");
         logout.addActionListener(e -> {
+            logger.info("Logging out User: " + username);
             this.dispose();
 
            LoginModel model = new LoginModel();
@@ -71,44 +112,72 @@ public class UserView extends JFrame {
 
         JPanel bottomPanel = new JPanel();
         bottomPanel.setLayout(null);
-        bottomPanel.setPreferredSize(new Dimension(370, 300));
+        bottomPanel.setPreferredSize(new Dimension(370, 350));
 
         JLabel issueLabel = new JLabel("Issue");
         JTextField issueField = new JTextField();
-        JLabel priorityLabel = new JLabel("Priority");
-        JTextField priorityField = new JTextField();
+        JLabel priorityLabel = new JLabel("Select Priority:");
+//        JTextField priorityField = new JTextField();
+        JTextArea ticketsArea = new JTextArea();
+        ticketsArea.setEditable(false);
+        JButton searchButton = new JButton("Search:");
+        searchButton.addActionListener(e -> {
+            logger.info("Searching for Ticket: {}", searchField.getText());
+
+           int ticketID = Integer.parseInt(searchField.getText().trim());
+
+           Ticket foundTicket =  Main.getBucket().searchTicket(ticketID);
+
+           if (foundTicket != null) {
+               logger.info("Found Ticket: {}", foundTicket.loggTicket());
+               ticketsArea.setText(foundTicket.printTicket());
+               searchField.setText("");
+           } else {
+               ticketsArea.setText("Ticket was not found");
+               searchField.setText("");
+           }
+        });
+
         JButton addTicket = new JButton("Create Ticket");
         addTicket.addActionListener(e -> {
-            Main main = new Main();
             String issue = issueField.getText();
-            int priority = Integer.parseInt(priorityField.getText());
-            Ticket ticket = new Ticket(issue, priority, username, "Bob", main.getBucket());
-            main.getBucket().enqueue(ticket);
+            Ticket ticket = new Ticket(issue, priority, username, "Bob", Main.getBucket());
+            Main.getBucket().enqueue(ticket);
 
             //updates the list of tickets with the newly inserted one
             listView.setListData(updateUserTickets(username));
 
+            issueField.setText("");
+
             logger.info("Adding Ticket");
+            priority1.setEnabled(true);
+            priority2.setEnabled(true);
+            priority3.setEnabled(true);
+            priority4.setEnabled(true);
         });
 
-        JLabel searchLabel = new JLabel("Search");
         searchField = new JTextField();
-        searchField.setBounds(65, 30, 270, 30);
-        searchLabel.setBounds(20, 30, 100, 30);
-        addTicket.setBounds(90, 250, 200, 30);
-        issueField.setBounds(150, 150, 200, 30);
-        priorityField.setBounds(150, 200, 200, 30);
+        searchField.setBounds(365, 30, 265, 30);
+        searchButton.setBounds(270, 30, 90, 30);
+        ticketsArea.setBounds(335, 70, 300, 120);
+        addTicket.setBounds(90, 300, 200, 30);
+        issueField.setBounds(110, 90, 200, 30);
+//        priorityField.setBounds(150, 250, 200, 30);
 
-        priorityLabel.setBounds(75, 200, 125, 30);
-        issueLabel.setBounds(75, 150, 125, 30);
+        priorityLabel.setBounds(35, 120, 125, 30);
+        issueLabel.setBounds(35, 90, 125, 30);
 
-
-        bottomPanel.add(searchLabel);
+        bottomPanel.add(priority1);
+        bottomPanel.add(priority2);
+        bottomPanel.add(priority3);
+        bottomPanel.add(priority4);
+        bottomPanel.add(ticketsArea);
+        bottomPanel.add(searchButton);
         bottomPanel.add(searchField);
         bottomPanel.add(issueLabel);
         bottomPanel.add(priorityLabel);
         bottomPanel.add(issueField);
-        bottomPanel.add(priorityField);
+//        bottomPanel.add(priorityField);
         bottomPanel.add(addTicket);
         // Username label
         userLabel = new JLabel("Welcome, " + username + "!");
@@ -116,7 +185,6 @@ public class UserView extends JFrame {
 
         // Add components to the top panel
         topPanel.add(logout);
-//        topPanel.add(searchField);
         topPanel.add(userLabel);
         rightPanel.add(topPanel, BorderLayout.NORTH);
         rightPanel.add(bottomPanel, BorderLayout.SOUTH);
@@ -127,7 +195,7 @@ public class UserView extends JFrame {
 
     public String[] updateUserTickets(String username) {
         //list that holds the users Tickets
-        Ticket[] userTicketsList = getUserTickets(username);
+        Ticket[] userTicketsList = db.getUserTickets(username);
         //list that holds the users ticket data
         String[] userTickets = new String[userTicketsList.length];
 
@@ -145,10 +213,6 @@ public class UserView extends JFrame {
 //            updateUserList(username);
         }
         return userTickets;
-    }
-
-    public Ticket[] getUserTickets (String username) {
-        return db.getUserTickets(username);
     }
 
     public void setVisibleUI(boolean visible) {

@@ -70,7 +70,7 @@ public class LoginModel {
                 loginView.setVisible(false);
 
                 employeeController.startGUI();
-            } else if (role.equals("User")) {
+            } else if (role.equals("user")) {
                 logger.info("Opening User: {}'s Account", username);
                 //initialize the UserController to start the GUI
                 UserModel userModel = new UserModel();

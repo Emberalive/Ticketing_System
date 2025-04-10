@@ -54,7 +54,7 @@ public class Db_Access {
                 stmnt.executeUpdate();
                 conn.commit();
 
-                logger.info("Inserted ticket ID: {}", ticket.printTicket());
+                logger.info("Inserted ticket ID: {}", ticket.loggTicket());
             } catch (SQLException ex) {
                 logger.error(ex.getMessage());
                 try {
@@ -138,7 +138,7 @@ public Ticket[] getUserTickets(String username) {
                 String employee = rs.getString("employee");
 
                 Ticket ticket = new Ticket(issue, priority, status, user, employee, ticketID, date);
-                logger.info("Getting ticket: {} for user: {}", ticket.printTicket(), username);
+                logger.info("Getting ticket: {} for user: {}", ticket.loggTicket(), username);
 
                 tickets[index++] = ticket;
             }
@@ -193,7 +193,7 @@ public Ticket[] getUserTickets(String username) {
                     String employee = rs.getString("employee");
 
                     Ticket ticket = new Ticket(issue, priority, status, user, employee, ticketID, date);
-                    logger.info("Getting ticket: {} for Employee", ticket.printTicket());
+                    logger.info("Getting ticket: {} for Employee", ticket.loggTicket());
 
                     tickets[index++] = ticket;
                 }

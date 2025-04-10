@@ -12,7 +12,6 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 
 public class Bucket_Queue {
-    Db_Access db = new Db_Access();
     private static final Logger logger = LogManager.getLogger(Bucket_Queue.class);
     private int counter = 0;
 
@@ -69,27 +68,32 @@ public class Bucket_Queue {
         }
     }
 
-    public Ticket searchTicket(Ticket ticket) {
-        int ticketID = ticket.getTicketID();
-        int priority = ticket.getPriority();
+    public Ticket searchTicket(int ticketID) {
+        Ticket foundTicket = null;
 
-        switch (priority) {
-            case 1:
-                return priority_1.searchTicket(ticketID);
-            case 2:
-                return priority_2.searchTicket(ticketID);
-            case 3:
-                return priority_3.searchTicket(ticketID);
-            case 4:
-                return priority_4.searchTicket(ticketID);
-            default:
-                invalid_priority(priority);
-                return null;
+        if (!priority_1.isEmpty()) {
+            foundTicket = priority_1.searchTicket(ticketID);
+            if (foundTicket != null) return foundTicket; // If found, return immediately
         }
+        if (!priority_2.isEmpty()) {
+            foundTicket = priority_2.searchTicket(ticketID);
+            if (foundTicket != null) return foundTicket; // If found, return immediately
+        }
+        if (!priority_3.isEmpty()) {
+            foundTicket = priority_3.searchTicket(ticketID);
+            if (foundTicket != null) return foundTicket; // If found, return immediately
+        }
+        if (!priority_4.isEmpty()) {
+            foundTicket = priority_4.searchTicket(ticketID);
+            if (foundTicket != null) return foundTicket; // If found, return immediately
+        }
+
+        log_ifEmpty();
+        return foundTicket;
     }
 
     public void setCounterIntial () {
-        Connection conn = db.getConnection();
+        Connection conn = Db_Access.getConnection();
         if (conn != null) {
             try {
                 PreparedStatement stmnt = conn.prepareStatement("SELECT MAX(id) FROM ticket");
@@ -112,33 +116,39 @@ public class Bucket_Queue {
         }
     }
 
-    public Bucket_Queue fillFromDB() {
-        Bucket_Queue dataStruct = new Bucket_Queue();
-        Connection conn = db.getConnection();
+    public static Bucket_Queue fillFromDB(Bucket_Queue bucket) {
+        Connection conn = Db_Access.getConnection();
         if (conn != null) {
             try {
                 logger.info("Filling Tickets from the Database");
-                PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM ticket WHERE status IN ('active', 'inactive') ORDER BY id ASC;");
+                PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM ticket WHERE status IN ('InActive', 'active') ORDER BY id ASC;");
 
                 ResultSet rs = stmnt.executeQuery();
 
-                while (rs.next()) {
-                    int id = rs.getInt("id");
-                    String issue = rs.getString("issue");
-                    int priority = rs.getInt("priority");
-                    String status = rs.getString("status");
-                    String username = rs.getString("username");
-                    LocalDate date = rs.getDate("date").toLocalDate();
-                    String employee =rs.getString("employee");
+                    while (rs.next()) {
+                        int id = rs.getInt("id");
+                        String issue = rs.getString("issue");
+                        int priority = rs.getInt("priority");
+                        String status = rs.getString("status");
+                        String username = rs.getString("username");
+                        LocalDate date = rs.getDate("date").toLocalDate();
+                        String employee =rs.getString("employee");
 
-                    Ticket ticket = new Ticket(issue, priority, status, username, employee, id, date);
-                    dataStruct.enqueue(ticket);
-                }
+                        Ticket ticket = new Ticket(issue, priority, status, username, employee, id, date);
+                        bucket.enqueue(ticket);
+                    }
+
             } catch (SQLException exc) {
                 logger.error("Database Error: {}", String.valueOf(exc));
+            } finally {
+                try {
+                    conn.close();
+                } catch (SQLException ex) {
+                    logger.error("Database Error closing Connection: {}", String.valueOf(ex));
+                }
             }
         }
-        return dataStruct;
+        return bucket;
     }
 
     public void log_ifEmpty() {

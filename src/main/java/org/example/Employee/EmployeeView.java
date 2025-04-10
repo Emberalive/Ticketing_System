@@ -4,6 +4,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.Ticket;
 import org.example.db_access.Db_Access;
+import org.example.login.LoginController;
+import org.example.login.LoginModel;
+import org.example.login.LoginView;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -19,7 +22,7 @@ public class EmployeeView extends JFrame {
     public EmployeeView(String username) {
         // Initialize JFrame
         setTitle("Employee Dashboard");
-        setSize(720, 350);
+        setSize(720, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
@@ -54,10 +57,23 @@ public class EmployeeView extends JFrame {
         JPanel topPanel = new JPanel();
         topPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
 
+        JButton logout = new JButton("Log out");
+        logout.addActionListener(e -> {
+            this.dispose();
+
+            LoginModel model = new LoginModel();
+            LoginView view = new LoginView();
+            LoginController controller = new LoginController(model, view);
+
+            controller.startGUI();
+        });
+
         // Username label
         userLabel = new JLabel("Welcome, " + username + "!");
         userLabel.setFont(new Font("Arial", Font.BOLD, 14));
+
         // Add components to the top panel
+        topPanel.add(logout);
         topPanel.add(userLabel);
         rightPanel.add(topPanel, BorderLayout.NORTH);
 

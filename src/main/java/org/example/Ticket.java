@@ -83,7 +83,7 @@ public class Ticket {
         return status;
     }
     public void setStatus(String status) {
-        logger.info("Updating status from '{}' - '{}' For the Ticket: {}", this.getStatus(), status, this.printTicket());
+        logger.info("Updating status from '{}' - '{}' For the Ticket: {}", this.getStatus(), status, this.loggTicket());
         this.status = status;
     }
 
@@ -101,8 +101,20 @@ public class Ticket {
     }
 
     // allows me to print the ticket in the logs
-    public String printTicket() {
+    public String loggTicket() {
         //concatenating all the values in one string
         return "Ticket{ (ID: '" + ticketID + "') (Date: '" + creationDate + "') (Issue: '" + issue + "') (Username: '" + userName + "') (Status: '" + status + "') (Handled By: '" + employee + "')}";
+    }
+
+    public String printTicket() {
+        return "Ticket Details:\n"
+                + "--------------------------------------------------------------------------\n"
+                + "Ticket ID: " + ticketID + "\n"
+                + "Issue: " + issue + "\n"
+                + "Priority: " + priority + "\n"
+                + "Status: " + status + "\n"
+                + "User: " + userName + "\n"
+                + "Handled By: " + employee + "\n"
+                + "Creation Date: " + creationDate + "\n";
     }
 }

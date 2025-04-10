@@ -21,7 +21,7 @@ public class User {
         this.password = BCrypt.withDefaults().hashToString(12, password.toCharArray());
         //registering the User
         // this allows me to know if it is a User or an admin
-        String role = "User";
+        String role = "user";
         return acc.register(getUsername(), getPassword(), role);
     }
 }
