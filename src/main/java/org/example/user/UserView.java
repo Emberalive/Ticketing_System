@@ -24,7 +24,7 @@ public class UserView extends JFrame {
     public UserView(String username) {
         // Initialize JFrame
         setTitle("User Dashboard");
-        setSize(1000, 400);
+        setSize(720, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
@@ -109,7 +109,6 @@ public class UserView extends JFrame {
            controller.startGUI();
         });
 
-
         JPanel bottomPanel = new JPanel();
         bottomPanel.setLayout(null);
         bottomPanel.setPreferredSize(new Dimension(370, 350));
@@ -117,26 +116,6 @@ public class UserView extends JFrame {
         JLabel issueLabel = new JLabel("Issue");
         JTextField issueField = new JTextField();
         JLabel priorityLabel = new JLabel("Select Priority:");
-//        JTextField priorityField = new JTextField();
-        JTextArea ticketsArea = new JTextArea();
-        ticketsArea.setEditable(false);
-        JButton searchButton = new JButton("Search:");
-        searchButton.addActionListener(e -> {
-            logger.info("Searching for Ticket: {}", searchField.getText());
-
-           int ticketID = Integer.parseInt(searchField.getText().trim());
-
-           Ticket foundTicket =  Main.getBucket().searchTicket(ticketID);
-
-           if (foundTicket != null) {
-               logger.info("Found Ticket: {}", foundTicket.loggTicket());
-               ticketsArea.setText(foundTicket.printTicket());
-               searchField.setText("");
-           } else {
-               ticketsArea.setText("Ticket was not found");
-               searchField.setText("");
-           }
-        });
 
         JButton addTicket = new JButton("Create Ticket");
         addTicket.addActionListener(e -> {
@@ -156,10 +135,14 @@ public class UserView extends JFrame {
             priority4.setEnabled(true);
         });
 
-        searchField = new JTextField();
-        searchField.setBounds(365, 30, 265, 30);
-        searchButton.setBounds(270, 30, 90, 30);
-        ticketsArea.setBounds(335, 70, 300, 120);
+        JButton searchTicket = new JButton("Search ticket");
+        searchTicket.addActionListener(e -> {
+            userSearchTicketModel model = new userSearchTicketModel();
+            model.StartGUI();
+        });
+        searchTicket.setBounds(10, 40, 150, 30);
+        bottomPanel.add(searchTicket);
+
         addTicket.setBounds(90, 300, 200, 30);
         issueField.setBounds(110, 90, 200, 30);
 //        priorityField.setBounds(150, 250, 200, 30);
@@ -171,9 +154,9 @@ public class UserView extends JFrame {
         bottomPanel.add(priority2);
         bottomPanel.add(priority3);
         bottomPanel.add(priority4);
-        bottomPanel.add(ticketsArea);
-        bottomPanel.add(searchButton);
-        bottomPanel.add(searchField);
+//        bottomPanel.add(ticketsArea);
+//        bottomPanel.add(searchButton);
+//        bottomPanel.add(searchField);
         bottomPanel.add(issueLabel);
         bottomPanel.add(priorityLabel);
         bottomPanel.add(issueField);

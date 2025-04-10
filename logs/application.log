@@ -1575,3 +1575,468 @@
 2025-04-10 16:27:36,171 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Simple_Queue - Ticket not found: 8
 2025-04-10 16:27:36,171 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 8
 2025-04-10 16:27:36,171 [AWT-EventQueue-0] INFO  org.example.user.UserView - Found Ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:20:04,615 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:20:04,616 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-10 20:20:04,677 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:20:04,677 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:20:04,677 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:20:04,677 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:20:04,677 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:20:04,677 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:20:04,677 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:20:04,677 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:20:09,562 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-10 20:20:10,052 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:20:10,148 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-10 20:20:10,394 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-10 20:20:10,394 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening User: samm's Account
+2025-04-10 20:20:10,865 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:20:10,865 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-10 20:20:10,917 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-10 20:20:10,917 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:20:10,917 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:20:10,918 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:20:10,918 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:20:10,918 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:20:10,918 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:20:10,918 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:20:10,918 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:26:20,741 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:26:20,742 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-10 20:26:20,796 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:26:20,796 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:26:20,796 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:26:20,796 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:26:20,797 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:26:20,797 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:26:20,797 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:26:20,797 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:26:25,364 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-10 20:26:26,049 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:26:26,196 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-10 20:26:26,440 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-10 20:26:26,440 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening User: samm's Account
+2025-04-10 20:26:27,200 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:26:27,200 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-10 20:26:27,252 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-10 20:26:27,253 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:26:27,253 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:26:27,253 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:26:27,253 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:26:27,253 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:26:27,253 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:26:27,253 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:26:27,253 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:27:35,483 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:27:35,485 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-10 20:27:35,541 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:27:35,542 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:27:35,542 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:27:35,542 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:27:35,542 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:27:35,542 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:27:35,542 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:27:35,542 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:27:39,702 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-10 20:27:40,188 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:27:40,281 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-10 20:27:40,527 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-10 20:27:40,527 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening User: samm's Account
+2025-04-10 20:27:40,971 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:27:40,972 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-10 20:27:41,018 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-10 20:27:41,019 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:27:41,019 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:27:41,019 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:27:41,019 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:27:41,019 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:27:41,019 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:27:41,019 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:27:41,019 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:29:36,928 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:29:36,929 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-10 20:29:36,982 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:29:36,983 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:29:36,983 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:29:36,983 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:29:36,983 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:29:36,983 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:29:36,983 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:29:36,983 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:29:41,648 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-10 20:29:42,091 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:29:42,181 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-10 20:29:42,425 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-10 20:29:42,425 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening User: samm's Account
+2025-04-10 20:29:42,873 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:29:42,874 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-10 20:29:42,921 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-10 20:29:42,922 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:29:42,922 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:29:42,922 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:29:42,922 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:29:42,922 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:29:42,922 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:29:42,922 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:29:42,923 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:32:03,471 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:32:03,472 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-10 20:32:03,533 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:32:03,534 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:32:03,534 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:32:03,534 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:32:03,534 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:32:03,534 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:32:03,534 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:32:03,534 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:32:08,246 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-10 20:32:08,721 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:32:08,821 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-10 20:32:09,065 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-10 20:32:09,065 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening User: samm's Account
+2025-04-10 20:32:09,572 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:32:09,572 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-10 20:32:09,621 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-10 20:32:09,621 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:32:09,622 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:32:09,622 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:32:09,622 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:32:09,622 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:32:09,622 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:32:09,622 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:32:09,622 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:32:35,090 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:32:35,091 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-10 20:32:35,145 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:32:35,145 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:32:35,145 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:32:35,145 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:32:35,145 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:32:35,146 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:32:35,146 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:32:35,146 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:32:38,937 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-10 20:32:39,389 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:32:39,485 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-10 20:32:39,732 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-10 20:32:39,733 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening User: samm's Account
+2025-04-10 20:32:40,190 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:32:40,190 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-10 20:32:40,243 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-10 20:32:40,244 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:32:40,244 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:32:40,244 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:32:40,245 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:32:40,245 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:32:40,245 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:32:40,245 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:32:40,245 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:33:50,823 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:33:50,824 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-10 20:33:50,879 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:33:50,879 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:33:50,879 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:33:50,879 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:33:50,879 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:33:50,880 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:33:50,880 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:33:50,880 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:33:54,394 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-10 20:33:54,878 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:33:54,981 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-10 20:33:55,224 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-10 20:33:55,225 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening User: samm's Account
+2025-04-10 20:33:55,683 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:33:55,683 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-10 20:33:55,734 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-10 20:33:55,735 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:33:55,735 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:33:55,735 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:33:55,735 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:33:55,735 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:33:55,736 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:33:55,736 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:33:55,736 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:35:31,623 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:35:31,625 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-10 20:35:31,795 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:35:31,795 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:35:31,795 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:35:31,795 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:35:31,795 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:35:31,796 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:35:31,796 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:35:31,796 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:35:35,944 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-10 20:35:36,410 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:35:36,585 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-10 20:35:36,827 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-10 20:35:36,828 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening User: samm's Account
+2025-04-10 20:35:37,666 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:35:37,666 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-10 20:35:37,814 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-10 20:35:37,814 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:35:37,815 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:35:37,815 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:35:37,815 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:35:37,815 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:35:37,815 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:35:37,815 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:35:37,815 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:35:43,629 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Searching for Ticket: 1
+2025-04-10 20:35:43,629 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 1
+2025-04-10 20:35:43,630 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Found Ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:35:46,184 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Searching for Ticket: 2
+2025-04-10 20:35:46,184 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 2
+2025-04-10 20:35:46,184 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Found Ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:35:47,650 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Searching for Ticket: 3
+2025-04-10 20:35:47,651 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 3
+2025-04-10 20:35:47,651 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Simple_Queue - Ticket not found: 3
+2025-04-10 20:35:47,651 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 3
+2025-04-10 20:35:47,651 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Found Ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:35:48,829 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Searching for Ticket: 4
+2025-04-10 20:35:48,829 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 4
+2025-04-10 20:35:48,829 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Simple_Queue - Ticket not found: 4
+2025-04-10 20:35:48,829 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 4
+2025-04-10 20:35:48,829 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Simple_Queue - Ticket not found: 4
+2025-04-10 20:35:48,829 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 4
+2025-04-10 20:35:48,829 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Found Ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:35:51,916 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Searching for Ticket: 5
+2025-04-10 20:35:51,916 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 5
+2025-04-10 20:35:51,916 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Simple_Queue - Ticket not found: 5
+2025-04-10 20:35:51,916 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 5
+2025-04-10 20:35:51,916 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Simple_Queue - Ticket not found: 5
+2025-04-10 20:35:51,916 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 5
+2025-04-10 20:35:51,916 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Found Ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:35:55,910 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Searching for Ticket: 6
+2025-04-10 20:35:55,910 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 6
+2025-04-10 20:35:55,910 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Found Ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:35:57,462 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Searching for Ticket: 7
+2025-04-10 20:35:57,463 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 7
+2025-04-10 20:35:57,463 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Found Ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:35:58,611 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Searching for Ticket: 8
+2025-04-10 20:35:58,611 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 8
+2025-04-10 20:35:58,611 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Simple_Queue - Ticket not found: 8
+2025-04-10 20:35:58,611 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 8
+2025-04-10 20:35:58,611 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Simple_Queue - Ticket not found: 8
+2025-04-10 20:35:58,611 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 8
+2025-04-10 20:35:58,611 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Simple_Queue - Ticket not found: 8
+2025-04-10 20:35:58,611 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 8
+2025-04-10 20:35:58,612 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Found Ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:36:00,054 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Searching for Ticket: 9
+2025-04-10 20:36:00,054 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 9
+2025-04-10 20:36:00,055 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Simple_Queue - Ticket not found: 9
+2025-04-10 20:36:00,055 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 9
+2025-04-10 20:36:00,055 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Simple_Queue - Ticket not found: 9
+2025-04-10 20:36:00,055 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 9
+2025-04-10 20:36:00,055 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Simple_Queue - Ticket not found: 9
+2025-04-10 20:36:00,055 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 9
+2025-04-10 20:36:00,055 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Simple_Queue - Ticket not found: 9
+2025-04-10 20:36:00,055 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-10 20:36:02,304 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Searching for Ticket: 1
+2025-04-10 20:36:02,305 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 1
+2025-04-10 20:36:02,305 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Found Ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:36:31,562 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:36:31,563 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-10 20:36:31,622 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:36:31,622 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:36:31,622 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:36:31,622 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:36:31,622 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:36:31,622 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:36:31,622 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:36:31,623 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:36:35,792 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-10 20:36:36,286 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:36:36,392 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-10 20:36:36,634 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-10 20:36:36,635 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening User: samm's Account
+2025-04-10 20:36:37,100 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:36:37,100 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-10 20:36:37,149 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-10 20:36:37,150 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:36:37,150 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:36:37,150 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:36:37,150 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:36:37,150 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:36:37,150 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:36:37,151 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:36:37,151 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:36:53,392 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:36:53,393 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-10 20:36:53,451 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:36:53,451 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:36:53,451 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:36:53,451 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:36:53,452 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:36:53,452 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:36:53,452 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:36:53,452 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:36:56,956 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-10 20:36:57,437 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:36:57,535 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-10 20:36:57,782 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-10 20:36:57,782 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening User: samm's Account
+2025-04-10 20:36:58,285 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:36:58,285 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-10 20:36:58,339 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-10 20:36:58,340 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:36:58,340 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:36:58,340 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:36:58,341 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:36:58,341 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:36:58,341 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:36:58,341 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:36:58,341 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:37:11,800 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:37:11,801 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-10 20:37:11,864 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:11,864 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:11,864 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:11,865 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:11,865 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:11,865 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:11,865 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:11,865 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:15,634 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-10 20:37:16,126 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:37:16,217 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-10 20:37:16,463 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-10 20:37:16,463 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening User: samm's Account
+2025-04-10 20:37:16,921 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:37:16,921 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-10 20:37:16,979 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-10 20:37:16,979 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:37:16,980 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:37:16,980 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:37:16,980 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:37:16,980 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:37:16,980 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:37:16,980 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:37:16,980 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:37:34,360 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:37:34,372 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-10 20:37:34,502 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:34,504 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:34,505 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:34,507 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:34,508 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:34,509 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:34,510 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:34,511 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:38,120 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-10 20:37:38,591 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:37:38,696 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-10 20:37:38,941 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-10 20:37:38,941 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening User: samm's Account
+2025-04-10 20:37:39,435 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:37:39,435 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-10 20:37:39,490 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-10 20:37:39,490 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:37:39,491 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:37:39,491 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:37:39,491 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:37:39,491 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:37:39,491 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:37:39,491 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:37:39,491 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:37:44,851 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Searching for Ticket: 1
+2025-04-10 20:37:44,852 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 1
+2025-04-10 20:37:44,852 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Found Ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:46,294 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Searching for Ticket: 2
+2025-04-10 20:37:46,294 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 2
+2025-04-10 20:37:46,294 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Found Ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:47,594 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Searching for Ticket: 3
+2025-04-10 20:37:47,594 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 3
+2025-04-10 20:37:47,594 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Simple_Queue - Ticket not found: 3
+2025-04-10 20:37:47,594 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 3
+2025-04-10 20:37:47,594 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Found Ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:49,044 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Searching for Ticket: 4
+2025-04-10 20:37:49,045 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 4
+2025-04-10 20:37:49,045 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Simple_Queue - Ticket not found: 4
+2025-04-10 20:37:49,045 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 4
+2025-04-10 20:37:49,045 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Simple_Queue - Ticket not found: 4
+2025-04-10 20:37:49,045 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 4
+2025-04-10 20:37:49,045 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Found Ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:37:50,624 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Searching for Ticket: 5
+2025-04-10 20:37:50,625 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 5
+2025-04-10 20:37:50,625 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Simple_Queue - Ticket not found: 5
+2025-04-10 20:37:50,625 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 5
+2025-04-10 20:37:50,625 [AWT-EventQueue-0] WARN  org.example.dataStructures.bucket.Simple_Queue - Ticket not found: 5
+2025-04-10 20:37:50,625 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 5
+2025-04-10 20:37:50,625 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Found Ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:15,520 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:38:15,521 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-10 20:38:15,581 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:15,582 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:15,582 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:15,582 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:15,582 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:15,582 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:15,582 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:15,582 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:19,106 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-10 20:38:19,589 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:38:19,679 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-10 20:38:19,922 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-10 20:38:19,922 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening User: samm's Account
+2025-04-10 20:38:20,379 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:38:20,379 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-10 20:38:20,428 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-10 20:38:20,429 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:20,429 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:20,429 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:20,429 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:20,430 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:20,430 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:20,430 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:20,430 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:33,397 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:38:33,399 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-10 20:38:33,449 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:33,449 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:33,450 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:33,450 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:33,450 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:33,450 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:33,450 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:33,450 [main] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:37,310 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-10 20:38:37,949 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:38:38,084 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-10 20:38:38,328 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-10 20:38:38,329 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening User: samm's Account
+2025-04-10 20:38:39,037 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:38:39,038 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-10 20:38:39,088 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-10 20:38:39,089 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:39,089 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:39,089 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:39,090 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:39,090 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:39,090 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:39,090 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:39,090 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:53,418 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:38:53,994 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:38:53,994 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Inserting ticket...9
+2025-04-10 20:38:54,098 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Inserted ticket ID: Ticket{ (ID: '9') (Date: '2025-04-10') (Issue: 'pee pee') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:54,149 [AWT-EventQueue-0] INFO  org.example.Ticket - Inserted ticket with ID: 9
+2025-04-10 20:38:54,149 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '9') (Date: '2025-04-10') (Issue: 'pee pee') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:38:54,620 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-10 20:38:54,620 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-10 20:38:54,667 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-10 20:38:54,667 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:54,667 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-10') (Issue: 'blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:54,668 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:54,668 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:54,668 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:54,668 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:54,668 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-10') (Issue: 'blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:54,668 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-10') (Issue: 'blah blah blah') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:54,668 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-10') (Issue: 'pee pee') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-10 20:38:54,719 [AWT-EventQueue-0] INFO  org.example.user.UserView - Adding Ticket
+2025-04-10 20:38:58,766 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Searching for Ticket: 9
+2025-04-10 20:38:58,767 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Searching Ticket 9
+2025-04-10 20:38:58,767 [AWT-EventQueue-0] INFO  org.example.user.userSearchTicket - Found Ticket: Ticket{ (ID: '9') (Date: '2025-04-10') (Issue: 'pee pee') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-10 20:39:04,021 [AWT-EventQueue-0] INFO  org.example.user.UserView - Logging out User: samm
