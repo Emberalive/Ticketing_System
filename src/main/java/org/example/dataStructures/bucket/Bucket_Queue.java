@@ -54,18 +54,23 @@ public class Bucket_Queue {
             log_ifEmpty();
         }
     }
-    public void peek() {
+    public Ticket peek() {
+        Ticket peekedTicket;
         if (!priority_1.isEmpty()) {
-            priority_1.peek();
+            peekedTicket = priority_1.peek();
+            if (peekedTicket != null) return peekedTicket; // If found, return immediately
         } else if (!priority_2.isEmpty()) {
-            priority_2.peek();
+            peekedTicket = priority_2.peek();
+            if (peekedTicket != null) return peekedTicket;
         } else if (!priority_3.isEmpty()) {
-            priority_3.peek();
+            peekedTicket = priority_3.peek();
+            if (peekedTicket != null) return peekedTicket;
         } else if (!priority_4.isEmpty()) {
-            priority_4.peek();
-        } else {
-            log_ifEmpty();
+            peekedTicket = priority_4.peek();
+            if (peekedTicket != null) return peekedTicket;
         }
+        log_ifEmpty();
+        return null;
     }
 
     public Ticket searchTicket(int ticketID) {

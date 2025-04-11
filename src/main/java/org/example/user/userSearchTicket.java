@@ -16,6 +16,7 @@ public class userSearchTicket extends JFrame {
 
     public userSearchTicket() {
         setLayout(null);
+        setTitle("Search Ticket");
 
         searchField.setBounds(120, 30, 265, 30);
         searchButton.setText("Search:");

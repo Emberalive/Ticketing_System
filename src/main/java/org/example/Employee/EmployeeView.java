@@ -2,7 +2,9 @@ package org.example.Employee;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.example.Main;
 import org.example.Ticket;
+import org.example.dataStructures.bucket.Bucket_Queue;
 import org.example.db_access.Db_Access;
 import org.example.login.LoginController;
 import org.example.login.LoginModel;
@@ -22,11 +24,39 @@ public class EmployeeView extends JFrame {
     public EmployeeView(String username) {
         // Initialize JFrame
         setTitle("Employee Dashboard");
-        setSize(720, 400);
+        setSize(720, 450);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
+        JButton getTicketButton = new JButton("Get Tickets");
+        JTextArea ticketsArea = new JTextArea();
+        ticketsArea.setPreferredSize(new Dimension(300, 200));
+        JButton finishTicket = new JButton("Completed");
 
+        finishTicket.addActionListener( e -> {
+            logger.info("Completing ticket");
+            Main.getBucket().dequeue();
+
+            ticketsArea.setText("");
+
+            listView.setListData(updateTickets());
+        });
+
+        getTicketButton.addActionListener(e -> {
+            Bucket_Queue bucket = Main.getBucket();
+
+            Ticket ticket = bucket.peek();
+            if (ticket == null) {
+                ticketsArea.setText("Ticket was not found");
+                logger.info("Ticket was not found, When searched by one by: {} ", username);
+            } else {
+                ticketsArea.setText(ticket.printTicket());
+            }
+        });
+
+        getTicketButton.setBounds(70, 50, 80, 30);
+        ticketsArea.setBounds(70, 130, 300, 120);
+        finishTicket.setBounds(70, 150, 80, 30);
 
         // Left side list
         listView = new JList<>(updateTickets());
@@ -78,6 +108,7 @@ public class EmployeeView extends JFrame {
         rightPanel.add(topPanel, BorderLayout.NORTH);
 
         JPanel bottomPanel = new JPanel();
+        bottomPanel.setPreferredSize(new Dimension(370, 350));
         bottomPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
 
         JButton updateTickets = new JButton("Update Tickets");
@@ -86,6 +117,10 @@ public class EmployeeView extends JFrame {
             listView.setListData(updateTickets());
         });
         bottomPanel.add(updateTickets);
+
+        bottomPanel.add(getTicketButton);
+        bottomPanel.add(ticketsArea);
+        bottomPanel.add(finishTicket);
 
         // Add the right panel to the center
         rightPanel.add(bottomPanel, BorderLayout.SOUTH);

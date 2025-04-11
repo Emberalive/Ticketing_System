@@ -166,10 +166,10 @@ public Ticket[] getUserTickets(String username) {
 
         if (conn != null) {
             try {
-                logger.info("Getting user tickets from the Database");
+                logger.info("Getting employee tickets from the Database");
 
                 PreparedStatement stmnt = conn.prepareStatement(
-                        "SELECT * FROM ticket",
+                        "SELECT * FROM ticket WHERE status = 'InActive'",
                         //This allows me to get the length of the result set as well as take the result set and put it into a list for the userView
                         ResultSet.TYPE_SCROLL_INSENSITIVE,
                         ResultSet.CONCUR_READ_ONLY
