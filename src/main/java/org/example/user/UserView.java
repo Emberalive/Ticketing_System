@@ -51,9 +51,17 @@ public class UserView extends JFrame {
         });
 
         JButton priority1 = new JButton("Security Issue");
+        priority1.setBackground(Color.DARK_GRAY);
+        priority1.setForeground(Color.white);
         JButton priority2 = new JButton("Network Issue");
+        priority2.setBackground(Color.DARK_GRAY);
+        priority2.setForeground(Color.white);
         JButton priority3 = new JButton("app installation");
+        priority3.setBackground(Color.DARK_GRAY);
+        priority3.setForeground(Color.white);
         JButton priority4 = new JButton("Device configuration");
+        priority4.setBackground(Color.DARK_GRAY);
+        priority4.setForeground(Color.white);
 
         priority1.addActionListener(e -> {
             priority = 1;
@@ -95,6 +103,7 @@ public class UserView extends JFrame {
         JPanel rightPanel = new JPanel();
         rightPanel.setLayout(new BorderLayout());
         JPanel topPanel = new JPanel();
+        topPanel.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
         topPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
 
         JButton logout = new JButton("Log out");
@@ -113,11 +122,14 @@ public class UserView extends JFrame {
         bottomPanel.setLayout(null);
         bottomPanel.setPreferredSize(new Dimension(370, 350));
 
-        JLabel issueLabel = new JLabel("Issue");
+        JLabel title = new JLabel("Create Tickets");
+        JLabel issueLabel = new JLabel("Issue:");
         JTextField issueField = new JTextField();
         JLabel priorityLabel = new JLabel("Select Priority:");
 
         JButton addTicket = new JButton("Create Ticket");
+        addTicket.setBackground(Color.DARK_GRAY);
+        addTicket.setForeground(Color.white);
         addTicket.addActionListener(e -> {
             if (issueField.getText().isEmpty() || priority == 0) {
                 JOptionPane.showMessageDialog(rootPane, "You must enter both an issue and priority!");
@@ -146,27 +158,27 @@ public class UserView extends JFrame {
             userSearchTicketModel model = new userSearchTicketModel();
             model.StartGUI();
         });
-        searchTicket.setBounds(10, 40, 150, 30);
+        searchTicket.setBounds(220, 300, 150, 30);
         bottomPanel.add(searchTicket);
 
-        addTicket.setBounds(90, 300, 200, 30);
-        issueField.setBounds(110, 90, 200, 30);
+        title.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+        title.setBounds(140, 20, 110, 30);
+
+        addTicket.setBounds(10, 300, 200, 30);
+        issueField.setBounds(95, 70, 200, 30);
 //        priorityField.setBounds(150, 250, 200, 30);
 
         priorityLabel.setBounds(35, 120, 125, 30);
-        issueLabel.setBounds(35, 90, 125, 30);
+        issueLabel.setBounds(35, 70, 125, 30);
 
+        bottomPanel.add(title);
         bottomPanel.add(priority1);
         bottomPanel.add(priority2);
         bottomPanel.add(priority3);
         bottomPanel.add(priority4);
-//        bottomPanel.add(ticketsArea);
-//        bottomPanel.add(searchButton);
-//        bottomPanel.add(searchField);
         bottomPanel.add(issueLabel);
         bottomPanel.add(priorityLabel);
         bottomPanel.add(issueField);
-//        bottomPanel.add(priorityField);
         bottomPanel.add(addTicket);
         // Username label
         userLabel = new JLabel("Welcome, " + username + "!");
