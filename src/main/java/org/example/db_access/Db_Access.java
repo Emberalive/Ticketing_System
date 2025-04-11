@@ -161,7 +161,7 @@ public Ticket[] getUserTickets(String username) {
     return null;
 }
 
-    public Ticket[] getAllTickets() {
+    public Ticket[] getEmployeetickets(String username) {
         Connection conn = getConnection();
 
         if (conn != null) {
@@ -169,11 +169,13 @@ public Ticket[] getUserTickets(String username) {
                 logger.info("Getting employee tickets from the Database");
 
                 PreparedStatement stmnt = conn.prepareStatement(
-                        "SELECT * FROM ticket WHERE status = 'InActive'",
+                        "SELECT * FROM ticket WHERE status = ? && employee = ?",
                         //This allows me to get the length of the result set as well as take the result set and put it into a list for the userView
                         ResultSet.TYPE_SCROLL_INSENSITIVE,
                         ResultSet.CONCUR_READ_ONLY
                 );
+                stmnt.setString(1, "InActive");
+                stmnt.setString(2, username);
                 ResultSet rs = stmnt.executeQuery();
 
                 // Move to last row to get count

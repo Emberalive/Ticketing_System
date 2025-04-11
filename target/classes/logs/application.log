@@ -1,0 +1,11 @@
+2025-04-11 18:25:36,783 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-11 18:25:36,784 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-11 18:26:00,424 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: Olivia
+2025-04-11 18:26:00,876 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-11 18:26:00,971 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: Olivia
+2025-04-11 18:26:01,223 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-11 18:26:01,223 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening Employee: Olivia's Account
+2025-04-11 18:26:01,745 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-11 18:26:01,745 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting employee tickets from the Database
+2025-04-11 18:26:01,806 [AWT-EventQueue-0] ERROR org.example.db_access.Db_Access - Database error Getting User Tickets: ERROR: syntax error at or near "="
+  Position: 52

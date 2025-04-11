@@ -1,6 +1,5 @@
 package org.example;
 
-import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.example.dataStructures.bucket.Bucket_Queue;
 import org.example.login.LoginController;
 import org.example.login.LoginModel;

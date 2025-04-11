@@ -1,187 +1,91 @@
-2025-04-11 14:02:20,494 [main] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:20,495 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
-2025-04-11 14:02:26,872 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
-2025-04-11 14:02:26,964 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:26,981 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
-2025-04-11 14:02:27,209 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
-2025-04-11 14:02:27,209 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening User: samm's Account
-2025-04-11 14:02:27,319 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:27,319 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
-2025-04-11 14:02:27,327 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
-2025-04-11 14:02:27,328 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-11') (Issue: 'poo poo') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:27,328 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-11') (Issue: 'blah blah') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:27,328 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-11') (Issue: 'klsdfbiouwgef') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:27,328 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-11') (Issue: '3rfsagh') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:27,328 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-11') (Issue: 'sa[porifgjqa0iejg') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:27,329 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-11') (Issue: 'k;ßɗfnw') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:27,329 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-11') (Issue: 'qwe[opirjgiue') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:27,329 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-11') (Issue: 'as;łjdfvhviuefdh') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:33,771 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:33,902 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:33,902 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Inserting ticket...9
-2025-04-11 14:02:33,920 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Inserted ticket ID: Ticket{ (ID: '9') (Date: '2025-04-11') (Issue: 'l;æðkdngvoinaeg') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:02:33,927 [AWT-EventQueue-0] INFO  org.example.Ticket - Inserted ticket with ID: 9
-2025-04-11 14:02:33,927 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '9') (Date: '2025-04-11') (Issue: 'l;æðkdngvoinaeg') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:02:34,013 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:34,013 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
-2025-04-11 14:02:34,022 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
-2025-04-11 14:02:34,022 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-11') (Issue: 'poo poo') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:34,022 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-11') (Issue: 'blah blah') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:34,022 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-11') (Issue: 'klsdfbiouwgef') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:34,022 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-11') (Issue: '3rfsagh') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:34,022 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-11') (Issue: 'sa[porifgjqa0iejg') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:34,023 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-11') (Issue: 'k;ßɗfnw') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:34,023 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-11') (Issue: 'qwe[opirjgiue') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:34,023 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-11') (Issue: 'as;łjdfvhviuefdh') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:34,023 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-11') (Issue: 'l;æðkdngvoinaeg') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:34,032 [AWT-EventQueue-0] INFO  org.example.user.UserView - Adding Ticket
-2025-04-11 14:02:36,549 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:36,670 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:36,670 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Inserting ticket...10
-2025-04-11 14:02:36,687 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Inserted ticket ID: Ticket{ (ID: '10') (Date: '2025-04-11') (Issue: 'ad';ĸđmgvnoad') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:02:36,692 [AWT-EventQueue-0] INFO  org.example.Ticket - Inserted ticket with ID: 10
-2025-04-11 14:02:36,693 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '10') (Date: '2025-04-11') (Issue: 'ad';ĸđmgvnoad') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:02:36,789 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:36,789 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
-2025-04-11 14:02:36,811 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
-2025-04-11 14:02:36,811 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-11') (Issue: 'poo poo') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:36,811 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-11') (Issue: 'blah blah') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:36,811 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-11') (Issue: 'klsdfbiouwgef') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:36,812 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-11') (Issue: '3rfsagh') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:36,812 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-11') (Issue: 'sa[porifgjqa0iejg') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:36,812 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-11') (Issue: 'k;ßɗfnw') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:36,812 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-11') (Issue: 'qwe[opirjgiue') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:36,812 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-11') (Issue: 'as;łjdfvhviuefdh') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:36,812 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-11') (Issue: 'l;æðkdngvoinaeg') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:36,812 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '10') (Date: '2025-04-11') (Issue: 'ad';ĸđmgvnoad') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:36,819 [AWT-EventQueue-0] INFO  org.example.user.UserView - Adding Ticket
-2025-04-11 14:02:39,954 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:40,056 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:40,056 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Inserting ticket...11
-2025-04-11 14:02:40,077 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Inserted ticket ID: Ticket{ (ID: '11') (Date: '2025-04-11') (Issue: 'ad;łđ”ŋ“ĸµp') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:02:40,088 [AWT-EventQueue-0] INFO  org.example.Ticket - Inserted ticket with ID: 11
-2025-04-11 14:02:40,088 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '11') (Date: '2025-04-11') (Issue: 'ad;łđ”ŋ“ĸµp') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:02:40,158 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:40,158 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
-2025-04-11 14:02:40,170 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
-2025-04-11 14:02:40,170 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-11') (Issue: 'poo poo') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:40,170 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-11') (Issue: 'blah blah') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:40,170 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-11') (Issue: 'klsdfbiouwgef') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:40,170 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-11') (Issue: '3rfsagh') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:40,170 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-11') (Issue: 'sa[porifgjqa0iejg') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:40,171 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-11') (Issue: 'k;ßɗfnw') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:40,171 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-11') (Issue: 'qwe[opirjgiue') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:40,171 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-11') (Issue: 'as;łjdfvhviuefdh') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:40,171 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-11') (Issue: 'l;æðkdngvoinaeg') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:40,171 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '10') (Date: '2025-04-11') (Issue: 'ad';ĸđmgvnoad') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:40,171 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-11') (Issue: 'ad;łđ”ŋ“ĸµp') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:40,175 [AWT-EventQueue-0] INFO  org.example.user.UserView - Adding Ticket
-2025-04-11 14:02:44,055 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:44,164 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:44,164 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Inserting ticket...12
-2025-04-11 14:02:44,196 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Inserted ticket ID: Ticket{ (ID: '12') (Date: '2025-04-11') (Issue: 'ad;łkgfnmorepi') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:02:44,203 [AWT-EventQueue-0] INFO  org.example.Ticket - Inserted ticket with ID: 12
-2025-04-11 14:02:44,204 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '12') (Date: '2025-04-11') (Issue: 'ad;łkgfnmorepi') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:02:44,284 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:44,284 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
-2025-04-11 14:02:44,290 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
-2025-04-11 14:02:44,290 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-11') (Issue: 'poo poo') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:44,291 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-11') (Issue: 'blah blah') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:44,291 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-11') (Issue: 'klsdfbiouwgef') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:44,291 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-11') (Issue: '3rfsagh') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:44,291 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-11') (Issue: 'sa[porifgjqa0iejg') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:44,291 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-11') (Issue: 'k;ßɗfnw') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:44,291 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-11') (Issue: 'qwe[opirjgiue') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:44,291 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-11') (Issue: 'as;łjdfvhviuefdh') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:44,291 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-11') (Issue: 'l;æðkdngvoinaeg') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:44,291 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '10') (Date: '2025-04-11') (Issue: 'ad';ĸđmgvnoad') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:44,291 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-11') (Issue: 'ad;łđ”ŋ“ĸµp') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:44,291 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-11') (Issue: 'ad;łkgfnmorepi') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:44,303 [AWT-EventQueue-0] INFO  org.example.user.UserView - Adding Ticket
-2025-04-11 14:02:47,445 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:47,549 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:47,549 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Inserting ticket...13
-2025-04-11 14:02:47,565 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Inserted ticket ID: Ticket{ (ID: '13') (Date: '2025-04-11') (Issue: 'skl;ðɲibgopw') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:02:47,571 [AWT-EventQueue-0] INFO  org.example.Ticket - Inserted ticket with ID: 13
-2025-04-11 14:02:47,571 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '13') (Date: '2025-04-11') (Issue: 'skl;ðɲibgopw') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:02:47,652 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:47,652 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
-2025-04-11 14:02:47,664 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
-2025-04-11 14:02:47,665 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-11') (Issue: 'poo poo') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:47,665 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-11') (Issue: 'blah blah') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:47,665 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-11') (Issue: 'klsdfbiouwgef') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:47,665 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-11') (Issue: '3rfsagh') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:47,665 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-11') (Issue: 'sa[porifgjqa0iejg') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:47,665 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-11') (Issue: 'k;ßɗfnw') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:47,665 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-11') (Issue: 'qwe[opirjgiue') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:47,665 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-11') (Issue: 'as;łjdfvhviuefdh') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:47,666 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-11') (Issue: 'l;æðkdngvoinaeg') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:47,666 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '10') (Date: '2025-04-11') (Issue: 'ad';ĸđmgvnoad') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:47,666 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-11') (Issue: 'ad;łđ”ŋ“ĸµp') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:47,666 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-11') (Issue: 'ad;łkgfnmorepi') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:47,666 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-11') (Issue: 'skl;ðɲibgopw') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
-2025-04-11 14:02:47,671 [AWT-EventQueue-0] INFO  org.example.user.UserView - Adding Ticket
-2025-04-11 14:02:49,553 [AWT-EventQueue-0] INFO  org.example.user.UserView - Logging out User: samm
-2025-04-11 14:02:55,412 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: Olivia
-2025-04-11 14:02:55,485 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:55,511 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: Olivia
-2025-04-11 14:02:55,742 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
-2025-04-11 14:02:55,742 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening Employee: Olivia's Account
-2025-04-11 14:02:55,830 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:02:55,830 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
-2025-04-11 14:02:55,839 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
-2025-04-11 14:02:55,840 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-11') (Issue: 'l;æðkdngvoinaeg') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for Employee
-2025-04-11 14:02:55,840 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '10') (Date: '2025-04-11') (Issue: 'ad';ĸđmgvnoad') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for Employee
-2025-04-11 14:02:55,840 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-11') (Issue: 'ad;łđ”ŋ“ĸµp') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for Employee
-2025-04-11 14:02:55,840 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-11') (Issue: 'ad;łkgfnmorepi') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for Employee
-2025-04-11 14:02:55,840 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-11') (Issue: 'skl;ðɲibgopw') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for Employee
-2025-04-11 14:03:01,918 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Peeking Ticket Ticket{ (ID: '10') (Date: '2025-04-11') (Issue: 'ad';ĸđmgvnoad') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:03:16,570 [AWT-EventQueue-0] INFO  org.example.user.UserView - Completing ticket
-2025-04-11 14:03:16,656 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:03:16,669 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Updated ticket: 10's status to: 'Completed'
-2025-04-11 14:03:16,675 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Dequeued Ticket Ticket{ (ID: '10') (Date: '2025-04-11') (Issue: 'ad';ĸđmgvnoad') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:03:16,760 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:03:16,760 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
-2025-04-11 14:03:16,767 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
-2025-04-11 14:03:16,768 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-11') (Issue: 'l;æðkdngvoinaeg') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for Employee
-2025-04-11 14:03:16,768 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-11') (Issue: 'ad;łđ”ŋ“ĸµp') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for Employee
-2025-04-11 14:03:16,768 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-11') (Issue: 'ad;łkgfnmorepi') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for Employee
-2025-04-11 14:03:16,768 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-11') (Issue: 'skl;ðɲibgopw') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for Employee
-2025-04-11 14:03:35,666 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Peeking Ticket Ticket{ (ID: '13') (Date: '2025-04-11') (Issue: 'skl;ðɲibgopw') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:03:39,106 [AWT-EventQueue-0] INFO  org.example.user.UserView - Completing ticket
-2025-04-11 14:03:39,190 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:03:39,213 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Updated ticket: 13's status to: 'Completed'
-2025-04-11 14:03:39,222 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Dequeued Ticket Ticket{ (ID: '13') (Date: '2025-04-11') (Issue: 'skl;ðɲibgopw') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:03:39,311 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:03:39,311 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
-2025-04-11 14:03:39,324 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
-2025-04-11 14:03:39,324 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-11') (Issue: 'l;æðkdngvoinaeg') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for Employee
-2025-04-11 14:03:39,324 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-11') (Issue: 'ad;łđ”ŋ“ĸµp') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for Employee
-2025-04-11 14:03:39,324 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-11') (Issue: 'ad;łkgfnmorepi') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for Employee
-2025-04-11 14:03:41,184 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Peeking Ticket Ticket{ (ID: '9') (Date: '2025-04-11') (Issue: 'l;æðkdngvoinaeg') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:03:45,188 [AWT-EventQueue-0] INFO  org.example.user.UserView - Completing ticket
-2025-04-11 14:03:45,280 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:03:45,294 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Updated ticket: 9's status to: 'Completed'
-2025-04-11 14:03:45,303 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Dequeued Ticket Ticket{ (ID: '9') (Date: '2025-04-11') (Issue: 'l;æðkdngvoinaeg') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:03:45,405 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:03:45,405 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
-2025-04-11 14:03:45,420 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
-2025-04-11 14:03:45,420 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-11') (Issue: 'ad;łđ”ŋ“ĸµp') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for Employee
-2025-04-11 14:03:45,420 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-11') (Issue: 'ad;łkgfnmorepi') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for Employee
-2025-04-11 14:03:47,636 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Peeking Ticket Ticket{ (ID: '11') (Date: '2025-04-11') (Issue: 'ad;łđ”ŋ“ĸµp') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:03:50,247 [AWT-EventQueue-0] INFO  org.example.user.UserView - Completing ticket
-2025-04-11 14:03:50,337 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:03:50,356 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Updated ticket: 11's status to: 'Completed'
-2025-04-11 14:03:50,364 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Dequeued Ticket Ticket{ (ID: '11') (Date: '2025-04-11') (Issue: 'ad;łđ”ŋ“ĸµp') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:03:50,462 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:03:50,462 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
-2025-04-11 14:03:50,470 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
-2025-04-11 14:03:50,470 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-11') (Issue: 'ad;łkgfnmorepi') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for Employee
-2025-04-11 14:03:51,327 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Peeking Ticket Ticket{ (ID: '12') (Date: '2025-04-11') (Issue: 'ad;łkgfnmorepi') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:03:52,463 [AWT-EventQueue-0] INFO  org.example.user.UserView - Completing ticket
-2025-04-11 14:03:52,549 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:03:52,567 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Updated ticket: 12's status to: 'Completed'
-2025-04-11 14:03:52,572 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Dequeued Ticket Ticket{ (ID: '12') (Date: '2025-04-11') (Issue: 'ad;łkgfnmorepi') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
-2025-04-11 14:03:52,658 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
-2025-04-11 14:03:52,658 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
-2025-04-11 14:03:52,669 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-11 18:25:36,783 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-11 18:25:36,784 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-11 18:26:00,424 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: Olivia
+2025-04-11 18:26:00,876 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-11 18:26:00,971 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: Olivia
+2025-04-11 18:26:01,223 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-11 18:26:01,223 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening Employee: Olivia's Account
+2025-04-11 18:26:01,745 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-11 18:26:01,745 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting employee tickets from the Database
+2025-04-11 18:26:01,806 [AWT-EventQueue-0] ERROR org.example.db_access.Db_Access - Database error Getting User Tickets: ERROR: syntax error at or near "="
+  Position: 52
+2025-04-11 18:29:56,297 [main] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-11 18:29:56,298 [main] INFO  org.example.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-11 18:30:10,686 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: Olivia
+2025-04-11 18:30:11,146 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-11 18:30:11,236 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: Olivia
+2025-04-11 18:30:11,481 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-11 18:30:11,481 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening Employee: Olivia's Account
+2025-04-11 18:30:12,052 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-11 18:30:12,052 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting employee tickets from the Database
+2025-04-11 18:30:12,104 [AWT-EventQueue-0] ERROR org.example.db_access.Db_Access - Database error Getting User Tickets: ERROR: syntax error at or near "="
+  Position: 52
+2025-04-11 18:30:12,146 [AWT-EventQueue-0] ERROR org.example.user.UserView - No tickets found
+2025-04-11 18:30:22,202 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: samm
+2025-04-11 18:30:22,676 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-11 18:30:22,775 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: samm
+2025-04-11 18:30:22,999 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-11 18:30:22,999 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening User: samm's Account
+2025-04-11 18:30:23,499 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-11 18:30:23,499 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-11 18:30:23,549 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-11 18:30:23,550 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-11') (Issue: 'poo poo') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:23,550 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-11') (Issue: 'blah blah') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:23,551 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-11') (Issue: 'klsdfbiouwgef') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:23,551 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-11') (Issue: '3rfsagh') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:23,551 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-11') (Issue: 'sa[porifgjqa0iejg') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:23,551 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-11') (Issue: 'k;ßɗfnw') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:23,551 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-11') (Issue: 'qwe[opirjgiue') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:23,551 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-11') (Issue: 'as;łjdfvhviuefdh') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:23,551 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '10') (Date: '2025-04-11') (Issue: 'ad';ĸđmgvnoad') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:23,552 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-11') (Issue: 'skl;ðɲibgopw') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:23,552 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-11') (Issue: 'l;æðkdngvoinaeg') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:23,552 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-11') (Issue: 'ad;łđ”ŋ“ĸµp') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:23,552 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-11') (Issue: 'ad;łkgfnmorepi') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:23,552 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '14') (Date: '2025-04-11') (Issue: 'oefh9') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:23,552 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '18') (Date: '2025-04-11') (Issue: 'sjhbdis') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:23,552 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-11') (Issue: 'shdbfsd') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:23,552 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-11') (Issue: 'iugfsd') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:23,552 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-11') (Issue: 'isdgv8f') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:23,553 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-11') (Issue: 'lsdvnsov') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:34,446 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-11 18:30:34,973 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-11 18:30:34,973 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Inserting ticket...20
+2025-04-11 18:30:35,063 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Inserted ticket ID: Ticket{ (ID: '20') (Date: '2025-04-11') (Issue: 'fvjibidbs') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-11 18:30:35,108 [AWT-EventQueue-0] INFO  org.example.Ticket - Inserted ticket with ID: 20
+2025-04-11 18:30:35,108 [AWT-EventQueue-0] INFO  org.example.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '20') (Date: '2025-04-11') (Issue: 'fvjibidbs') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')}
+2025-04-11 18:30:35,538 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-11 18:30:35,539 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting user tickets from the Database
+2025-04-11 18:30:35,589 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Moving tickets to the userView
+2025-04-11 18:30:35,590 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '1') (Date: '2025-04-11') (Issue: 'poo poo') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,590 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-11') (Issue: 'blah blah') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,590 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-11') (Issue: 'klsdfbiouwgef') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,590 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-11') (Issue: '3rfsagh') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,591 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-11') (Issue: 'sa[porifgjqa0iejg') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,591 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '5') (Date: '2025-04-11') (Issue: 'k;ßɗfnw') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,591 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '7') (Date: '2025-04-11') (Issue: 'qwe[opirjgiue') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,591 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '6') (Date: '2025-04-11') (Issue: 'as;łjdfvhviuefdh') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,591 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '10') (Date: '2025-04-11') (Issue: 'ad';ĸđmgvnoad') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,591 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-11') (Issue: 'skl;ðɲibgopw') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,591 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '9') (Date: '2025-04-11') (Issue: 'l;æðkdngvoinaeg') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,591 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-11') (Issue: 'ad;łđ”ŋ“ĸµp') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,591 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-11') (Issue: 'ad;łkgfnmorepi') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,591 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '14') (Date: '2025-04-11') (Issue: 'oefh9') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,591 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '18') (Date: '2025-04-11') (Issue: 'sjhbdis') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,591 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-11') (Issue: 'shdbfsd') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,592 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-11') (Issue: 'iugfsd') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,592 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-11') (Issue: 'isdgv8f') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,592 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-11') (Issue: 'lsdvnsov') (Username: 'samm') (Status: 'Completed') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,592 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting ticket: Ticket{ (ID: '20') (Date: '2025-04-11') (Issue: 'fvjibidbs') (Username: 'samm') (Status: 'InActive') (Handled By: 'Bob')} for user: samm
+2025-04-11 18:30:35,639 [AWT-EventQueue-0] INFO  org.example.user.UserView - Adding Ticket
+2025-04-11 18:30:38,584 [AWT-EventQueue-0] INFO  org.example.user.UserView - Logging out User: samm
+2025-04-11 18:30:47,408 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login attempt for User: Olivia
+2025-04-11 18:30:47,849 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-11 18:30:47,942 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Verifying User: Olivia
+2025-04-11 18:30:48,165 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Login successful
+2025-04-11 18:30:48,165 [AWT-EventQueue-0] INFO  org.example.login.LoginModel - Opening Employee: Olivia's Account
+2025-04-11 18:30:48,593 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Database connection established!
+2025-04-11 18:30:48,593 [AWT-EventQueue-0] INFO  org.example.db_access.Db_Access - Getting employee tickets from the Database
+2025-04-11 18:30:48,644 [AWT-EventQueue-0] ERROR org.example.db_access.Db_Access - Database error Getting User Tickets: ERROR: syntax error at or near "="
+  Position: 52
+2025-04-11 18:30:48,688 [AWT-EventQueue-0] ERROR org.example.user.UserView - No tickets found

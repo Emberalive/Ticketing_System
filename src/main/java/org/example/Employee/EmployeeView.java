@@ -39,7 +39,7 @@ public class EmployeeView extends JFrame {
 
             ticketsArea.setText("");
 
-            listView.setListData(updateTickets());
+            listView.setListData(updateTickets(username));
         });
 
         getTicketButton.addActionListener(e -> {
@@ -59,7 +59,7 @@ public class EmployeeView extends JFrame {
         finishTicket.setBounds(70, 150, 80, 30);
 
         // Left side list
-        listView = new JList<>(updateTickets());
+        listView = new JList<>(updateTickets(username));
         listView.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         JScrollPane listScrollPane = new JScrollPane(listView);
         listScrollPane.setPreferredSize(new Dimension(340, 0));  // Width for the list
@@ -114,7 +114,7 @@ public class EmployeeView extends JFrame {
         JButton updateTickets = new JButton("Update Tickets");
         updateTickets.setFont(new Font("Arial", Font.BOLD, 14));
         updateTickets.addActionListener(e -> {
-            listView.setListData(updateTickets());
+            listView.setListData(updateTickets(username));
         });
         bottomPanel.add(updateTickets);
 
@@ -127,29 +127,36 @@ public class EmployeeView extends JFrame {
         add(rightPanel, BorderLayout.CENTER);
     }
 
-    public String[] updateTickets() {
+    public String[] updateTickets(String username) {
         //list that holds the users Tickets
-        Ticket[] userTicketsList = getTickets();
+        Ticket[] userTicketsList = getTickets(username);
         //list that holds the users ticket data
-        String[] userTickets = new String[userTicketsList.length];
+        if (userTicketsList == null) {
+            logger.error("No tickets found");
+            String[] emptyTickets = new String[1];
+            emptyTickets[0] = "There are no tickets";
+            return emptyTickets;
+        } else {
+            String[] userTickets = new String[userTicketsList.length];
 
-        for (int i = 0; i < userTicketsList.length; i++) {
-            //getting the ticket
-            Ticket ticket = userTicketsList[i];
-            //getting ticket data
-            int userID = ticket.getTicketID();
-            String status = ticket.getStatus();
-            String user = ticket.getUserID();
-            //concatenating ticket data
-            String ticketForUser = "(ID: " + userID + ") (Status: " + status + ") (User: " + user + ")";
-            //adding ticket data to the list that is shown in the GUI
-            userTickets[i] = ticketForUser;
+            for (int i = 0; i < userTicketsList.length; i++) {
+                //getting the ticket
+                Ticket ticket = userTicketsList[i];
+                //getting ticket data
+                int userID = ticket.getTicketID();
+                String status = ticket.getStatus();
+                String user = ticket.getUserID();
+                //concatenating ticket data
+                String ticketForUser = "(ID: " + userID + ") (Status: " + status + ") (User: " + user + ")";
+                //adding ticket data to the list that is shown in the GUI
+                userTickets[i] = ticketForUser;
+            }
+            return userTickets;
         }
-        return userTickets;
     }
 
-    public Ticket[] getTickets () {
-        return db.getAllTickets();
+    public Ticket[] getTickets (String username) {
+        return db.getEmployeetickets(username);
     }
 
     public void setVisibleUI(boolean visible) {
