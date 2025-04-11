@@ -218,5 +218,37 @@ public Ticket[] getUserTickets(String username) {
         return null;
     }
 
-
+    public static String[] randomeEmployee() {
+        Connection conn = getConnection();
+        if (conn != null) {
+            try {
+                PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM users WHERE role = 'employee'"
+                        ResultSet.TYPE_SCROLL_INSENSITIVE,
+                        ResultSet.CONCUR_READ_ONLY
+                );
+                ResultSet rs = stmnt.executeQuery();
+                rs.last();
+                int rowCount = rs.getRow();
+                rs.beforeFirst();
+                String[] employees = new String[rowCount];
+                    while (rs.next()) {
+                        for (int i = 0; i < rowCount; i++) {
+                            rs.next();
+                            String employee = rs.getString("username");
+                            employees[i] = employee;
+                        }
+                    }
+                    return employees;
+            } catch (SQLException e) {
+                logger.error("Database error Getting Employees: {}", e.getMessage());
+            } finally {
+                try {
+                    conn.close();
+                } catch (SQLException close) {
+                    logger.error("Database error on closing connection: {}", close.getMessage());
+                }
+            }
+        }
+        return null;
+    }
 }

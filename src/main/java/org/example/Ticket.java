@@ -6,6 +6,7 @@ import org.example.dataStructures.bucket.Bucket_Queue;
 import org.example.db_access.Db_Access;
 
 import java.time.LocalDate;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Ticket {
     private static final Logger logger = LogManager.getLogger(Ticket.class);
@@ -24,7 +25,12 @@ public class Ticket {
         this.issue = issue;
         this.priority = priority;
         this.userName = userName;
-        this.employee = employee;
+
+        //this allocates a random employee based on the employees that are in the database
+        String[] employees = Db_Access.randomeEmployee();
+        int randomNum = ThreadLocalRandom.current().nextInt(0, employees.length + 1); // inclusive
+        this.employee = employees[randomNum];
+
         this.creationDate = LocalDate.now();
 
         // Insert into DB and update ticketID
