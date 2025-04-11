@@ -14,7 +14,7 @@ import javax.swing.border.Border;
 import java.awt.*;
 
 public class UserView extends JFrame {
-    private static int priority;
+    private static int priority = 0;
     private static final Logger logger = LogManager.getLogger(UserView.class);
     Db_Access db = new Db_Access();
     private JTextField searchField;
@@ -58,30 +58,30 @@ public class UserView extends JFrame {
         priority1.addActionListener(e -> {
             priority = 1;
             priority1.setEnabled(false);
-            priority2.setEnabled(false);
-            priority3.setEnabled(false);
-            priority4.setEnabled(false);
+            priority2.setEnabled(true);
+            priority3.setEnabled(true);
+            priority4.setEnabled(true);
         });
         priority2.addActionListener(e -> {
             priority = 2;
-            priority1.setEnabled(false);
+            priority1.setEnabled(true);
             priority2.setEnabled(false);
-            priority3.setEnabled(false);
-            priority4.setEnabled(false);
+            priority3.setEnabled(true);
+            priority4.setEnabled(true);
         });
         priority3.addActionListener(e -> {
             priority = 3;
-            priority1.setEnabled(false);
-            priority2.setEnabled(false);
+            priority1.setEnabled(true);
+            priority2.setEnabled(true);
             priority3.setEnabled(false);
-            priority4.setEnabled(false);
+            priority4.setEnabled(true);
         });
         priority4.addActionListener(e -> {
             priority = 4;
-            priority1.setEnabled(false);
-            priority2.setEnabled(false);
-            priority3.setEnabled(false);
             priority4.setEnabled(false);
+            priority1.setEnabled(true);
+            priority2.setEnabled(true);
+            priority3.setEnabled(true);
         });
 
         //        priorityField.setBounds(150, 250, 200, 30);
@@ -119,20 +119,26 @@ public class UserView extends JFrame {
 
         JButton addTicket = new JButton("Create Ticket");
         addTicket.addActionListener(e -> {
-            String issue = issueField.getText();
-            Ticket ticket = new Ticket(issue, priority, username, "Bob", Main.getBucket());
-            Main.getBucket().enqueue(ticket);
+            if (issueField.getText().isEmpty() || priority == 0) {
+                JOptionPane.showMessageDialog(rootPane, "You must enter both an issue and priority!");
+            } else {
+                String issue = issueField.getText();
+                Ticket ticket = new Ticket(issue, priority, username, "Bob", Main.getBucket());
+                Main.getBucket().enqueue(ticket);
 
-            //updates the list of tickets with the newly inserted one
-            listView.setListData(updateUserTickets(username));
+                //updates the list of tickets with the newly inserted one
+                listView.setListData(updateUserTickets(username));
 
-            issueField.setText("");
+                issueField.setText("");
 
-            logger.info("Adding Ticket");
-            priority1.setEnabled(true);
-            priority2.setEnabled(true);
-            priority3.setEnabled(true);
-            priority4.setEnabled(true);
+                logger.info("Adding Ticket");
+                priority1.setEnabled(true);
+                priority2.setEnabled(true);
+                priority3.setEnabled(true);
+                priority4.setEnabled(true);
+
+                priority = 0;
+            }
         });
 
         JButton searchTicket = new JButton("Search ticket");
@@ -180,22 +186,29 @@ public class UserView extends JFrame {
         //list that holds the users Tickets
         Ticket[] userTicketsList = db.getUserTickets(username);
         //list that holds the users ticket data
-        String[] userTickets = new String[userTicketsList.length];
 
-        for (int i = 0; i < userTicketsList.length; i++) {
-            //getting the ticket
-            Ticket ticket = userTicketsList[i];
-            //getting ticket data
-            int userID = ticket.getTicketID();
-            String status = ticket.getStatus();
-            String employee = ticket.getEmployee();
-            //concatenating ticket data
-            String ticketForUser = "(ID: " + userID + ") (Status: " + status + ") (Employee: " + employee + ")";
-            //adding ticket data to the list that is shown in the GUI
-            userTickets[i] = ticketForUser;
+        if (userTicketsList == null) {
+            String[] emptyTickets = new String[1];
+            emptyTickets[0] = "There are no tickets";
+            return emptyTickets;
+        } else {
+            String[] userTickets = new String[userTicketsList.length];
+
+            for (int i = 0; i < userTicketsList.length; i++) {
+                //getting the ticket
+                Ticket ticket = userTicketsList[i];
+                //getting ticket data
+                int userID = ticket.getTicketID();
+                String status = ticket.getStatus();
+                String employee = ticket.getEmployee();
+                //concatenating ticket data
+                String ticketForUser = "(ID: " + userID + ") (Status: " + status + ") (Employee: " + employee + ")";
+                //adding ticket data to the list that is shown in the GUI
+                userTickets[i] = ticketForUser;
 //            updateUserList(username);
+            }
+            return userTickets;
         }
-        return userTickets;
     }
 
     public void setVisibleUI(boolean visible) {

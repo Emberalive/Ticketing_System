@@ -126,25 +126,28 @@ public Ticket[] getUserTickets(String username) {
 
             Ticket[] tickets = new Ticket[rowCount];
             int index = 0;
+            if (rowCount > 0) {
 
-            logger.info("Moving tickets to the userView");
-            while (rs.next()) {
-                String issue = rs.getString("issue");
-                int ticketID = rs.getInt("id");
-                int priority = rs.getInt("priority");
-                String status = rs.getString("status");
-                String user = rs.getString("username");
-                LocalDate date = rs.getDate("date").toLocalDate();
-                String employee = rs.getString("employee");
+                logger.info("Moving tickets to the userView");
+                while (rs.next()) {
+                    String issue = rs.getString("issue");
+                    int ticketID = rs.getInt("id");
+                    int priority = rs.getInt("priority");
+                    String status = rs.getString("status");
+                    String user = rs.getString("username");
+                    LocalDate date = rs.getDate("date").toLocalDate();
+                    String employee = rs.getString("employee");
 
-                Ticket ticket = new Ticket(issue, priority, status, user, employee, ticketID, date);
-                logger.info("Getting ticket: {} for user: {}", ticket.loggTicket(), username);
+                    Ticket ticket = new Ticket(issue, priority, status, user, employee, ticketID, date);
+                    logger.info("Getting ticket: {} for user: {}", ticket.loggTicket(), username);
 
-                tickets[index++] = ticket;
+                    tickets[index++] = ticket;
+                }
+                rs.close();
+                return tickets;
+            } else {
+                return null;
             }
-            rs.close();
-            return tickets;
-
         } catch (SQLException e) {
             logger.error("Database error Getting User Tickets: {}", e.getMessage());
         }  finally {
