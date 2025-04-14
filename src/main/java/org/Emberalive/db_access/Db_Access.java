@@ -38,7 +38,6 @@ public class Db_Access {
         String status = ticket.getStatus();
         String username = ticket.getUserID();
         LocalDate date = ticket.getCreationDate();
-        String employee = ticket.getEmployee();
         if (conn != null) {
             try {
                 logger.info("Inserting ticket...{}", ticketID);
@@ -219,38 +218,39 @@ public Ticket[] getUserTickets(String username) {
         return null;
     }
 
-    public static String randomeEmployee() {
+    public static void deleteTicket(int ticketID, String status) {
         Connection conn = getConnection();
         if (conn != null) {
+            logger.info("Attempting to deleting ticket: {}", ticketID);
             try {
-                logger.info("Getting employee's from the Database");
-                PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM users WHERE role = 'employee'",
-                        ResultSet.TYPE_SCROLL_INSENSITIVE,
-                        ResultSet.CONCUR_READ_ONLY
-                );
+                PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM ticket WHERE id = ? AND status = ?");
+                stmnt.setInt(1, ticketID);
+                stmnt.setString(2, status);
+
                 ResultSet rs = stmnt.executeQuery();
 
-                rs.last();
-                int rowCount = rs.getRow();
-                rs.beforeFirst();
-
-                String[] employees = new String[rowCount];
-                int i = 0;
-
-                    while (rs.next()) {
-                            String employee = rs.getString(1);
-                            employees[i] = employee;
-                            logger.info("Getting employee: {} for a new ticket", employee);
-                            i++;
+                while (rs.next()) {
+                    String ticketStatus = rs.getString(4);
+                    if (ticketStatus.equalsIgnoreCase(status)) {
+                        try {
+                            PreparedStatement ps = conn.prepareStatement("DELETE FROM ticket WHERE id = ? AND status = ?");
+                            ps.setInt(1, ticketID);
+                            ps.setString(2, status);
+                            int rowsEffected = ps.executeUpdate();
+                            if (rowsEffected == 1) {
+                                conn.commit();
+                                logger.info("Ticket {} has been deleted", ticketID);
+                            } else {
+                                logger.info("Found more than one ticket in the Database with ID: {} and Status: {}", ticketID, status);
+                                conn.rollback();
+                            }
+                        } catch (SQLException delete) {
+                            logger.error("Error Deleting ticket: {} Error: {}", ticketID, delete.getMessage());
+                        }
                     }
-                    logger.info("Getting random employee for ew ticket");
-                    int randomNum = ThreadLocalRandom.current().nextInt(0, employees.length + 1); // inclusive
-                    System.out.println(randomNum);
-
-                return employees[randomNum];
-
+                }
             } catch (SQLException e) {
-                logger.error("Database error Getting Employees: {}", e.getMessage());
+                logger.error("Database Error, deleting ticket: {}", e.getMessage());
             } finally {
                 try {
                     conn.close();
@@ -259,6 +259,48 @@ public Ticket[] getUserTickets(String username) {
                 }
             }
         }
-        return null;
     }
+
+//    public static String randomeEmployee() {
+//        Connection conn = getConnection();
+//        if (conn != null) {
+//            try {
+//                logger.info("Getting employee's from the Database");
+//                PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM users WHERE role = 'employee'",
+//                        ResultSet.TYPE_SCROLL_INSENSITIVE,
+//                        ResultSet.CONCUR_READ_ONLY
+//                );
+//                ResultSet rs = stmnt.executeQuery();
+//
+//                rs.last();
+//                int rowCount = rs.getRow();
+//                rs.beforeFirst();
+//
+//                String[] employees = new String[rowCount];
+//                int i = 0;
+//
+//                    while (rs.next()) {
+//                            String employee = rs.getString(1);
+//                            employees[i] = employee;
+//                            logger.info("Getting employee: {} for a new ticket", employee);
+//                            i++;
+//                    }
+//                    logger.info("Getting random employee for ew ticket");
+//                    int randomNum = ThreadLocalRandom.current().nextInt(0, employees.length + 1); // inclusive
+//                    System.out.println(randomNum);
+//
+//                return employees[randomNum];
+//
+//            } catch (SQLException e) {
+//                logger.error("Database error Getting Employees: {}", e.getMessage());
+//            } finally {
+//                try {
+//                    conn.close();
+//                } catch (SQLException close) {
+//                    logger.error("Database error on closing connection: {}", close.getMessage());
+//                }
+//            }
+//        }
+//        return null;
+//    }
 }

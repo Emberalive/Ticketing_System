@@ -1,5 +1,6 @@
 package org.Emberalive.user;
 
+import org.Emberalive.user.DeleteTicket.DeleteTicketModel;
 import org.Emberalive.user.search.userSearchTicket;
 import org.Emberalive.user.search.userSearchTicketModel;
 import org.apache.logging.log4j.LogManager;
@@ -52,6 +53,20 @@ public class UserView extends JFrame {
                 label.setBorder(border);
 
                 return label;
+            }
+        });
+
+        listView.addListSelectionListener(e -> {
+            if (!e.getValueIsAdjusting()) {
+                String selectedTicket = listView.getSelectedValue();
+                int ID = Integer.parseInt(selectedTicket.split("ID: ")[1].split("\\)")[0].trim());
+                String status = selectedTicket.split("Status: ")[1].split("\\)")[0].trim();
+                DeleteTicketModel deleteTicketModel = new DeleteTicketModel(ID, status);
+                if (status.equals("Complete")) {
+                    deleteTicketModel.startGUI();
+                } else {
+                    JOptionPane.showMessageDialog(UserView.this, "This ticket can not be deleted");
+                }
             }
         });
 
@@ -113,7 +128,7 @@ public class UserView extends JFrame {
 
         JButton logout = new JButton("Log out");
         logout.addActionListener(e -> {
-            logger.info("Logging out User: " + username);
+            logger.info("Logging out User: {}", username);
             this.dispose();
 
             searchTicketModel.FinishGUI(userSearchTicket);

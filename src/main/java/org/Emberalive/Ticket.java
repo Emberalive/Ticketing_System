@@ -24,9 +24,6 @@ public class Ticket {
         this.issue = issue;
         this.priority = priority;
         this.userName = userName;
-
-//        this.employee = Db_Access.randomeEmployee();
-
         this.creationDate = LocalDate.now();
 
         // Insert into DB and update ticketID
