@@ -1,8 +1,13 @@
 package org.Emberalive.user.search;
 
 public class userSearchTicketModel {
-    public void StartGUI() {
+    public userSearchTicket StartGUI() {
         userSearchTicket view = new userSearchTicket();
         view.setVisible(true);
+        return view;
+    }
+
+    public void FinishGUI(userSearchTicket view) {
+        view.dispose();
     }
 }

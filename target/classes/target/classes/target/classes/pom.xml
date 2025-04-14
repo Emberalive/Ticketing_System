@@ -35,11 +35,11 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>org.Emberalive.Main</mainClass> <!-- Update with your main class -->
+                    <mainClass>org.example.Main</mainClass> <!-- Update with your main class -->
                     <arguments>
                         <argument>--module-path</argument>
                         <argument>${java.home}/lib</argument> <!-- Path to JDK, or to your JavaFX SDK -->
-                        <argument>org.Emberalive.user.UserView</argument>
+                        <argument>org.example.user.UserView</argument>
                         <argument>javafx.controls,javafx.fxml</argument> <!-- Specify JavaFX modules -->
                     </arguments>
                 </configuration>

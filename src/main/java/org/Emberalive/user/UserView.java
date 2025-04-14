@@ -1,5 +1,6 @@
 package org.Emberalive.user;
 
+import org.Emberalive.user.search.userSearchTicket;
 import org.Emberalive.user.search.userSearchTicketModel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,6 +16,9 @@ import javax.swing.border.Border;
 import java.awt.*;
 
 public class UserView extends JFrame {
+    userSearchTicketModel searchTicketModel = new userSearchTicketModel();
+    userSearchTicket userSearchTicket;
+
     private static int priority = 0;
     private static final Logger logger = LogManager.getLogger(UserView.class);
     Db_Access db = new Db_Access();
@@ -112,6 +116,8 @@ public class UserView extends JFrame {
             logger.info("Logging out User: " + username);
             this.dispose();
 
+            searchTicketModel.FinishGUI(userSearchTicket);
+
            LoginModel model = new LoginModel();
            LoginView view = new LoginView();
            LoginController controller = new LoginController(model, view);
@@ -156,8 +162,7 @@ public class UserView extends JFrame {
 
         JButton searchTicket = new JButton("Search ticket");
         searchTicket.addActionListener(e -> {
-            userSearchTicketModel model = new userSearchTicketModel();
-            model.StartGUI();
+            userSearchTicket = searchTicketModel.StartGUI();
         });
         searchTicket.setBounds(220, 300, 150, 30);
         bottomPanel.add(searchTicket);
