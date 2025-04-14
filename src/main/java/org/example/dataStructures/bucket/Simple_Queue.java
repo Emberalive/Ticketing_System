@@ -45,7 +45,7 @@ public class Simple_Queue {
         Ticket ticket = queue[front];
         //getting the ticket id and using that to update the ticket in the database before it is removed
         int ticketID = ticket.getTicketID();
-        db.updateStatusWhenCompleted(ticketID, "Completed");
+//        db.updateStatusWhenCompleted(ticketID, "Completed");
 
         front = (front + 1) % capacity;
         size--;

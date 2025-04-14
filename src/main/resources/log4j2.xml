@@ -7,9 +7,6 @@
             </PatternLayout>
         </File>
     </Appenders>
-    <!--        <Console name="fileAppender" target="SYSTEM_OUT">-->
-    <!--            <PatternLayout pattern="%d [%t] %-5level %logger - %msg%n"/>-->
-    <!--        </Console>-->
     <Loggers>
         <Root level="info">
             <AppenderRef ref="fileAppender"/>

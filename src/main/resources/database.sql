@@ -9,9 +9,9 @@ CREATE TABLE ticket (
     issue VARCHAR(300) NOT NULL,
     priority int NOT NULL,
     status VARCHAR(10) NOT NULL,
-    username VARCHAR(50)NOT NULL,
+    username VARCHAR(50) NOT NULL,
     date date NOT NULL,
-    employee VARCHAR(50) NOT NULL,
+    employee VARCHAR(50) DEFAULT 'Not Assigned' NOT NULL,
     PRIMARY KEY(ID, username),
     FOREIGN KEY (username) REFERENCES users(username)
 );

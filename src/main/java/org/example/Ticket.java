@@ -21,15 +21,12 @@ public class Ticket {
     private String employee;
 
     // Constructor for creating new tickets (no ID or creationDate passed)
-    public Ticket(String issue, int priority, String userName, String employee, Bucket_Queue dataStruct) {
+    public Ticket(String issue, int priority, String userName, Bucket_Queue dataStruct) {
         this.issue = issue;
         this.priority = priority;
         this.userName = userName;
 
-        //this allocates a random employee based on the employees that are in the database
-        String[] employees = Db_Access.randomeEmployee();
-        int randomNum = ThreadLocalRandom.current().nextInt(0, employees.length + 1); // inclusive
-        this.employee = employees[randomNum];
+//        this.employee = Db_Access.randomeEmployee();
 
         this.creationDate = LocalDate.now();
 
@@ -50,6 +47,10 @@ public class Ticket {
         this.employee = employee;
         this.ticketID = ticketID;
         this.creationDate = creationDate;
+    }
+
+    public String getUsername() {
+        return userName;
     }
 
     //created setters and getters for employee

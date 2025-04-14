@@ -125,7 +125,7 @@ public class UserView extends JFrame {
         JLabel title = new JLabel("Create Tickets");
         JLabel issueLabel = new JLabel("Issue:");
         JTextField issueField = new JTextField();
-        JLabel priorityLabel = new JLabel("Select Priority:");
+        JLabel priorityLabel = new JLabel("Select Issue:");
 
         JButton addTicket = new JButton("Create Ticket");
         addTicket.setBackground(Color.DARK_GRAY);
@@ -135,7 +135,7 @@ public class UserView extends JFrame {
                 JOptionPane.showMessageDialog(rootPane, "You must enter both an issue and priority!");
             } else {
                 String issue = issueField.getText();
-                Ticket ticket = new Ticket(issue, priority, username, "Bob", Main.getBucket());
+                Ticket ticket = new Ticket(issue, priority, username, Main.getBucket());
                 Main.getBucket().enqueue(ticket);
 
                 //updates the list of tickets with the newly inserted one
