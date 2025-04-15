@@ -40,7 +40,6 @@ public class AccountView extends JFrame {
                 logger.error("Account details could not be retrieved from the Database");
             }
         });
-
         add(accountLabel);
         add(getAccountDetails);
         add(accountDetailsArea);

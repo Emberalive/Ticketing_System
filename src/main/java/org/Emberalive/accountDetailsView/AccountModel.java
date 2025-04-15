@@ -25,7 +25,7 @@ public class AccountModel {
         Connection conn = Db_Access.getConnection();
         String accountDetails;
         try {
-            PreparedStatement stmnt = conn.prepareStatement("select * from account_details where username=?",
+            PreparedStatement stmnt = conn.prepareStatement("select * from users where username=?",
                     ResultSet.TYPE_SCROLL_INSENSITIVE,
                     ResultSet.CONCUR_READ_ONLY
             );
@@ -43,7 +43,11 @@ public class AccountModel {
                 String password = rs.getString("password");
                 String role = rs.getString("role");
 
-                accountDetails = String.format("Username: %s, Password: %s, Role: %s", username2, password, role);
+                accountDetails = ("Account Details:\n" +
+                        "--------------------------------------------------------------------------------------------------------------------------\n"
+                      +  "Username: " + username
+                + "\nPassword: ***************"
+                + "\nRole: " + role);
                 return accountDetails;
             }
 
