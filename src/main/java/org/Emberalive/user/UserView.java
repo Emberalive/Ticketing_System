@@ -1,5 +1,7 @@
 package org.Emberalive.user;
 
+import org.Emberalive.accountDetailsView.AccountModel;
+import org.Emberalive.accountDetailsView.AccountView;
 import org.Emberalive.user.DeleteTicket.DeleteTicketModel;
 import org.Emberalive.user.search.userSearchTicket;
 import org.Emberalive.user.search.userSearchTicketModel;
@@ -197,6 +199,15 @@ public class UserView extends JFrame {
         priorityLabel.setBounds(35, 120, 125, 30);
         issueLabel.setBounds(35, 70, 125, 30);
 
+        JButton accountButton = new JButton("Account");
+        accountButton.addActionListener(e -> {
+           //open the account page
+            AccountView accountView = new AccountView(username);
+            AccountModel accountModel = new AccountModel(accountView);
+            accountModel.startGUI();
+           logger.info("opening the Account page for User: {}", username);
+        });
+
         bottomPanel.add(title);
         bottomPanel.add(priority1);
         bottomPanel.add(priority2);
@@ -211,6 +222,7 @@ public class UserView extends JFrame {
         userLabel.setFont(new Font("Arial", Font.BOLD, 14));
 
         // Add components to the top panel
+        topPanel.add(accountButton);
         topPanel.add(logout);
         topPanel.add(userLabel);
         rightPanel.add(topPanel, BorderLayout.NORTH);
