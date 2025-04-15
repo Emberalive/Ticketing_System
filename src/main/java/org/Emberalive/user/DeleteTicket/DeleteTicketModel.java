@@ -32,7 +32,7 @@ public class DeleteTicketModel {
                      "SELECT * FROM ticket WHERE id = ? AND username = ?",
                      ResultSet.TYPE_SCROLL_INSENSITIVE,
                      ResultSet.CONCUR_READ_ONLY
-             )) {
+             )){
 
             stmnt.setInt(1, ticketID);
             stmnt.setString(2, username);
