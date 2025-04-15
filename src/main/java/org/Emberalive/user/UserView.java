@@ -59,13 +59,16 @@ public class UserView extends JFrame {
         listView.addListSelectionListener(e -> {
             if (!e.getValueIsAdjusting()) {
                 String selectedTicket = listView.getSelectedValue();
-                int ID = Integer.parseInt(selectedTicket.split("ID: ")[1].split("\\)")[0].trim());
-                String status = selectedTicket.split("Status: ")[1].split("\\)")[0].trim();
-                DeleteTicketModel deleteTicketModel = new DeleteTicketModel(ID, status);
-                if (status.equals("Complete")) {
-                    deleteTicketModel.startGUI();
-                } else {
-                    JOptionPane.showMessageDialog(UserView.this, "This ticket can not be deleted");
+                if (selectedTicket != null) {
+                    int ID = Integer.parseInt(selectedTicket.split("ID: ")[1].split("\\)")[0].trim());
+                    String status = selectedTicket.split("Status: ")[1].split("\\)")[0].trim();
+                    DeleteTicketModel deleteTicketModel = new DeleteTicketModel(ID, status, username, this);
+                    if (status.equals("Complete")) {
+                        logger.info("Opening delete ticket confirmation");
+                        deleteTicketModel.startGUI();
+                    } else {
+                        JOptionPane.showMessageDialog(UserView.this, "This ticket can not be deleted");
+                    }
                 }
             }
         });
@@ -130,9 +133,11 @@ public class UserView extends JFrame {
         logout.addActionListener(e -> {
             logger.info("Logging out User: {}", username);
             this.dispose();
-
-            searchTicketModel.FinishGUI(userSearchTicket);
-
+            if (userSearchTicket != null) {
+                searchTicketModel.FinishGUI(userSearchTicket);
+            } else {
+                logger.warn("There is no userSearchTicket window to close");
+            }
            LoginModel model = new LoginModel();
            LoginView view = new LoginView();
            LoginController controller = new LoginController(model, view);
@@ -250,6 +255,10 @@ public class UserView extends JFrame {
 
     public JTextField getSearchField() {
         return searchField;
+    }
+
+    public void setListView(String[] listView) {
+        this.listView.setListData(listView);
     }
 
     public JList<String> getListView() {
