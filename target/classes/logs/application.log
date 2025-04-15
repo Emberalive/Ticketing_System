@@ -253,3 +253,66 @@
 2025-04-15 12:47:37,711 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-14') (Issue: 'zdfhhvddf') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for user: samm
 2025-04-15 12:47:37,712 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-14') (Issue: 'dfhargs') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for user: samm
 2025-04-15 12:47:37,712 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-14') (Issue: 'dngrsarea') (Username: 'samm') (Status: 'Active') (Handled By: 'Sophia')} for user: samm
+2025-04-15 12:50:09,831 [main] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 12:50:09,832 [main] INFO  org.Emberalive.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-15 12:50:09,847 [main] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '11') (Date: '2025-04-14') (Issue: 'osjbgiows') (Username: 'samm') (Status: 'Active') (Handled By: 'Mia')}
+2025-04-15 12:50:09,847 [main] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '12') (Date: '2025-04-14') (Issue: 'dfhnaeht') (Username: 'samm') (Status: 'Active') (Handled By: 'Lucas')}
+2025-04-15 12:50:09,848 [main] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '13') (Date: '2025-04-14') (Issue: 'DFHAFDRSHFDS') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')}
+2025-04-15 12:50:09,848 [main] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '15') (Date: '2025-04-14') (Issue: 'zdfhhvddf') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')}
+2025-04-15 12:50:09,848 [main] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '16') (Date: '2025-04-14') (Issue: 'dfhargs') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')}
+2025-04-15 12:50:09,848 [main] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '17') (Date: '2025-04-14') (Issue: 'dngrsarea') (Username: 'samm') (Status: 'Active') (Handled By: 'Sophia')}
+2025-04-15 12:50:13,905 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login attempt for User: samm
+2025-04-15 12:50:14,021 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 12:50:14,041 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Verifying User: samm
+2025-04-15 12:50:14,269 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login successful
+2025-04-15 12:50:14,270 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Opening User: samm's Account
+2025-04-15 12:50:14,365 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 12:50:14,365 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting user tickets from the Database
+2025-04-15 12:50:14,374 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Moving tickets to the userView
+2025-04-15 12:50:14,374 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-14') (Issue: 'SDFAGASGA') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 12:50:14,374 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-14') (Issue: 'treheaefd') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 12:50:14,374 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-14') (Issue: 'erthrsdzg') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 12:50:14,374 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '8') (Date: '2025-04-14') (Issue: 'rthfghsf') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 12:50:14,375 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-14') (Issue: 'osjbgiows') (Username: 'samm') (Status: 'Active') (Handled By: 'Mia')} for user: samm
+2025-04-15 12:50:14,375 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-14') (Issue: 'dfhnaeht') (Username: 'samm') (Status: 'Active') (Handled By: 'Lucas')} for user: samm
+2025-04-15 12:50:14,375 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-14') (Issue: 'DFHAFDRSHFDS') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for user: samm
+2025-04-15 12:50:14,375 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-14') (Issue: 'zdfhhvddf') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for user: samm
+2025-04-15 12:50:14,375 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-14') (Issue: 'dfhargs') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for user: samm
+2025-04-15 12:50:14,375 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-14') (Issue: 'dngrsarea') (Username: 'samm') (Status: 'Active') (Handled By: 'Sophia')} for user: samm
+2025-04-15 12:50:18,004 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 12:50:18,017 [AWT-EventQueue-0] INFO  org.Emberalive.user.UserView - Opening delete ticket confirmation
+2025-04-15 12:50:23,543 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 12:50:23,544 [AWT-EventQueue-0] INFO  org.Emberalive.user.DeleteTicket.DeleteTicketModel - Attempting to deleting ticket: 8
+2025-04-15 12:50:23,563 [AWT-EventQueue-0] INFO  org.Emberalive.user.DeleteTicket.DeleteTicketModel - Ticket 8 has been deleted
+2025-04-15 12:50:23,645 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 12:50:23,653 [AWT-EventQueue-0] INFO  org.Emberalive.user.DeleteTicket.DeleteTicketModel - No ticket found with ID: 8 for user: samm
+2025-04-15 12:50:27,078 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 12:50:27,078 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting user tickets from the Database
+2025-04-15 12:50:27,088 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Moving tickets to the userView
+2025-04-15 12:50:27,088 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-14') (Issue: 'SDFAGASGA') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 12:50:27,088 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-14') (Issue: 'treheaefd') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 12:50:27,088 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '4') (Date: '2025-04-14') (Issue: 'erthrsdzg') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 12:50:27,088 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-14') (Issue: 'osjbgiows') (Username: 'samm') (Status: 'Active') (Handled By: 'Mia')} for user: samm
+2025-04-15 12:50:27,089 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-14') (Issue: 'dfhnaeht') (Username: 'samm') (Status: 'Active') (Handled By: 'Lucas')} for user: samm
+2025-04-15 12:50:27,089 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-14') (Issue: 'DFHAFDRSHFDS') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for user: samm
+2025-04-15 12:50:27,089 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-14') (Issue: 'zdfhhvddf') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for user: samm
+2025-04-15 12:50:27,089 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-14') (Issue: 'dfhargs') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for user: samm
+2025-04-15 12:50:27,089 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-14') (Issue: 'dngrsarea') (Username: 'samm') (Status: 'Active') (Handled By: 'Sophia')} for user: samm
+2025-04-15 12:50:35,310 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 12:50:35,331 [AWT-EventQueue-0] INFO  org.Emberalive.user.UserView - Opening delete ticket confirmation
+2025-04-15 12:50:36,370 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 12:50:36,371 [AWT-EventQueue-0] INFO  org.Emberalive.user.DeleteTicket.DeleteTicketModel - Attempting to deleting ticket: 4
+2025-04-15 12:50:36,397 [AWT-EventQueue-0] INFO  org.Emberalive.user.DeleteTicket.DeleteTicketModel - Ticket 4 has been deleted
+2025-04-15 12:50:36,485 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 12:50:36,496 [AWT-EventQueue-0] INFO  org.Emberalive.user.DeleteTicket.DeleteTicketModel - No ticket found with ID: 4 for user: samm
+2025-04-15 12:50:37,619 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 12:50:37,619 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting user tickets from the Database
+2025-04-15 12:50:37,630 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Moving tickets to the userView
+2025-04-15 12:50:37,631 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-14') (Issue: 'SDFAGASGA') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 12:50:37,631 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '3') (Date: '2025-04-14') (Issue: 'treheaefd') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 12:50:37,631 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-14') (Issue: 'osjbgiows') (Username: 'samm') (Status: 'Active') (Handled By: 'Mia')} for user: samm
+2025-04-15 12:50:37,631 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-14') (Issue: 'dfhnaeht') (Username: 'samm') (Status: 'Active') (Handled By: 'Lucas')} for user: samm
+2025-04-15 12:50:37,631 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-14') (Issue: 'DFHAFDRSHFDS') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for user: samm
+2025-04-15 12:50:37,631 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-14') (Issue: 'zdfhhvddf') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for user: samm
+2025-04-15 12:50:37,632 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-14') (Issue: 'dfhargs') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for user: samm
+2025-04-15 12:50:37,632 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-14') (Issue: 'dngrsarea') (Username: 'samm') (Status: 'Active') (Handled By: 'Sophia')} for user: samm

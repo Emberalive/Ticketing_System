@@ -17,7 +17,7 @@ public class LoginView extends JFrame{
     public LoginView() {
         setTitle("Ticketing System");
         setSize(400, 250);
-        setDefaultCloseOperation(HIDE_ON_CLOSE);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         //layout and components
         setLayout(null);

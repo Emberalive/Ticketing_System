@@ -316,3 +316,218 @@
 2025-04-15 12:50:37,631 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-14') (Issue: 'zdfhhvddf') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for user: samm
 2025-04-15 12:50:37,632 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-14') (Issue: 'dfhargs') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for user: samm
 2025-04-15 12:50:37,632 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-14') (Issue: 'dngrsarea') (Username: 'samm') (Status: 'Active') (Handled By: 'Sophia')} for user: samm
+2025-04-15 13:10:41,990 [main] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:10:41,991 [main] INFO  org.Emberalive.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-15 13:10:42,020 [main] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '11') (Date: '2025-04-14') (Issue: 'osjbgiows') (Username: 'samm') (Status: 'Active') (Handled By: 'Mia')}
+2025-04-15 13:10:42,021 [main] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '12') (Date: '2025-04-14') (Issue: 'dfhnaeht') (Username: 'samm') (Status: 'Active') (Handled By: 'Lucas')}
+2025-04-15 13:10:42,021 [main] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '13') (Date: '2025-04-14') (Issue: 'DFHAFDRSHFDS') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')}
+2025-04-15 13:10:42,021 [main] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '15') (Date: '2025-04-14') (Issue: 'zdfhhvddf') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')}
+2025-04-15 13:10:42,021 [main] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '16') (Date: '2025-04-14') (Issue: 'dfhargs') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')}
+2025-04-15 13:10:42,021 [main] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Enqueued ticket: Ticket{ (ID: '17') (Date: '2025-04-14') (Issue: 'dngrsarea') (Username: 'samm') (Status: 'Active') (Handled By: 'Sophia')}
+2025-04-15 13:16:47,537 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login attempt for User: samel
+2025-04-15 13:16:47,631 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:16:47,642 [AWT-EventQueue-0] WARN  org.Emberalive.login.LoginModel - No User found with username: samel
+2025-04-15 13:16:51,260 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login attempt for User: samm
+2025-04-15 13:16:51,351 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:16:51,366 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Verifying User: samm
+2025-04-15 13:16:51,612 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login successful
+2025-04-15 13:16:51,612 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Opening User: samm's Account
+2025-04-15 13:16:51,684 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:16:51,685 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting user tickets from the Database
+2025-04-15 13:16:51,693 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Moving tickets to the userView
+2025-04-15 13:16:51,694 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-14') (Issue: 'SDFAGASGA') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 13:16:51,694 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-14') (Issue: 'osjbgiows') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 13:16:51,694 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-14') (Issue: 'dfhnaeht') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 13:16:51,694 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-14') (Issue: 'DFHAFDRSHFDS') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 13:16:51,694 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-14') (Issue: 'zdfhhvddf') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 13:16:51,694 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-14') (Issue: 'dfhargs') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for user: samm
+2025-04-15 13:16:51,694 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-14') (Issue: 'dngrsarea') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 13:16:51,694 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '18') (Date: '2025-04-15') (Issue: 'isudubv') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 13:16:51,694 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-15') (Issue: 'osdhvoVW') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for user: samm
+2025-04-15 13:17:00,571 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:17:00,586 [AWT-EventQueue-0] INFO  org.Emberalive.user.UserView - Opening delete ticket confirmation
+2025-04-15 13:17:01,096 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:17:06,999 [AWT-EventQueue-0] INFO  org.Emberalive.user.search.userSearchTicket - Searching for Ticket: 19
+2025-04-15 13:17:06,999 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Searching Ticket 19
+2025-04-15 13:17:06,999 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Simple_Queue - Ticket not found: 19
+2025-04-15 13:17:07,000 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Searching Ticket 19
+2025-04-15 13:17:07,000 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Simple_Queue - Ticket not found: 19
+2025-04-15 13:17:07,000 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Searching Ticket 19
+2025-04-15 13:17:07,000 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Simple_Queue - Ticket not found: 19
+2025-04-15 13:17:07,000 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Searching Ticket 19
+2025-04-15 13:17:07,000 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Simple_Queue - Ticket not found: 19
+2025-04-15 13:17:07,000 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:17:14,951 [AWT-EventQueue-0] INFO  org.Emberalive.user.search.userSearchTicket - Searching for Ticket: 19
+2025-04-15 13:17:14,951 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Searching Ticket 19
+2025-04-15 13:17:14,951 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Simple_Queue - Ticket not found: 19
+2025-04-15 13:17:14,952 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Searching Ticket 19
+2025-04-15 13:17:14,952 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Simple_Queue - Ticket not found: 19
+2025-04-15 13:17:14,952 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Searching Ticket 19
+2025-04-15 13:17:14,952 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Simple_Queue - Ticket not found: 19
+2025-04-15 13:17:14,952 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Searching Ticket 19
+2025-04-15 13:17:14,952 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Simple_Queue - Ticket not found: 19
+2025-04-15 13:17:14,952 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:17:20,447 [AWT-EventQueue-0] INFO  org.Emberalive.user.search.userSearchTicket - Searching for Ticket: 16
+2025-04-15 13:17:20,447 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Searching Ticket 16
+2025-04-15 13:17:20,448 [AWT-EventQueue-0] INFO  org.Emberalive.user.search.userSearchTicket - Found Ticket: Ticket{ (ID: '16') (Date: '2025-04-14') (Issue: 'dfhargs') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')}
+2025-04-15 13:17:24,329 [AWT-EventQueue-0] INFO  org.Emberalive.user.search.userSearchTicket - Searching for Ticket: 1
+2025-04-15 13:17:24,330 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Searching Ticket 1
+2025-04-15 13:17:24,330 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Simple_Queue - Ticket not found: 1
+2025-04-15 13:17:24,330 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Searching Ticket 1
+2025-04-15 13:17:24,330 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Simple_Queue - Ticket not found: 1
+2025-04-15 13:17:24,330 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Searching Ticket 1
+2025-04-15 13:17:24,330 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Simple_Queue - Ticket not found: 1
+2025-04-15 13:17:24,330 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Searching Ticket 1
+2025-04-15 13:17:24,330 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Simple_Queue - Ticket not found: 1
+2025-04-15 13:17:24,330 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:17:27,358 [AWT-EventQueue-0] INFO  org.Emberalive.user.search.userSearchTicket - Searching for Ticket: 19
+2025-04-15 13:17:27,358 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Searching Ticket 19
+2025-04-15 13:17:27,358 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Simple_Queue - Ticket not found: 19
+2025-04-15 13:17:27,358 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Searching Ticket 19
+2025-04-15 13:17:27,358 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Simple_Queue - Ticket not found: 19
+2025-04-15 13:17:27,358 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Searching Ticket 19
+2025-04-15 13:17:27,358 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Simple_Queue - Ticket not found: 19
+2025-04-15 13:17:27,358 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Searching Ticket 19
+2025-04-15 13:17:27,358 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Simple_Queue - Ticket not found: 19
+2025-04-15 13:17:27,358 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:17:33,325 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:17:33,339 [AWT-EventQueue-0] INFO  org.Emberalive.user.UserView - Opening delete ticket confirmation
+2025-04-15 13:17:34,564 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:17:36,585 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:17:36,585 [AWT-EventQueue-0] INFO  org.Emberalive.user.DeleteTicket.DeleteTicketModel - Attempting to deleting ticket: 18
+2025-04-15 13:17:36,614 [AWT-EventQueue-0] INFO  org.Emberalive.user.DeleteTicket.DeleteTicketModel - Ticket 18 has been deleted
+2025-04-15 13:17:36,700 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:17:36,708 [AWT-EventQueue-0] INFO  org.Emberalive.user.DeleteTicket.DeleteTicketModel - No ticket found with ID: 18 for user: samm
+2025-04-15 13:17:37,812 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:17:37,812 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting user tickets from the Database
+2025-04-15 13:17:37,820 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Moving tickets to the userView
+2025-04-15 13:17:37,821 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '2') (Date: '2025-04-14') (Issue: 'SDFAGASGA') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 13:17:37,821 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '11') (Date: '2025-04-14') (Issue: 'osjbgiows') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 13:17:37,821 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '12') (Date: '2025-04-14') (Issue: 'dfhnaeht') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 13:17:37,821 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '13') (Date: '2025-04-14') (Issue: 'DFHAFDRSHFDS') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 13:17:37,821 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '15') (Date: '2025-04-14') (Issue: 'zdfhhvddf') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 13:17:37,821 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-14') (Issue: 'dfhargs') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for user: samm
+2025-04-15 13:17:37,821 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '17') (Date: '2025-04-14') (Issue: 'dngrsarea') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')} for user: samm
+2025-04-15 13:17:37,821 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-15') (Issue: 'osdhvoVW') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for user: samm
+2025-04-15 13:17:38,785 [AWT-EventQueue-0] INFO  org.Emberalive.user.UserView - Logging out User: samm
+2025-04-15 13:17:44,424 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login attempt for User: Olivia
+2025-04-15 13:17:44,516 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:17:44,530 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Verifying User: Olivia
+2025-04-15 13:17:44,756 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login successful
+2025-04-15 13:17:44,757 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Opening Employee: Olivia's Account
+2025-04-15 13:17:44,835 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:17:44,846 [AWT-EventQueue-0] WARN  org.Emberalive.Employee.EmployeeModel - Employee: Olivia Has more than one Active Ticket
+2025-04-15 13:17:44,926 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:17:44,926 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting employee tickets for Employee Account: Olivia
+2025-04-15 13:17:44,931 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Moving tickets to the EmployeeView
+2025-04-15 13:17:44,932 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-14') (Issue: 'dfhargs') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for Employee
+2025-04-15 13:17:44,932 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-15') (Issue: 'osdhvoVW') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for Employee
+2025-04-15 13:17:49,262 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Peeking Ticket Ticket{ (ID: '11') (Date: '2025-04-14') (Issue: 'osjbgiows') (Username: 'samm') (Status: 'Active') (Handled By: 'Mia')}
+2025-04-15 13:17:50,964 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Completing ticket
+2025-04-15 13:17:50,964 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Peeking Ticket Ticket{ (ID: '11') (Date: '2025-04-14') (Issue: 'osjbgiows') (Username: 'samm') (Status: 'Active') (Handled By: 'Mia')}
+2025-04-15 13:17:51,045 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:17:51,045 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeModel - Updating Ticket: 11's status to: 'Active'
+2025-04-15 13:17:51,051 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeModel - Successfully updated 1 ticket(s)
+2025-04-15 13:17:51,051 [AWT-EventQueue-0] INFO  org.Emberalive.Ticket - Updating status from 'Active' - 'Complete' For the Ticket: Ticket{ (ID: '11') (Date: '2025-04-14') (Issue: 'osjbgiows') (Username: 'samm') (Status: 'Active') (Handled By: 'Mia')}
+2025-04-15 13:17:51,059 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Dequeued Ticket Ticket{ (ID: '11') (Date: '2025-04-14') (Issue: 'osjbgiows') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')}
+2025-04-15 13:17:51,154 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:17:51,154 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting employee tickets for Employee Account: Olivia
+2025-04-15 13:17:51,163 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Moving tickets to the EmployeeView
+2025-04-15 13:17:51,163 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '16') (Date: '2025-04-14') (Issue: 'dfhargs') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for Employee
+2025-04-15 13:17:51,163 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-15') (Issue: 'osdhvoVW') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for Employee
+2025-04-15 13:17:51,538 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Peeking Ticket Ticket{ (ID: '16') (Date: '2025-04-14') (Issue: 'dfhargs') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')}
+2025-04-15 13:17:55,932 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Completing ticket
+2025-04-15 13:17:55,933 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Peeking Ticket Ticket{ (ID: '16') (Date: '2025-04-14') (Issue: 'dfhargs') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')}
+2025-04-15 13:17:56,011 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:17:56,011 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeModel - Updating Ticket: 16's status to: 'Active'
+2025-04-15 13:17:56,018 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeModel - Successfully updated 1 ticket(s)
+2025-04-15 13:17:56,018 [AWT-EventQueue-0] INFO  org.Emberalive.Ticket - Updating status from 'InActive' - 'Complete' For the Ticket: Ticket{ (ID: '16') (Date: '2025-04-14') (Issue: 'dfhargs') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')}
+2025-04-15 13:17:56,024 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Dequeued Ticket Ticket{ (ID: '16') (Date: '2025-04-14') (Issue: 'dfhargs') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')}
+2025-04-15 13:17:56,121 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:17:56,121 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting employee tickets for Employee Account: Olivia
+2025-04-15 13:17:56,134 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Moving tickets to the EmployeeView
+2025-04-15 13:17:56,134 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-15') (Issue: 'osdhvoVW') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for Employee
+2025-04-15 13:17:56,768 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Peeking Ticket Ticket{ (ID: '12') (Date: '2025-04-14') (Issue: 'dfhnaeht') (Username: 'samm') (Status: 'Active') (Handled By: 'Lucas')}
+2025-04-15 13:17:57,611 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Peeking Ticket Ticket{ (ID: '12') (Date: '2025-04-14') (Issue: 'dfhnaeht') (Username: 'samm') (Status: 'Active') (Handled By: 'Lucas')}
+2025-04-15 13:17:57,612 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Dequeued Ticket Ticket{ (ID: '12') (Date: '2025-04-14') (Issue: 'dfhnaeht') (Username: 'samm') (Status: 'Active') (Handled By: 'Lucas')}
+2025-04-15 13:17:57,698 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:17:57,698 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeModel - Updating Ticket: 12's status to: 'Active'
+2025-04-15 13:17:57,704 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeModel - Successfully updated 1 ticket(s)
+2025-04-15 13:17:57,704 [AWT-EventQueue-0] INFO  org.Emberalive.Ticket - Updating status from 'Active' - 'Active' For the Ticket: Ticket{ (ID: '12') (Date: '2025-04-14') (Issue: 'dfhnaeht') (Username: 'samm') (Status: 'Active') (Handled By: 'Lucas')}
+2025-04-15 13:17:57,803 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:17:57,803 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting employee tickets for Employee Account: Olivia
+2025-04-15 13:17:57,810 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Moving tickets to the EmployeeView
+2025-04-15 13:17:57,811 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-15') (Issue: 'osdhvoVW') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for Employee
+2025-04-15 13:18:00,178 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:18:00,179 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeModel - Updating Ticket: 12's status to: 'Active'
+2025-04-15 13:18:00,185 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeModel - Successfully updated 1 ticket(s)
+2025-04-15 13:18:00,185 [AWT-EventQueue-0] INFO  org.Emberalive.Ticket - Updating status from 'Active' - 'Complete' For the Ticket: Ticket{ (ID: '12') (Date: '2025-04-14') (Issue: 'dfhnaeht') (Username: 'samm') (Status: 'Active') (Handled By: 'Olivia')}
+2025-04-15 13:18:00,189 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Dequeued Ticket Ticket{ (ID: '17') (Date: '2025-04-14') (Issue: 'dngrsarea') (Username: 'samm') (Status: 'Active') (Handled By: 'Sophia')}
+2025-04-15 13:18:00,271 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:18:00,271 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting employee tickets for Employee Account: Olivia
+2025-04-15 13:18:00,281 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Moving tickets to the EmployeeView
+2025-04-15 13:18:00,281 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-15') (Issue: 'osdhvoVW') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for Employee
+2025-04-15 13:18:00,882 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Peeking Ticket Ticket{ (ID: '13') (Date: '2025-04-14') (Issue: 'DFHAFDRSHFDS') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')}
+2025-04-15 13:18:05,006 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Completing ticket
+2025-04-15 13:18:05,007 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Peeking Ticket Ticket{ (ID: '13') (Date: '2025-04-14') (Issue: 'DFHAFDRSHFDS') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')}
+2025-04-15 13:18:05,091 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:18:05,091 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeModel - Updating Ticket: 13's status to: 'Active'
+2025-04-15 13:18:05,099 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeModel - Successfully updated 1 ticket(s)
+2025-04-15 13:18:05,099 [AWT-EventQueue-0] INFO  org.Emberalive.Ticket - Updating status from 'InActive' - 'Complete' For the Ticket: Ticket{ (ID: '13') (Date: '2025-04-14') (Issue: 'DFHAFDRSHFDS') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')}
+2025-04-15 13:18:05,106 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Dequeued Ticket Ticket{ (ID: '13') (Date: '2025-04-14') (Issue: 'DFHAFDRSHFDS') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')}
+2025-04-15 13:18:05,191 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:18:05,191 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting employee tickets for Employee Account: Olivia
+2025-04-15 13:18:05,203 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Moving tickets to the EmployeeView
+2025-04-15 13:18:05,204 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-15') (Issue: 'osdhvoVW') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for Employee
+2025-04-15 13:18:05,606 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Peeking Ticket Ticket{ (ID: '15') (Date: '2025-04-14') (Issue: 'zdfhhvddf') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')}
+2025-04-15 13:18:06,291 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Completing ticket
+2025-04-15 13:18:06,292 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Peeking Ticket Ticket{ (ID: '15') (Date: '2025-04-14') (Issue: 'zdfhhvddf') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')}
+2025-04-15 13:18:06,365 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:18:06,366 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeModel - Updating Ticket: 15's status to: 'Active'
+2025-04-15 13:18:06,377 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeModel - Successfully updated 1 ticket(s)
+2025-04-15 13:18:06,377 [AWT-EventQueue-0] INFO  org.Emberalive.Ticket - Updating status from 'InActive' - 'Complete' For the Ticket: Ticket{ (ID: '15') (Date: '2025-04-14') (Issue: 'zdfhhvddf') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')}
+2025-04-15 13:18:06,387 [AWT-EventQueue-0] INFO  org.Emberalive.dataStructures.bucket.Simple_Queue - Dequeued Ticket Ticket{ (ID: '15') (Date: '2025-04-14') (Issue: 'zdfhhvddf') (Username: 'samm') (Status: 'Complete') (Handled By: 'Olivia')}
+2025-04-15 13:18:06,474 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:18:06,474 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting employee tickets for Employee Account: Olivia
+2025-04-15 13:18:06,486 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Moving tickets to the EmployeeView
+2025-04-15 13:18:06,486 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-15') (Issue: 'osdhvoVW') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for Employee
+2025-04-15 13:18:06,909 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:18:06,910 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Ticket was not found, When searched by one by: Olivia 
+2025-04-15 13:18:07,822 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:18:07,822 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Ticket was not found, When searched by one by: Olivia 
+2025-04-15 13:18:08,310 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:18:08,311 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Ticket was not found, When searched by one by: Olivia 
+2025-04-15 13:18:08,463 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:18:08,464 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Ticket was not found, When searched by one by: Olivia 
+2025-04-15 13:18:08,602 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:18:08,602 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Ticket was not found, When searched by one by: Olivia 
+2025-04-15 13:18:08,752 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:18:08,752 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Ticket was not found, When searched by one by: Olivia 
+2025-04-15 13:18:08,881 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:18:08,882 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Ticket was not found, When searched by one by: Olivia 
+2025-04-15 13:18:09,017 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:18:09,018 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Ticket was not found, When searched by one by: Olivia 
+2025-04-15 13:18:09,297 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:18:09,298 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Ticket was not found, When searched by one by: Olivia 
+2025-04-15 13:18:09,475 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:18:09,476 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Ticket was not found, When searched by one by: Olivia 
+2025-04-15 13:18:09,997 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:18:09,997 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting employee tickets for Employee Account: Olivia
+2025-04-15 13:18:10,009 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Moving tickets to the EmployeeView
+2025-04-15 13:18:10,009 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-15') (Issue: 'osdhvoVW') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for Employee
+2025-04-15 13:18:10,437 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:18:10,438 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Ticket was not found, When searched by one by: Olivia 
+2025-04-15 13:18:10,620 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:18:10,621 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Ticket was not found, When searched by one by: Olivia 
+2025-04-15 13:18:10,766 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:18:10,766 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Ticket was not found, When searched by one by: Olivia 
+2025-04-15 13:18:11,712 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-15 13:18:11,712 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting employee tickets for Employee Account: Olivia
+2025-04-15 13:18:11,726 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Moving tickets to the EmployeeView
+2025-04-15 13:18:11,726 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting ticket: Ticket{ (ID: '19') (Date: '2025-04-15') (Issue: 'osdhvoVW') (Username: 'samm') (Status: 'InActive') (Handled By: 'Not Assigned')} for Employee
+2025-04-15 13:18:11,963 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:18:11,964 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Ticket was not found, When searched by one by: Olivia 
+2025-04-15 13:18:12,152 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:18:12,153 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Ticket was not found, When searched by one by: Olivia 
+2025-04-15 13:18:12,291 [AWT-EventQueue-0] WARN  org.Emberalive.dataStructures.bucket.Bucket_Queue - There are no tickets to dequeue
+2025-04-15 13:18:12,291 [AWT-EventQueue-0] INFO  org.Emberalive.Employee.EmployeeView - Ticket was not found, When searched by one by: Olivia 
