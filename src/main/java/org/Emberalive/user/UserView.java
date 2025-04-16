@@ -202,7 +202,7 @@ public class UserView extends JFrame {
         JButton accountButton = new JButton("Account");
         accountButton.addActionListener(e -> {
            //open the account page
-            AccountView accountView = new AccountView(username);
+            AccountView accountView = new AccountView(username, this);
             AccountModel accountModel = new AccountModel(accountView);
             accountModel.startGUI();
            logger.info("opening the Account page for User: {}", username);

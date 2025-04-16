@@ -1,5 +1,9 @@
 package org.Emberalive.accountDetailsView;
 
+import org.Emberalive.login.LoginController;
+import org.Emberalive.login.LoginModel;
+import org.Emberalive.login.LoginView;
+import org.Emberalive.user.UserView;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -11,7 +15,7 @@ public class AccountView extends JFrame {
     AccountModel model = new AccountModel(this);
 
 
-    public AccountView(String username) {
+    public AccountView(String username, UserView userView) {
         setTitle("Account Details");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(600, 600);
@@ -36,7 +40,6 @@ public class AccountView extends JFrame {
             if (accountDetails != null) {
                 accountDetailsArea.setText(accountDetails);
             } else {
-//                JOptionPane.showMessageDialog("There was an error getting your details");
                 logger.error("Account details could not be retrieved from the Database");
             }
         });
@@ -76,13 +79,38 @@ public class AccountView extends JFrame {
                logger.info("Passwords do not match when trying to change the password for user: {}", username);
                JOptionPane.showMessageDialog(AccountView.this, "Passwords do not match!");
            } else {
-               model.changePassword(username, newPass);
-               JOptionPane.showMessageDialog(AccountView.this, "Password changed!");
-               newPassword.setText("");
-               confirmPassword.setText("");
-               confirmPassword.setEnabled(false);
-               newPassword.setEnabled(false);
-               changePasswordButton.setEnabled(false);
+               boolean check = model.changePassword(newPass, username);
+               if (check) {
+                   JOptionPane.showMessageDialog(AccountView.this, "Password changed!");
+                   newPassword.setText("");
+                   confirmPassword.setText("");
+                   confirmPassword.setEnabled(false);
+                   newPassword.setEnabled(false);
+                   changePasswordButton.setEnabled(false);
+               } else {
+                   JOptionPane.showMessageDialog(AccountView.this, "Password was not changed!");
+               }
+           }
+        });
+
+        JButton deleteAccountButton = new JButton("Delete Account");
+        deleteAccountButton.setBounds(260, 410, 175, 30);
+        deleteAccountButton.addActionListener(e -> {
+           logger.info("Deleting an account with username: {}", username);
+           boolean success = model.deleteAccount(username);
+           if (success) {
+               JOptionPane.showMessageDialog(AccountView.this, "Account has been deleted from the database");
+
+               this.dispose();
+
+               userView.dispose();
+
+               LoginView loginView = new LoginView();
+               LoginModel loginModel = new LoginModel();
+               LoginController loginController = new LoginController(loginModel, loginView);
+               loginController.startGUI();
+           } else {
+               JOptionPane.showMessageDialog(this, "Issues with deleting the account");
            }
         });
 
@@ -95,9 +123,11 @@ public class AccountView extends JFrame {
                 confirmPassword.setEnabled(true);
                 newPassword.setEnabled(true);
                 changePasswordButton.setEnabled(true);
+                verifyPassField.setText("");
             }
         });
 
+        add(deleteAccountButton);
         add(changePasswordButton);
         add(newPasswordLabel);
         add(newPassword);

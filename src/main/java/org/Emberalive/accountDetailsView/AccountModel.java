@@ -2,6 +2,9 @@ package org.Emberalive.accountDetailsView;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.Emberalive.db_access.Db_Access;
+import org.Emberalive.login.LoginController;
+import org.Emberalive.login.LoginModel;
+import org.Emberalive.login.LoginView;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -97,12 +100,16 @@ public class AccountModel {
     public boolean changePassword(String newPassword, String username) {
         Connection conn = Db_Access.getConnection();
         try {
+            conn.setAutoCommit(false);
+
+            String hashedPassword = Db_Access.hashPassword(newPassword);
+
             PreparedStatement stmnt = conn.prepareStatement("UPDATE users SET password=? WHERE username=?");
-            stmnt.setString(1, newPassword);
+            stmnt.setString(1, hashedPassword);
             stmnt.setString(2, username);
             int rows = stmnt.executeUpdate();
-            if (rows > 1) {
-                logger.warn("Found more than one users with the username: {} Password not changed", username);
+            if (rows > 1 || rows == 0) {
+                logger.warn("Issues with changing the password for user: {}. Password not changed", username);
                 conn.rollback();
                 return false;
             } else {
@@ -117,6 +124,67 @@ public class AccountModel {
                 conn.close();
             } catch (SQLException close) {
                 logger.error("Failed to close the database connection", close);
+            }
+        }
+        return false;
+    }
+
+    //allows a User to delete their account
+    public boolean deleteAccount(String username) {
+        Connection conn = Db_Access.getConnection();
+
+        boolean deleteTickets = deleteTickets(username);
+
+        try {
+            conn.setAutoCommit(false);
+            logger.info("\nDeleting an account with username: {}", username);
+            PreparedStatement stmt = conn.prepareStatement("DELETE FROM users WHERE username = ?");
+            stmt.setString(1, username);
+
+            int rows = stmt.executeUpdate();
+            if (rows == 1 && deleteTickets) {
+                conn.commit();
+                logger.info("\nThe account has been deleted from the database");
+
+                return true;
+            } else {
+                conn.rollback();
+                logger.info("\nThe account could not be deleted");
+            }
+        } catch (SQLException e){
+            logger.error("\nDatabase err: {}", String.valueOf(e));
+            try {
+                conn.rollback(); // Rollback in case of error
+                logger.warn("\nTransaction rolled back.");
+            } catch (SQLException rollbackEx) {
+                logger.error("Error rolling back the database: {}", rollbackEx.getMessage());
+            } finally {
+                try {
+                    conn.close();
+                } catch (SQLException closeEx) {
+                    logger.error("Error losing the connection: {}", closeEx.getMessage());
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean deleteTickets(String username) {
+        Connection conn = Db_Access.getConnection();
+        try {
+            conn.setAutoCommit(false);
+            PreparedStatement stmnt = conn.prepareStatement("DELETE FROM ticket WHERE username = ?");
+            stmnt.setString(1, username);
+            stmnt.executeUpdate();
+            conn.commit();
+            return true;
+        } catch (SQLException e) {
+            logger.error("Failed to get the tickets for: {} Error: {}", username, e.getMessage());
+        } finally {
+            try {
+                conn.close();
+            } catch (SQLException close) {
+                logger.error("Failed to close the database connection Error: {}", close.getMessage());
             }
         }
         return false;

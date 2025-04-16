@@ -1,6 +1,6 @@
 package org.Emberalive.account;
 
-import at.favre.lib.crypto.bcrypt.BCrypt;
+import org.Emberalive.db_access.Db_Access;
 
 public class IT_employee {
     Account acc = new Account();
@@ -18,7 +18,7 @@ public class IT_employee {
     }
     public boolean setPassword(String password) {
         //encrypting the password
-        this.ItPassword = BCrypt.withDefaults().hashToString(12, password.toCharArray());
+        this.ItPassword = Db_Access.hashPassword(password);
         String role = "employee";
         return acc.register(getUsername(), getPassword(), role);
     }

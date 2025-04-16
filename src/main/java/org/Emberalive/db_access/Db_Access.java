@@ -1,4 +1,5 @@
 package org.Emberalive.db_access;
+import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.Emberalive.Ticket;
@@ -216,5 +217,9 @@ public Ticket[] getUserTickets(String username) {
             }
         }
         return null;
+    }
+
+    public static String hashPassword(String password) {
+        return BCrypt.withDefaults().hashToString(12, password.toCharArray());
     }
 }

@@ -52,33 +52,4 @@ public class Account {
         }
         return success;
     }
-
-    //allows a User to delete their account
-    public void deleteAccount(String username) {
-        Connection conn = Db_Access.getConnection();
-        try {
-            logger.info("\nDeleting an account with username: {}", username);
-            PreparedStatement stmt = conn.prepareStatement("DELETE FROM users WHERE username = ?");
-            stmt.setString(1, username);
-
-            stmt.executeUpdate();
-            conn.commit();
-
-            logger.info("\nThe account has been deleted from the database");
-        } catch (SQLException e){
-            logger.error("\nDatabase err: {}", String.valueOf(e));
-            try {
-                conn.rollback(); // Rollback in case of error
-                logger.warn("\nTransaction rolled back.");
-            } catch (SQLException rollbackEx) {
-                logger.error("\nDatabase err: {}", String.valueOf(rollbackEx));
-            } finally {
-                try {
-                    conn.close();
-                } catch (SQLException closeEx) {
-                    logger.error("\nDatabase err: {}", String.valueOf(closeEx));
-                }
-            }
-        }
-    }
 }

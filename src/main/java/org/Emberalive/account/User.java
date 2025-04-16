@@ -1,6 +1,7 @@
 package org.Emberalive.account;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
+import org.Emberalive.db_access.Db_Access;
 
 public class User {
     Account acc = new Account();
@@ -18,7 +19,7 @@ public class User {
     }
     public boolean setPassword(String password) {
         //encrypting the password
-        this.password = BCrypt.withDefaults().hashToString(12, password.toCharArray());
+        this.password = Db_Access.hashPassword(password);
         //registering the User
         // this allows me to know if it is a User or an admin
         String role = "user";
