@@ -1,51 +1,136 @@
-2025-04-15 22:40:34,628 [main] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
-2025-04-15 22:40:34,631 [main] INFO  org.Emberalive.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
-2025-04-15 22:40:38,667 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login attempt for User: samm
-2025-04-15 22:40:39,059 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
-2025-04-15 22:40:39,132 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Verifying User: samm
-2025-04-15 22:40:39,912 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login successful
-2025-04-15 22:40:39,912 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Opening User: samm's Account
-2025-04-15 22:40:40,295 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
-2025-04-15 22:40:40,295 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting user tickets from the Database
-2025-04-15 22:40:47,297 [AWT-EventQueue-0] INFO  org.Emberalive.user.UserView - opening the Account page for User: samm
-2025-04-15 22:40:49,799 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Getting Account Details for user: samm
-2025-04-15 22:40:50,208 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
-2025-04-15 22:40:50,270 [AWT-EventQueue-0] ERROR org.Emberalive.accountDetailsView.AccountModel - Failed to get the account Details for: samm Error: org.postgresql.util.PSQLException: ERROR: relation "account_details" does not exist
-  Position: 15
-2025-04-15 22:40:50,325 [AWT-EventQueue-0] ERROR org.Emberalive.accountDetailsView.AccountView - Account details could not be retrieved from the Database
-2025-04-15 22:41:27,571 [main] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
-2025-04-15 22:41:27,574 [main] INFO  org.Emberalive.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
-2025-04-15 22:41:34,943 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login attempt for User: samm
-2025-04-15 22:41:35,331 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
-2025-04-15 22:41:35,405 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Verifying User: samm
-2025-04-15 22:41:36,181 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login successful
-2025-04-15 22:41:36,182 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Opening User: samm's Account
-2025-04-15 22:41:36,576 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
-2025-04-15 22:41:36,577 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting user tickets from the Database
-2025-04-15 22:41:39,829 [AWT-EventQueue-0] INFO  org.Emberalive.user.UserView - opening the Account page for User: samm
-2025-04-15 22:41:40,778 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Getting Account Details for user: samm
-2025-04-15 22:41:41,158 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
-2025-04-15 22:43:30,753 [main] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
-2025-04-15 22:43:30,756 [main] INFO  org.Emberalive.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
-2025-04-15 22:43:34,618 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login attempt for User: samm
-2025-04-15 22:43:35,006 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
-2025-04-15 22:43:35,078 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Verifying User: samm
-2025-04-15 22:43:35,851 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login successful
-2025-04-15 22:43:35,851 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Opening User: samm's Account
-2025-04-15 22:43:36,323 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
-2025-04-15 22:43:36,323 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting user tickets from the Database
-2025-04-15 22:43:39,290 [AWT-EventQueue-0] INFO  org.Emberalive.user.UserView - opening the Account page for User: samm
-2025-04-15 22:43:40,265 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Getting Account Details for user: samm
-2025-04-15 22:43:40,636 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
-2025-04-15 22:43:59,229 [main] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
-2025-04-15 22:43:59,233 [main] INFO  org.Emberalive.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
-2025-04-15 22:44:04,395 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login attempt for User: samm
-2025-04-15 22:44:04,780 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
-2025-04-15 22:44:04,859 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Verifying User: samm
-2025-04-15 22:44:05,637 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login successful
-2025-04-15 22:44:05,638 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Opening User: samm's Account
-2025-04-15 22:44:06,033 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
-2025-04-15 22:44:06,033 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting user tickets from the Database
-2025-04-15 22:44:10,307 [AWT-EventQueue-0] INFO  org.Emberalive.user.UserView - opening the Account page for User: samm
-2025-04-15 22:44:11,487 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Getting Account Details for user: samm
-2025-04-15 22:44:11,858 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:34:26,210 [main] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:34:26,211 [main] INFO  org.Emberalive.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-16 12:34:31,626 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login attempt for User: samm
+2025-04-16 12:34:31,726 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:34:31,750 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Verifying User: samm
+2025-04-16 12:34:31,982 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login successful
+2025-04-16 12:34:31,983 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Opening User: samm's Account
+2025-04-16 12:34:32,089 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:34:32,089 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting user tickets from the Database
+2025-04-16 12:34:39,667 [AWT-EventQueue-0] INFO  org.Emberalive.user.UserView - opening the Account page for User: samm
+2025-04-16 12:34:52,400 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Verifying Password to change password for: samm
+2025-04-16 12:34:52,494 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:34:52,494 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - getting password for: samm
+2025-04-16 12:34:52,509 [AWT-EventQueue-0] ERROR org.Emberalive.accountDetailsView.AccountModel - Failed to get the password for: samm Error: org.postgresql.util.PSQLException: Operation requires a scrollable ResultSet, but this ResultSet is FORWARD_ONLY.
+2025-04-16 12:35:56,335 [main] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:35:56,336 [main] INFO  org.Emberalive.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-16 12:36:00,103 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login attempt for User: samm
+2025-04-16 12:36:00,194 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:36:00,205 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Verifying User: samm
+2025-04-16 12:36:00,432 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login successful
+2025-04-16 12:36:00,433 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Opening User: samm's Account
+2025-04-16 12:36:00,524 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:36:00,525 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting user tickets from the Database
+2025-04-16 12:36:03,634 [AWT-EventQueue-0] INFO  org.Emberalive.user.UserView - opening the Account page for User: samm
+2025-04-16 12:36:10,087 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Verifying Password to change password for: samm
+2025-04-16 12:36:10,163 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:36:10,163 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - getting password for: samm
+2025-04-16 12:36:10,400 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - Password verified
+2025-04-16 12:36:25,739 [AWT-EventQueue-0] INFO  org.Emberalive.user.UserView - opening the Account page for User: samm
+2025-04-16 12:36:29,111 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Verifying Password to change password for: samm
+2025-04-16 12:36:29,202 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:36:29,202 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - getting password for: samm
+2025-04-16 12:36:29,442 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - Password not verified
+2025-04-16 12:36:42,590 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Verifying Password to change password for: samm
+2025-04-16 12:36:42,691 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:36:42,691 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - getting password for: samm
+2025-04-16 12:36:42,935 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - Password verified
+2025-04-16 12:46:41,751 [main] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:46:41,752 [main] INFO  org.Emberalive.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-16 12:46:46,175 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login attempt for User: samm
+2025-04-16 12:46:46,280 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:46:46,300 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Verifying User: samm
+2025-04-16 12:46:46,532 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login successful
+2025-04-16 12:46:46,532 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Opening User: samm's Account
+2025-04-16 12:46:46,610 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:46:46,611 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting user tickets from the Database
+2025-04-16 12:46:47,448 [AWT-EventQueue-0] INFO  org.Emberalive.user.UserView - opening the Account page for User: samm
+2025-04-16 12:46:52,766 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Verifying Password to change password for: samm
+2025-04-16 12:46:52,897 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:46:52,897 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - getting password for: samm
+2025-04-16 12:46:53,145 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - Password verified
+2025-04-16 12:47:20,656 [main] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:47:20,657 [main] INFO  org.Emberalive.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-16 12:47:24,978 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login attempt for User: samm
+2025-04-16 12:47:25,080 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:47:25,105 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Verifying User: samm
+2025-04-16 12:47:26,269 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login failed: incorrect password for User: samm
+2025-04-16 12:47:28,968 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login attempt for User: samm
+2025-04-16 12:47:29,080 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:47:29,094 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Verifying User: samm
+2025-04-16 12:47:29,324 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login successful
+2025-04-16 12:47:29,324 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Opening User: samm's Account
+2025-04-16 12:47:29,413 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:47:29,413 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting user tickets from the Database
+2025-04-16 12:47:30,300 [AWT-EventQueue-0] INFO  org.Emberalive.user.UserView - opening the Account page for User: samm
+2025-04-16 12:48:39,160 [main] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:48:39,161 [main] INFO  org.Emberalive.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-16 12:48:42,379 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login attempt for User: samm
+2025-04-16 12:48:42,466 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:48:42,478 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Verifying User: samm
+2025-04-16 12:48:42,709 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login successful
+2025-04-16 12:48:42,709 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Opening User: samm's Account
+2025-04-16 12:48:42,790 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:48:42,791 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting user tickets from the Database
+2025-04-16 12:48:43,624 [AWT-EventQueue-0] INFO  org.Emberalive.user.UserView - opening the Account page for User: samm
+2025-04-16 12:49:39,255 [main] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:49:39,257 [main] INFO  org.Emberalive.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-16 12:49:42,256 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login attempt for User: samm
+2025-04-16 12:49:42,359 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:49:42,375 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Verifying User: samm
+2025-04-16 12:49:42,604 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login successful
+2025-04-16 12:49:42,605 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Opening User: samm's Account
+2025-04-16 12:49:42,691 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:49:42,691 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting user tickets from the Database
+2025-04-16 12:49:43,568 [AWT-EventQueue-0] INFO  org.Emberalive.user.UserView - opening the Account page for User: samm
+2025-04-16 12:49:47,340 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Verifying Password to change password for: samm
+2025-04-16 12:49:47,428 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:49:47,428 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - getting password for: samm
+2025-04-16 12:49:47,660 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - Password verified
+2025-04-16 12:49:54,279 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Changing Password to change password for: samm
+2025-04-16 12:49:54,369 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:50:21,805 [main] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:50:21,807 [main] INFO  org.Emberalive.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-16 12:50:27,234 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login attempt for User: samm
+2025-04-16 12:50:27,320 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:50:27,343 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Verifying User: samm
+2025-04-16 12:50:27,574 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login successful
+2025-04-16 12:50:27,574 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Opening User: samm's Account
+2025-04-16 12:50:27,663 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:50:27,663 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting user tickets from the Database
+2025-04-16 12:50:29,722 [AWT-EventQueue-0] INFO  org.Emberalive.user.UserView - opening the Account page for User: samm
+2025-04-16 12:50:32,298 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Getting Account Details for user: samm
+2025-04-16 12:50:32,392 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:50:37,939 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Verifying Password to change password for: samm
+2025-04-16 12:50:38,027 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:50:38,027 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - getting password for: samm
+2025-04-16 12:50:38,263 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - Password not verified
+2025-04-16 12:50:42,086 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Verifying Password to change password for: samm
+2025-04-16 12:50:42,163 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:50:42,163 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - getting password for: samm
+2025-04-16 12:50:42,404 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - Password verified
+2025-04-16 12:50:48,864 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Changing Password to change password for: samm
+2025-04-16 12:50:48,865 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Passwords do not match when trying to change the password for user: samm
+2025-04-16 12:50:58,241 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Changing Password to change password for: samm
+2025-04-16 12:50:58,326 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:52:54,645 [main] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:52:54,646 [main] INFO  org.Emberalive.dataStructures.bucket.Bucket_Queue - Filling Tickets from the Database
+2025-04-16 12:52:58,271 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login attempt for User: samm
+2025-04-16 12:52:58,361 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:52:58,383 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Verifying User: samm
+2025-04-16 12:52:58,614 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Login successful
+2025-04-16 12:52:58,614 [AWT-EventQueue-0] INFO  org.Emberalive.login.LoginModel - Opening User: samm's Account
+2025-04-16 12:52:58,712 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:52:58,712 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Getting user tickets from the Database
+2025-04-16 12:52:59,651 [AWT-EventQueue-0] INFO  org.Emberalive.user.UserView - opening the Account page for User: samm
+2025-04-16 12:53:02,570 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Verifying Password to change password for: samm
+2025-04-16 12:53:02,660 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:53:02,660 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - getting password for: samm
+2025-04-16 12:53:02,897 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - Password verified
+2025-04-16 12:53:16,731 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Changing Password to change password for: samm
+2025-04-16 12:53:16,829 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:53:16,847 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - Password changed
+2025-04-16 12:53:39,531 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountView - Verifying Password to change password for: samm
+2025-04-16 12:53:39,619 [AWT-EventQueue-0] INFO  org.Emberalive.db_access.Db_Access - Database connection established!
+2025-04-16 12:53:39,619 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - getting password for: samm
+2025-04-16 12:53:39,855 [AWT-EventQueue-0] INFO  org.Emberalive.accountDetailsView.AccountModel - Password not verified
