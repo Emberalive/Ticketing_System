@@ -1,6 +1,6 @@
 package org.Emberalive.user.DeleteTicket;
 
-import org.Emberalive.Ticket;
+import org.Emberalive.ticket.Ticket;
 import org.Emberalive.db_access.Db_Access;
 import org.Emberalive.user.UserView;
 import org.apache.logging.log4j.LogManager;

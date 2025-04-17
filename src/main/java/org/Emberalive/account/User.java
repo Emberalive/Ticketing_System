@@ -17,12 +17,14 @@ public class User {
     public String getPassword() {
         return password;
     }
-    public boolean setPassword(String password) {
+    public void setPassword(String password) {
         //encrypting the password
         this.password = Db_Access.hashPassword(password);
         //registering the User
         // this allows me to know if it is a User or an admin
-        String role = "user";
-        return acc.register(getUsername(), getPassword(), role);
+    }
+
+    public String getRole() {
+        return "user";
     }
 }

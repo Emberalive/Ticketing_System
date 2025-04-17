@@ -1,6 +1,6 @@
 package org.Emberalive.Employee;
 
-import org.Emberalive.Ticket;
+import org.Emberalive.ticket.Ticket;
 
 public class EmployeeController {
     private final EmployeeView view;

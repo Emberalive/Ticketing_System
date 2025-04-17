@@ -8,7 +8,7 @@ import org.Emberalive.user.search.userSearchTicketModel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.Emberalive.Main;
-import org.Emberalive.Ticket;
+import org.Emberalive.ticket.Ticket;
 import org.Emberalive.db_access.Db_Access;
 import org.Emberalive.login.LoginController;
 import org.Emberalive.login.LoginModel;

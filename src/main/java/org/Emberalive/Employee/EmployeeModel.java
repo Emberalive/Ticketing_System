@@ -3,7 +3,7 @@ package org.Emberalive.Employee;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.Emberalive.Main;
-import org.Emberalive.Ticket;
+import org.Emberalive.ticket.Ticket;
 import org.Emberalive.db_access.Db_Access;
 
 import java.sql.Connection;
@@ -64,11 +64,10 @@ public class EmployeeModel {
         int ID = ticket.getTicketID();
         logger.info("Updating Ticket: {}'s status to: 'Active'", ID);
         try {
-            PreparedStatement ps = conn.prepareStatement("UPDATE ticket SET status = ?, employee = ? WHERE id = ? AND username = ?");
+            PreparedStatement ps = conn.prepareStatement("UPDATE ticket SET status = ?, employee = ? WHERE id = ?");
             ps.setString(1, newStatus);
             ps.setString(2, username);
             ps.setInt(3, ID);
-            ps.setString(4, ticket.getUsername());
 
             int rowsUpdated = ps.executeUpdate();
             if (rowsUpdated == 0) {
@@ -78,9 +77,6 @@ public class EmployeeModel {
                 ticket.setStatus(newStatus);
                 ticket.setEmployee(username);
                 conn.commit();
-            }
-            if (newStatus.equals("Complete")) {
-                Main.getBucket().dequeue();
             }
         } catch (SQLException e) {
             logger.warn("Error updating status for ticket {} to '{}': {}", ticket.loggTicket(), newStatus, e.getMessage());

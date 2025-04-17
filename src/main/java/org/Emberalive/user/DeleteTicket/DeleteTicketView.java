@@ -1,6 +1,6 @@
 package org.Emberalive.user.DeleteTicket;
 
-import org.Emberalive.Ticket;
+import org.Emberalive.ticket.Ticket;
 import org.Emberalive.user.UserView;
 import javax.swing.*;
 import java.awt.*;

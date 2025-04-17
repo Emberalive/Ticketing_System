@@ -7,7 +7,7 @@ import javax.swing.*;
 public class RegisterView extends JFrame {
     private JTextField usernameField;
     private JPasswordField passwordField;
-    RegisterModel model = new RegisterModel();
+    RegisterModel model = new RegisterModel(this);
     RegisterController controller;
 
     public RegisterView() {
@@ -50,7 +50,9 @@ public class RegisterView extends JFrame {
 
             User usr = new User();
             usr.setUsername(username);
-            boolean success = usr.setPassword(password);
+            usr.setPassword(password);
+
+            boolean success = model.register(usr.getUsername(), usr.getPassword(), usr.getRole());
             if (success) {
                 JOptionPane.showMessageDialog(this, "Registration Successful");
 

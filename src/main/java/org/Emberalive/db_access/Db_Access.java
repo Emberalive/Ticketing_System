@@ -2,12 +2,11 @@ package org.Emberalive.db_access;
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.Emberalive.Ticket;
+import org.Emberalive.ticket.Ticket;
 
 
 import java.sql.*;
 import java.time.LocalDate;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class Db_Access {
     private static final Logger logger = LogManager.getLogger(Db_Access.class);

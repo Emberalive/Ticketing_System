@@ -3,7 +3,7 @@ package org.Emberalive.dataStructures.priority_queue;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.Emberalive.Ticket;
+import org.Emberalive.ticket.Ticket;
 
 public class Priority_Queue_List {
     private static final Logger logger = LogManager.getLogger(Priority_Queue_List.class);

@@ -3,7 +3,7 @@ package org.Emberalive.Employee;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.Emberalive.Main;
-import org.Emberalive.Ticket;
+import org.Emberalive.ticket.Ticket;
 import org.Emberalive.dataStructures.bucket.Bucket_Queue;
 import org.Emberalive.db_access.Db_Access;
 import org.Emberalive.login.LoginController;
@@ -20,11 +20,42 @@ public class EmployeeView extends JFrame {
     EmployeeController controller = new EmployeeController(this, model);
     private static final Logger logger = LogManager.getLogger(EmployeeView.class);
     Db_Access db = new Db_Access();
-    private JList<String> listView;
+
+    //creating button variables
+    JButton logout = new JButton("Logout");
+    JButton updateTicket = new JButton("Update Ticket");
+    JButton getTicketButton = new JButton("Get Ticket");
+    JButton finishTicket = new JButton("Finish Ticket");
+    JButton completeTicket = new JButton("Complete Ticket");
+    JButton inComplete = new JButton("UnFinish");
+
+    //creating the textAreas
+    JTextArea ticketsArea = new JTextArea();
+    JTextArea activeTicket = new JTextArea();
+
+    //creating the JPanels
+    JPanel topPanel;
+    JPanel rightPanel;
+    JPanel bottomPanel;
+
+    //creating the labels
+    JLabel activeTicketLabel = new JLabel("Active Ticket:");
     private final JLabel userLabel;
 
+
+    private JList<String> listView;
+
     public EmployeeView(String username) {
-        unfinishedTicket = controller.startActiveTicket(username);
+        //checks if the unfinished ticket is null and sets default text if it is
+        if (unfinishedTicket != null) {
+            logger.info("Setting the unfinishedTicket {}", unfinishedTicket.loggTicket());
+            activeTicket.setText(unfinishedTicket.printTicket());
+            inComplete.setEnabled(false);
+            completeTicket.setEnabled(false);
+        } else {
+            activeTicket.setText("No active ticket");
+            finishTicket.setEnabled(false);
+        }
 
         // Initialize JFrame
         setTitle("Employee Dashboard");
@@ -32,52 +63,36 @@ public class EmployeeView extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        //setting up my JComponents
-        JButton logout = new JButton("Log out");
+        //setting bounds for my JButtons
+        updateTicket.setBounds(35, 10, 150, 30);
 
+        getTicketButton.setBounds(195, 10, 150, 30);
 
+        finishTicket.setBounds(190, 390, 150, 30);
 
-        // Username label
+        inComplete.setBounds(195, 180, 150, 30);
+
+        completeTicket.setBounds(35, 180, 150, 30);
+
+        //setting up the JLabels
         userLabel = new JLabel("Welcome, " + username + "!");
         userLabel.setFont(new Font("Arial", Font.BOLD, 14));
 
-        //update tickets
-        JButton updateTicket = new JButton("Update Tickets");
-        updateTicket.setBounds(35, 10, 150, 30);
-//        updateTicket.setFont(new Font("Arial", Font.BOLD, 14));
-
-
-
-        //ticket display area
-        JTextArea ticketsArea = new JTextArea();
-        ticketsArea.setEditable(false);
-        ticketsArea.setPreferredSize(new Dimension(300, 200));
-        ticketsArea.setBounds(40, 50, 300, 120);
-        ticketsArea.setText("Ticket Details");
-
-        JButton getTicketButton = new JButton("Get Tickets");
-        getTicketButton.setBounds(195, 10, 150, 30);
-
-
-        //active tickets            180
-        JLabel activeTicketLabel = new JLabel("Active Ticket:");
         activeTicketLabel.setBounds(40, 220, 150, 30);
         activeTicketLabel.setBorder(
                 BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK)
         );
 
-        JButton finishTicket = new JButton("Finish Ticket");
-        finishTicket.setBounds(190, 390, 150, 30);
+        //setting up the JTextAreas
+        ticketsArea.setEditable(false);
+        ticketsArea.setPreferredSize(new Dimension(300, 200));
+        ticketsArea.setBounds(40, 50, 300, 120);
+        ticketsArea.setText("Ticket Details");
 
-
-        JTextArea activeTicket = new JTextArea();
         activeTicket.setEditable(false);
         activeTicket.setPreferredSize(new Dimension(300, 120));
         activeTicket.setBounds(40, 260, 300, 120);
 
-        //complete ticket
-        JButton completeTicket = new JButton("Completed");
-        completeTicket.setBounds(35, 180, 150, 30);
 
         completeTicket.addActionListener( e -> {
             String operation = "Complete";
@@ -89,13 +104,15 @@ public class EmployeeView extends JFrame {
             Bucket_Queue bucket = Main.getBucket();
 
             Ticket ticket = bucket.peek();
-            controller.changeStatus(operation, ticket, username);
-            listView.setListData(updateTickets(username));
-        });
+            if (ticket == null) {
+                JOptionPane.showMessageDialog(this, "No Ticket found!");
+            } else {
+                controller.changeStatus(operation, ticket, username);
+                Main.getBucket().dequeue();
+                listView.setListData(updateTickets(username));
+            }
 
-        //unfinished tickets
-        JButton inComplete = new JButton("Unfinished");
-        inComplete.setBounds(195, 180, 150, 30);
+        });
 
 
         inComplete.addActionListener(e -> {
@@ -103,24 +120,28 @@ public class EmployeeView extends JFrame {
             if (unfinishedTicket == null) {
 
                 Ticket ticket = bucket.peek();
-                bucket.dequeue();
-                unfinishedTicket = ticket;
+                if (ticket == null) {
+                    JOptionPane.showMessageDialog(this, "No Ticket found!");
+                } else {
+                    unfinishedTicket = ticket;
 
-                String operation = "Active";
+                    Main.getBucket().dequeue();
+
+                    String operation = "Active";
 
 
-                controller.changeStatus(operation, ticket, username);
-                ticketsArea.setText("");
-                listView.setListData(updateTickets(username));
+                    controller.changeStatus(operation, ticket, username);
+                    ticketsArea.setText("");
+                    listView.setListData(updateTickets(username));
 
-                activeTicket.setText(ticket.printTicket());
+                    activeTicket.setText(ticket.printTicket());
 
-                completeTicket.setEnabled(false);
-                inComplete.setEnabled(false);
-                finishTicket.setEnabled(true);
+                    completeTicket.setEnabled(false);
+                    inComplete.setEnabled(false);
+                    finishTicket.setEnabled(true);
+                }
             }
         });
-
 
         //ActionListeners set up
         logout.addActionListener(e -> {
@@ -138,15 +159,6 @@ public class EmployeeView extends JFrame {
         });
 
 
-        //checks if the unfinished ticket i null and sets default text if it is
-        if (unfinishedTicket != null) {
-            logger.info("Setting the unfinishedTicket {}", unfinishedTicket.loggTicket());
-            activeTicket.setText(unfinishedTicket.printTicket());
-            inComplete.setEnabled(false);
-            completeTicket.setEnabled(false);
-        } else {
-            activeTicket.setText("No active ticket");
-        }
 
         // Left side list
         listView = new JList<>(updateTickets(username));
@@ -199,15 +211,15 @@ public class EmployeeView extends JFrame {
         //setting up the JPanels for the JFrame
 
         // Right side panel with a search bar and label
-        JPanel rightPanel = new JPanel();
+        rightPanel = new JPanel();
         rightPanel.setLayout(new BorderLayout());
 
         //top panel that holds the logout button and username
-        JPanel topPanel = new JPanel();
+        topPanel = new JPanel();
         topPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
 
         // setting up the bottomPanel
-        JPanel bottomPanel = new JPanel();
+        bottomPanel = new JPanel();
         bottomPanel.setPreferredSize(new Dimension(370, 500));
         bottomPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         bottomPanel.setLayout(null);

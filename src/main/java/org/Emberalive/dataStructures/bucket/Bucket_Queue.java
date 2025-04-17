@@ -2,7 +2,7 @@ package org.Emberalive.dataStructures.bucket;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.Emberalive.Ticket;
+import org.Emberalive.ticket.Ticket;
 import org.Emberalive.db_access.Db_Access;
 
 import java.sql.Connection;

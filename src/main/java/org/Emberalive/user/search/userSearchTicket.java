@@ -3,7 +3,7 @@ package org.Emberalive.user.search;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.Emberalive.Main;
-import org.Emberalive.Ticket;
+import org.Emberalive.ticket.Ticket;
 
 import javax.swing.*;
 
