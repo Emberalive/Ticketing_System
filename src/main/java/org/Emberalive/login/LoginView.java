@@ -1,58 +1,62 @@
 package org.Emberalive.login;
 
+import org.Emberalive.register.RegisterView;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.Emberalive.register.RegisterView;
 
 import javax.swing.*;
 
-public class LoginView extends JFrame{
+public class LoginView extends JFrame {
+
     private static final Logger logger = LogManager.getLogger(LoginView.class);
-    private JTextField usernameField;
-    private JPasswordField passwordField;
-    LoginView view;
-    LoginModel model = new LoginModel();
-    LoginController controller;
+
+    private final JTextField usernameField;
+    private final JPasswordField passwordField;
+
+    private final LoginModel model = new LoginModel();
+    private LoginController controller;
 
     public LoginView() {
+        // Frame setup
         setTitle("Ticketing System");
         setSize(400, 250);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-
-        //layout and components
         setLayout(null);
 
-        //adding the username label
+        // Components
         JLabel titleLabel = new JLabel("Login:");
         JLabel usernameLabel = new JLabel("Username");
-        usernameField = new JTextField();
         JLabel passwordLabel = new JLabel("Password");
-        passwordField = new JPasswordField();
-        JButton login = new JButton("Login");
-        JButton register = new JButton("Register");
 
+        usernameField = new JTextField();
+        passwordField = new JPasswordField();
+
+        JButton loginButton = new JButton("Login");
+        JButton registerButton = new JButton("Register");
+
+        // Bounds
         titleLabel.setBounds(200, 0, 100, 25);
 
-        usernameLabel.setBounds(50, 50, 100, 30); // x, y, width, height
-        usernameField.setBounds(150, 50, 200, 30); // x, y, width, height
+        usernameLabel.setBounds(50, 50, 100, 30);
+        usernameField.setBounds(150, 50, 200, 30);
 
-        passwordLabel.setBounds(50, 100, 100, 30); // x, y, width, height
-        passwordField.setBounds(150, 100, 200, 30); // x, y, width, height
+        passwordLabel.setBounds(50, 100, 100, 30);
+        passwordField.setBounds(150, 100, 200, 30);
 
-        login.setBounds(37, 150, 150, 30);
-        register.setBounds(213, 150, 150, 30);
+        loginButton.setBounds(37, 150, 150, 30);
+        registerButton.setBounds(213, 150, 150, 30);
 
-        //adding the components
+        // Add components to frame
         add(titleLabel);
         add(usernameLabel);
         add(usernameField);
         add(passwordLabel);
         add(passwordField);
-        add(login);
-        add(register);
+        add(loginButton);
+        add(registerButton);
 
-
-        login.addActionListener(ev ->{
+        // Action Listeners
+        loginButton.addActionListener(e -> {
             controller = new LoginController(model, this);
             String username = usernameField.getText().trim();
             String password = new String(passwordField.getPassword()).trim();
@@ -60,10 +64,9 @@ public class LoginView extends JFrame{
             controller.startLogin(username, password);
         });
 
-        register.addActionListener(ev ->{
-            RegisterView view = new RegisterView();
-
-            view.setVisible(true);
+        registerButton.addActionListener(e -> {
+            RegisterView registerView = new RegisterView();
+            registerView.setVisible(true);
         });
     }
 }
