@@ -16,6 +16,7 @@ public class IT_employee {
     private String role = "employee";
 
     public IT_employee(String username, String password) {
+        logger.info("---- Start IT_employee Constructor ----");
         this.username = username;
         this.password = Db_Access.hashPassword(password);
         boolean success = register(this.username, this.password, role);
@@ -24,6 +25,7 @@ public class IT_employee {
         } else {
             logger.info("Employee registration failed");
         }
+        logger.info("---- End IT_employee Constructor ----\n");
     }
 
     public String getUsername() {
@@ -37,8 +39,10 @@ public class IT_employee {
     }
 
     public boolean register(String username, String password, String role) {
+        logger.info("---- Start register() ----");
         boolean success = false;
         Connection conn = Db_Access.getConnection();
+
         if (conn != null) {
             try {
                 logger.info("Creating an account with username: {} and role: {}", username, role);
@@ -52,28 +56,29 @@ public class IT_employee {
                 pstmt.executeUpdate();
                 conn.commit();
 
-                logger.info("The new User has been inserted into the database\n");
+                logger.info("The new User has been inserted into the database");
                 success = true;
             } catch (SQLException e) {
                 try {
                     conn.rollback(); // Rollback in case of error
-                    logger.warn("Transaction rolled back.\n");
+                    logger.warn("Transaction rolled back.");
                 } catch (SQLException rollbackEx) {
-                    logger.error("Database err: {}\n", String.valueOf(rollbackEx));
+                    logger.error("!!! ERROR in register(): Database err: {} !!!", String.valueOf(rollbackEx));
                 }
-                logger.error("Database err: {}\n", String.valueOf(e));
+                logger.error("!!! ERROR in register(): Database err: {} !!!", String.valueOf(e));
             } finally {
                 try {
                     conn.close();
-                    logger.info("Connection closed\n");
+                    logger.info("Connection closed");
                 } catch (SQLException e) {
-                    logger.warn("Database error when closing connection: {}\n", String.valueOf(e));   ;
+                    logger.warn("Database error when closing connection: {}", String.valueOf(e));
                 }
             }
         } else {
-            logger.info("Connection failed\n");
+            logger.info("Connection failed");
         }
+
+        logger.info("---- End register() ----\n");
         return success;
     }
 }
-

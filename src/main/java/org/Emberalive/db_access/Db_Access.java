@@ -1,9 +1,9 @@
 package org.Emberalive.db_access;
+
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.Emberalive.ticket.Ticket;
-
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -15,6 +15,7 @@ public class Db_Access {
     private static final String PASSWORD = "QwErTy1243!";
 
     public static Connection getConnection() {
+        logger.info("---- Start getConnection ----");
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(URL, USER, PASSWORD);
@@ -22,203 +23,210 @@ public class Db_Access {
                 logger.info("Database connection established!");
                 conn.setAutoCommit(false);
             } else {
-                logger.info("Database connection not established!");
+                logger.warn("Database connection not valid!");
             }
         } catch (SQLException e) {
-            logger.error("Database error: {}", String.valueOf(e));
+            logger.error("Database error: {}", e.getMessage());
         }
+        logger.info("---- End getConnection ----\n");
         return conn;
     }
 
     public void insertTicket(Ticket ticket) {
+        logger.info("---- Start insertTicket ----");
         Connection conn = getConnection();
-        int ticketID = ticket.getTicketID();
-        String issue = ticket.getIssue();
-        int priority = ticket.getPriority();
-        String status = ticket.getStatus();
-        String username = ticket.getUserID();
-        LocalDate date = ticket.getCreationDate();
         if (conn != null) {
             try {
-                logger.info("Inserting ticket...{}", ticketID);
-                conn.setAutoCommit(false);
+                logger.info("Inserting ticket...{}", ticket.getTicketID());
 
-                PreparedStatement stmnt = conn.prepareStatement("INSERT INTO ticket (ID, issue, priority, status, username, date) VALUES (?, ?, ?, ?, ?, ?)");
-                stmnt.setInt(1, ticketID);
-                stmnt.setString(2, issue);
-                stmnt.setInt(3, priority);
-                stmnt.setString(4, status);
-                stmnt.setString(5, username);
-                stmnt.setDate(6, Date.valueOf((date)));
+                PreparedStatement stmnt = conn.prepareStatement(
+                        "INSERT INTO ticket (ID, issue, priority, status, username, date) VALUES (?, ?, ?, ?, ?, ?)"
+                );
+                stmnt.setInt(1, ticket.getTicketID());
+                stmnt.setString(2, ticket.getIssue());
+                stmnt.setInt(3, ticket.getPriority());
+                stmnt.setString(4, ticket.getStatus());
+                stmnt.setString(5, ticket.getUserID());
+                stmnt.setDate(6, Date.valueOf(ticket.getCreationDate()));
+
                 stmnt.executeUpdate();
                 conn.commit();
 
                 logger.info("Inserted ticket ID: {}", ticket.loggTicket());
             } catch (SQLException ex) {
-                logger.error(ex.getMessage());
+                logger.error("Error inserting ticket: {}", ex.getMessage());
                 try {
                     conn.rollback();
-                } catch (SQLException ex1) {
-                    logger.error(ex1.getMessage());
+                    logger.warn("Transaction rolled back.");
+                } catch (SQLException rollbackEx) {
+                    logger.error("Error during rollback: {}", rollbackEx.getMessage());
                 }
             } finally {
                 try {
                     conn.close();
+                    logger.info("Connection closed.");
                 } catch (SQLException close) {
-                    logger.error(close.getMessage());
+                    logger.error("Error closing connection: {}", close.getMessage());
                 }
             }
+        } else {
+            logger.warn("insertTicket aborted: connection was null.");
         }
+        logger.info("---- End insertTicket ----\n");
     }
 
-//    //This method updates the status of a ticket using its id, by searching it in the database,this is so that when a ticket has been completed the user can see that the ticket
-//    //has been completed even though it is not in the Bucket_Queue
-//    public void updateStatusWhenCompleted (int ticketID, String status) {
-//        Connection conn = getConnection();
-//        if (conn != null) {
-//            try {
-//                PreparedStatement stmnt = conn.prepareStatement("UPDATE ticket SET status = ? WHERE id = ?");
-//                stmnt.setString(1, status);
-//                stmnt.setInt(2, ticketID);
-//                stmnt.executeUpdate();
-//                conn.commit();
-//                logger.info("Updated ticket: {}'s status to: '{}'", ticketID, status);
-//
-//            } catch (SQLException e) {
-//                try{
-//                    conn.rollback();
-//                } catch (SQLException ex1) {
-//                    logger.error("Database Error on rollback: {}", ex1.getMessage());
-//                }
-//                logger.error("Database Error when updating ticket Status: {}", e.getMessage());
-//            } finally {
-//                try{
-//                    conn.close();
-//                } catch (SQLException close) {
-//                    logger.error("Database Error on closing connection: {}", close.getMessage());
-//                }
-//            }
-//        }
-//    }
+    public void updateStatusWhenCompleted(int ticketID, String status) {
+        logger.info("---- Start updateStatusWhenCompleted [{}] ----", ticketID);
+        Connection conn = getConnection();
+        if (conn != null) {
+            try {
+                PreparedStatement stmnt = conn.prepareStatement(
+                        "UPDATE ticket SET status = ? WHERE id = ?"
+                );
+                stmnt.setString(1, status);
+                stmnt.setInt(2, ticketID);
 
-public Ticket[] getUserTickets(String username) {
-    Connection conn = getConnection();
+                stmnt.executeUpdate();
+                conn.commit();
+                logger.info("Updated ticket [{}] status to '{}'", ticketID, status);
+            } catch (SQLException e) {
+                logger.error("Error updating ticket status: {}", e.getMessage());
+                try {
+                    conn.rollback();
+                    logger.warn("Transaction rolled back.");
+                } catch (SQLException rollbackEx) {
+                    logger.error("Rollback error: {}", rollbackEx.getMessage());
+                }
+            } finally {
+                try {
+                    conn.close();
+                    logger.info("Connection closed.");
+                } catch (SQLException close) {
+                    logger.error("Closing connection error: {}", close.getMessage());
+                }
+            }
+        } else {
+            logger.warn("updateStatusWhenCompleted aborted: connection was null.");
+        }
+        logger.info("---- End updateStatusWhenCompleted [{}] ----\n", ticketID);
+    }
 
-    if (conn != null) {
-        try {
-            logger.info("Getting user tickets from the Database");
+    public Ticket[] getUserTickets(String username) {
+        logger.info("---- Start getUserTickets [{}] ----", username);
+        Connection conn = getConnection();
+        if (conn != null) {
+            try {
+                PreparedStatement stmnt = conn.prepareStatement(
+                        "SELECT * FROM ticket WHERE username = ? ORDER BY id ASC",
+                        ResultSet.TYPE_SCROLL_INSENSITIVE,
+                        ResultSet.CONCUR_READ_ONLY
+                );
+                stmnt.setString(1, username);
+                ResultSet rs = stmnt.executeQuery();
 
-            PreparedStatement stmnt = conn.prepareStatement(
-                    "SELECT * FROM ticket WHERE username = ? ORDER BY id ASC",
-                    //This allows me to get the length of the result set as well as take the result set and put it into a list for the userView
-                    ResultSet.TYPE_SCROLL_INSENSITIVE,
-                    ResultSet.CONCUR_READ_ONLY
-            );
-            stmnt.setString(1, username);
-            ResultSet rs = stmnt.executeQuery();
+                rs.last();
+                int rowCount = rs.getRow();
+                rs.beforeFirst();
 
-            // Move to last row to get count
-            rs.last();
-            int rowCount = rs.getRow();
-            // reset to before first to start iteration
-            rs.beforeFirst();
+                Ticket[] tickets = new Ticket[rowCount];
+                int index = 0;
 
-            Ticket[] tickets = new Ticket[rowCount];
-            int index = 0;
-            if (rowCount > 0) {
-
-                logger.info("Moving tickets to the userView");
-                while (rs.next()) {
-                    String issue = rs.getString("issue");
-                    int ticketID = rs.getInt("id");
-                    int priority = rs.getInt("priority");
-                    String status = rs.getString("status");
-                    String user = rs.getString("username");
-                    LocalDate date = rs.getDate("date").toLocalDate();
-                    String employee = rs.getString("employee");
-
-                    Ticket ticket = new Ticket(issue, priority, status, user, employee, ticketID, date);
-                    logger.info("Getting ticket: {} for user: {}", ticket.loggTicket(), username);
-
-                    tickets[index++] = ticket;
+                if (rowCount > 0) {
+                    logger.info("Found {} tickets for user: {}", rowCount, username);
+                    while (rs.next()) {
+                        Ticket ticket = new Ticket(
+                                rs.getString("issue"),
+                                rs.getInt("priority"),
+                                rs.getString("status"),
+                                rs.getString("username"),
+                                rs.getString("employee"),
+                                rs.getInt("id"),
+                                rs.getDate("date").toLocalDate()
+                        );
+                        logger.info("Retrieved ticket: {}", ticket.loggTicket());
+                        tickets[index++] = ticket;
+                    }
                 }
                 rs.close();
                 return tickets;
-            } else {
-                return null;
+            } catch (SQLException e) {
+                logger.error("Database error retrieving user tickets: {}", e.getMessage());
+            } finally {
+                try {
+                    conn.close();
+                    logger.info("Connection closed.");
+                } catch (SQLException close) {
+                    logger.error("Error closing connection: {}", close.getMessage());
+                }
             }
-        } catch (SQLException e) {
-            logger.error("Database error Getting User Tickets: {}", e.getMessage());
-        }  finally {
-            try {
-                conn.close();
-            } catch (SQLException close) {
-                logger.error("Database error on closing connection: {}", close.getMessage());
-            }
+        } else {
+            logger.warn("getUserTickets aborted: connection was null.");
         }
+        logger.info("---- End getUserTickets [{}] ----\n", username);
+        return null;
     }
-    return null;
-}
 
     public Ticket[] getEmployeetickets(String username) {
+        logger.info("---- Start getEmployeetickets [{}] ----", username);
         Connection conn = getConnection();
-
         if (conn != null) {
             try {
-                logger.info("Getting employee tickets for Employee Account: {}", username);
-
                 PreparedStatement stmnt = conn.prepareStatement(
                         "SELECT * FROM ticket WHERE status = ? AND employee IN (?, ?) ORDER BY id ASC",
-                        //This allows me to get the length of the result set as well as take the result set and put it into a list for the userView
                         ResultSet.TYPE_SCROLL_INSENSITIVE,
                         ResultSet.CONCUR_READ_ONLY
                 );
                 stmnt.setString(1, "InActive");
                 stmnt.setString(2, "Not Assigned");
                 stmnt.setString(3, username);
+
                 ResultSet rs = stmnt.executeQuery();
 
-                // Move to last row to get count
                 rs.last();
                 int rowCount = rs.getRow();
-                // reset to before first to start iteration
                 rs.beforeFirst();
 
                 Ticket[] tickets = new Ticket[rowCount];
                 int index = 0;
 
-                logger.info("Moving tickets to the EmployeeView");
-                while (rs.next()) {
-                    String issue = rs.getString("issue");
-                    int ticketID = rs.getInt("id");
-                    int priority = rs.getInt("priority");
-                    String status = rs.getString("status");
-                    String user = rs.getString("username");
-                    LocalDate date = rs.getDate("date").toLocalDate();
-                    String employee = rs.getString("employee");
-
-                    Ticket ticket = new Ticket(issue, priority, status, user, employee, ticketID, date);
-                    logger.info("Getting ticket: {} for Employee", ticket.loggTicket());
-
-                    tickets[index++] = ticket;
+                if (rowCount > 0) {
+                    logger.info("Found {} tickets for employee: {}", rowCount, username);
+                    while (rs.next()) {
+                        Ticket ticket = new Ticket(
+                                rs.getString("issue"),
+                                rs.getInt("priority"),
+                                rs.getString("status"),
+                                rs.getString("username"),
+                                rs.getString("employee"),
+                                rs.getInt("id"),
+                                rs.getDate("date").toLocalDate()
+                        );
+                        logger.info("Retrieved ticket: {}", ticket.loggTicket());
+                        tickets[index++] = ticket;
+                    }
                 }
                 rs.close();
                 return tickets;
 
             } catch (SQLException e) {
-                logger.error("Database error Getting User Tickets: {}", e.getMessage());
-            }  finally {
+                logger.error("Database error retrieving employee tickets: {}", e.getMessage());
+            } finally {
                 try {
                     conn.close();
+                    logger.info("Connection closed.");
                 } catch (SQLException close) {
-                    logger.error("Database error on closing connection: {}", close.getMessage());
+                    logger.error("Error closing connection: {}", close.getMessage());
                 }
             }
+        } else {
+            logger.warn("getEmployeetickets aborted: connection was null.");
         }
+        logger.info("---- End getEmployeetickets [{}] ----\n", username);
         return null;
     }
 
     public static String hashPassword(String password) {
+        logger.info("Hashing password...");
         return BCrypt.withDefaults().hashToString(12, password.toCharArray());
     }
 }

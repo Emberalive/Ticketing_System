@@ -21,6 +21,7 @@ public class Bucket_Queue {
     Simple_Queue priority_4 = new Simple_Queue(300);
 
     public void enqueue(Ticket ticket) {
+        logger.info("---- Start enqueue ----");
         int priority = ticket.getPriority();
         switch (priority) {
             case 1:
@@ -39,9 +40,11 @@ public class Bucket_Queue {
                 invalid_priority(priority);
                 break;
         }
+        logger.info("---- End enqueue ----\n");
     }
 
     public void dequeue() {
+        logger.info("---- Start dequeue ----");
         if (!priority_1.isEmpty()) {
             priority_1.deQueue();
         } else if (!priority_2.isEmpty()) {
@@ -53,51 +56,82 @@ public class Bucket_Queue {
         } else {
             log_ifEmpty();
         }
+        logger.info("---- End dequeue ----\n");
     }
+
     public Ticket peek() {
+        logger.info("---- Start peek ----");
         Ticket peekedTicket;
         if (!priority_1.isEmpty()) {
             peekedTicket = priority_1.peek();
-            if (peekedTicket != null) return peekedTicket; // If found, return immediately
+            if (peekedTicket != null) {
+                logger.info("---- End peek ----\n");
+                return peekedTicket;
+            }
         } else if (!priority_2.isEmpty()) {
             peekedTicket = priority_2.peek();
-            if (peekedTicket != null) return peekedTicket;
+            if (peekedTicket != null) {
+                logger.info("---- End peek ----\n");
+                return peekedTicket;
+            }
         } else if (!priority_3.isEmpty()) {
             peekedTicket = priority_3.peek();
-            if (peekedTicket != null) return peekedTicket;
+            if (peekedTicket != null) {
+                logger.info("---- End peek ----\n");
+                return peekedTicket;
+            }
         } else if (!priority_4.isEmpty()) {
             peekedTicket = priority_4.peek();
-            if (peekedTicket != null) return peekedTicket;
+            if (peekedTicket != null) {
+                logger.info("---- End peek ----\n");
+                return peekedTicket;
+            }
         }
         log_ifEmpty();
+        logger.info("---- End peek ----\n");
         return null;
     }
 
     public Ticket searchTicket(int ticketID) {
+        logger.info("---- Start searchTicket ----");
         Ticket foundTicket = null;
 
         if (!priority_1.isEmpty()) {
             foundTicket = priority_1.searchTicket(ticketID);
-            if (foundTicket != null) return foundTicket; // If found, return immediately
+            if (foundTicket != null) {
+                logger.info("---- End searchTicket ----\n");
+                return foundTicket;
+            }
         }
         if (!priority_2.isEmpty()) {
             foundTicket = priority_2.searchTicket(ticketID);
-            if (foundTicket != null) return foundTicket; // If found, return immediately
+            if (foundTicket != null) {
+                logger.info("---- End searchTicket ----\n");
+                return foundTicket;
+            }
         }
         if (!priority_3.isEmpty()) {
             foundTicket = priority_3.searchTicket(ticketID);
-            if (foundTicket != null) return foundTicket; // If found, return immediately
+            if (foundTicket != null) {
+                logger.info("---- End searchTicket ----\n");
+                return foundTicket;
+            }
         }
         if (!priority_4.isEmpty()) {
             foundTicket = priority_4.searchTicket(ticketID);
-            if (foundTicket != null) return foundTicket; // If found, return immediately
+            if (foundTicket != null) {
+                logger.info("---- End searchTicket ----\n");
+                return foundTicket;
+            }
         }
 
         log_ifEmpty();
+        logger.info("---- End searchTicket ----\n");
         return foundTicket;
     }
 
     public void setCounterIntial () {
+        logger.info("---- Start setCounterInitial ----");
         Connection conn = Db_Access.getConnection();
         if (conn != null) {
             try {
@@ -110,49 +144,51 @@ public class Bucket_Queue {
                 }
                 rs.close();
             } catch (SQLException ex) {
-                logger.error("Database error, Getting Counter: {}", String.valueOf(ex));
+                logger.error("Database error, Getting Counter: {}", ex);
             } finally {
                 try {
                     conn.close();
                 } catch (SQLException ex) {
-                    logger.error("Database Error closing Connection: {}", String.valueOf(ex));
+                    logger.error("Database Error closing Connection: {}", ex);
                 }
             }
         }
+        logger.info("---- End setCounterInitial ----\n");
     }
 
     public static Bucket_Queue fillFromDB(Bucket_Queue bucket) {
+        logger.info("---- Start fillFromDB ----");
         Connection conn = Db_Access.getConnection();
         if (conn != null) {
             try {
                 logger.info("Filling Tickets from the Database");
                 PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM ticket WHERE status IN ('InActive', 'Active') ORDER BY id ASC;");
-
                 ResultSet rs = stmnt.executeQuery();
 
-                    while (rs.next()) {
-                        int id = rs.getInt("id");
-                        String issue = rs.getString("issue");
-                        int priority = rs.getInt("priority");
-                        String status = rs.getString("status");
-                        String username = rs.getString("username");
-                        LocalDate date = rs.getDate("date").toLocalDate();
-                        String employee =rs.getString("employee");
+                while (rs.next()) {
+                    int id = rs.getInt("id");
+                    String issue = rs.getString("issue");
+                    int priority = rs.getInt("priority");
+                    String status = rs.getString("status");
+                    String username = rs.getString("username");
+                    LocalDate date = rs.getDate("date").toLocalDate();
+                    String employee = rs.getString("employee");
 
-                        Ticket ticket = new Ticket(issue, priority, status, username, employee, id, date);
-                        bucket.enqueue(ticket);
-                    }
+                    Ticket ticket = new Ticket(issue, priority, status, username, employee, id, date);
+                    bucket.enqueue(ticket);
+                }
 
             } catch (SQLException exc) {
-                logger.error("Database Error: {}", String.valueOf(exc));
+                logger.error("Database Error: {}", exc);
             } finally {
                 try {
                     conn.close();
                 } catch (SQLException ex) {
-                    logger.error("Database Error closing Connection: {}", String.valueOf(ex));
+                    logger.error("Database Error closing Connection: {}", ex);
                 }
             }
         }
+        logger.info("---- End fillFromDB ----\n");
         return bucket;
     }
 
@@ -171,4 +207,4 @@ public class Bucket_Queue {
     public void setCounter (int counter) {
         this.counter = counter;
     }
-    }
+}

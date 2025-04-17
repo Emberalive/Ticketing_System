@@ -86,6 +86,7 @@ public class AccountView extends JFrame {
 
         // Action Listeners
         getAccountDetails.addActionListener(e -> {
+            logger.info("---- Start getAccountDetails listener ----");
             logger.info("Getting Account Details for user: {}", username);
             String accountDetails = model.getAccountDetails(username);
             if (accountDetails != null) {
@@ -93,9 +94,11 @@ public class AccountView extends JFrame {
             } else {
                 logger.error("Account details could not be retrieved from the Database");
             }
+            logger.info("---- End getAccountDetails listener ----\n");
         });
 
         verifyPasswordButton.addActionListener(e -> {
+            logger.info("---- Start verifyPassword listener ----");
             logger.info("Verifying Password to change password for: {}", username);
             String verifyPass = String.valueOf(verifyPassField.getPassword());
             if (model.verifyPassword(username, verifyPass)) {
@@ -104,10 +107,12 @@ public class AccountView extends JFrame {
                 changePasswordButton.setEnabled(true);
                 verifyPassField.setText("");
             }
+            logger.info("---- End verifyPassword listener ----\n");
         });
 
         changePasswordButton.addActionListener(e -> {
-            logger.info("Changing Password to change password for: {}", username);
+            logger.info("---- Start changePassword listener ----");
+            logger.info("Changing Password for user: {}", username);
             String newPass = String.valueOf(newPassword.getPassword());
             String confirmPass = String.valueOf(confirmPassword.getPassword());
             if (!newPass.equals(confirmPass)) {
@@ -126,9 +131,11 @@ public class AccountView extends JFrame {
                     JOptionPane.showMessageDialog(AccountView.this, "Password was not changed!");
                 }
             }
+            logger.info("---- End changePassword listener ----\n");
         });
 
         deleteAccountButton.addActionListener(e -> {
+            logger.info("---- Start deleteAccount listener ----");
             logger.info("Deleting an account with username: {}", username);
             boolean success = model.deleteAccount(username);
             if (success) {
@@ -144,6 +151,7 @@ public class AccountView extends JFrame {
             } else {
                 JOptionPane.showMessageDialog(this, "Issues with deleting the account");
             }
+            logger.info("---- End deleteAccount listener ----\n");
         });
 
         // Add components to the JFrame

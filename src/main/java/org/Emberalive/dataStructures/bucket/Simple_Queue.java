@@ -8,11 +8,11 @@ import org.Emberalive.db_access.Db_Access;
 public class Simple_Queue {
     Db_Access db = new Db_Access();
     private static final Logger logger = LogManager.getLogger(Simple_Queue.class);
-    private final Ticket[] queue;  //array that holds the queue
-    private int front;  //Points to the front item
-    private int rear;   //points to the next insertion point
-    private final int capacity;   //Max size of the queue
-    private int size;   //Current number of items
+    private final Ticket[] queue;
+    private int front;
+    private int rear;
+    private final int capacity;
+    private int size;
 
     public Simple_Queue(int capacity) {
         this.capacity = capacity;
@@ -22,59 +22,68 @@ public class Simple_Queue {
         this.size = 0;
     }
 
-    //Adding items to the queue
     public void enQueue(Ticket ticket) {
+        logger.info("---- Start enQueue ----");
         if (isFull()) {
             logger.warn("Queue is full! Cannot enqueue Ticket {}", ticket.loggTicket());
+            logger.info("---- End enQueue ----\n");
             return;
         }
         queue[rear] = ticket;
         rear = (rear + 1) % capacity;
         size++;
         logger.info("Enqueued ticket: {}", ticket.loggTicket());
+        logger.info("---- End enQueue ----\n");
     }
 
-    //removing items from the queue
     public void deQueue() {
+        logger.info("---- Start deQueue ----");
         if (isEmpty()) {
             logger.warn("Queue is empty! Cannot dequeue.");
+            logger.info("---- End deQueue ----\n");
             return;
         }
         Ticket ticket = queue[front];
-        //getting the ticket id and using that to update the ticket in the database before it is removed
         int ticketID = ticket.getTicketID();
 //        db.updateStatusWhenCompleted(ticketID, "Completed");
 
         front = (front + 1) % capacity;
         size--;
         logger.info("Dequeued Ticket {}", ticket.loggTicket());
+        logger.info("---- End deQueue ----\n");
     }
 
-    //view the  front item without removing it
     public Ticket peek() {
-        if (isEmpty()){
+        logger.info("---- Start peek ----");
+        if (isEmpty()) {
             logger.warn("Queue is empty! Cannot peek.");
+            logger.info("---- End peek ----\n");
             return null;
         }
         logger.info("Peeking Ticket {}", queue[front].loggTicket());
+        logger.info("---- End peek ----\n");
         return queue[front];
     }
 
     public Ticket searchTicket(int ticketID) {
-        logger.info("Searching Ticket {}", ticketID);
-        if (isEmpty()){
+        logger.info("---- Start searchTicket [{}] ----", ticketID);
+        if (isEmpty()) {
             logger.warn("Queue is empty! Cannot search ticket: {}", ticketID);
+            logger.info("---- End searchTicket [{}] ----\n", ticketID);
             return null;
         } else {
             for (int i = 0; i < size; i++) {
                 int index = (front + i) % capacity;
                 Ticket ticket = queue[index];
                 if (ticket != null && ticket.getTicketID() == ticketID) {
+                    logger.info("Found ticket: {}", ticket.loggTicket());
+                    logger.info("---- End searchTicket [{}] ----\n", ticketID);
                     return ticket;
                 }
             }
         }
         logger.warn("Ticket not found: {}", ticketID);
+        logger.info("---- End searchTicket [{}] ----\n", ticketID);
         return null;
     }
 
@@ -82,12 +91,10 @@ public class Simple_Queue {
         return size;
     }
 
-    //checks if the queue is empty
     public boolean isEmpty() {
         return size == 0;
     }
 
-    //checks if the queue is full
     public boolean isFull() {
         return size == capacity;
     }
