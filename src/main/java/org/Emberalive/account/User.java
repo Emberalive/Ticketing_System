@@ -1,10 +1,8 @@
 package org.Emberalive.account;
 
-import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.Emberalive.db_access.Db_Access;
 
 public class User {
-    Account acc = new Account();
     private String username;
     private String password;
 

@@ -1,5 +1,6 @@
 package org.Emberalive;
 
+import org.Emberalive.account.IT_employee;
 import org.Emberalive.dataStructures.bucket.Bucket_Queue;
 import org.Emberalive.login.LoginController;
 import org.Emberalive.login.LoginModel;
@@ -10,6 +11,8 @@ public class Main {
     private static Bucket_Queue bucket_queue = new Bucket_Queue();
 
     public static void main(String[] args) {
+//        new IT_employee("employee", "password");
+
         bucket_queue = setBucket();
 
 //         Initialize the model, view, and controller
