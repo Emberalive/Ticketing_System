@@ -43,41 +43,35 @@ public class EmployeeView extends JFrame {
     private Ticket unfinishedTicket;
 
     public EmployeeView(String username) {
+        logger.info("---- Start EmployeeView constructor [{}] ----", username);
 
-        // Configure main JFrame
         setTitle("Employee Dashboard");
         setSize(720, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        // Label setup
         userLabel = new JLabel("Welcome, " + username + "!");
         userLabel.setFont(new Font("Arial", Font.BOLD, 14));
-
         activeTicketLabel.setBounds(40, 220, 150, 30);
         activeTicketLabel.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
 
-        // Ticket TextArea
         ticketsArea.setEditable(false);
         ticketsArea.setPreferredSize(new Dimension(300, 200));
         ticketsArea.setBounds(40, 50, 300, 120);
         ticketsArea.setText("Ticket Details");
 
-        // Active Ticket TextArea
         activeTicket.setEditable(false);
         activeTicket.setPreferredSize(new Dimension(300, 120));
         activeTicket.setBounds(40, 260, 300, 120);
 
-        // Button bounds
         updateTicket.setBounds(35, 10, 150, 30);
         getTicketButton.setBounds(195, 10, 150, 30);
         finishTicket.setBounds(190, 390, 150, 30);
         completeTicket.setBounds(35, 180, 150, 30);
         inComplete.setBounds(195, 180, 150, 30);
 
-        // Initial active ticket state
         if (unfinishedTicket != null) {
-            logger.info("Setting the unfinishedTicket {}", unfinishedTicket.loggTicket());
+            logger.info("Setting the unfinishedTicket [{}]", unfinishedTicket.loggTicket());
             activeTicket.setText(unfinishedTicket.printTicket());
             inComplete.setEnabled(false);
             completeTicket.setEnabled(false);
@@ -86,7 +80,6 @@ public class EmployeeView extends JFrame {
             finishTicket.setEnabled(false);
         }
 
-        // List setup
         listView = new JList<>(updateTickets(username));
         listView.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         JScrollPane listScrollPane = new JScrollPane(listView);
@@ -100,7 +93,6 @@ public class EmployeeView extends JFrame {
             }
         });
 
-        // Panels
         topPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         topPanel.add(logout);
         topPanel.add(userLabel);
@@ -127,6 +119,7 @@ public class EmployeeView extends JFrame {
 
         // Action Listeners
         completeTicket.addActionListener(e -> {
+            logger.info("---- Start completeTicket [{}] ----", username);
             Bucket_Queue bucket = Main.getBucket();
             Ticket ticket = bucket.peek();
 
@@ -134,13 +127,15 @@ public class EmployeeView extends JFrame {
                 JOptionPane.showMessageDialog(this, "No Ticket found!");
             } else {
                 controller.changeStatus("Complete", ticket, username);
-                Main.getBucket().dequeue();
+                bucket.dequeue();
                 listView.setListData(updateTickets(username));
                 ticketsArea.setText("");
             }
+            logger.info("---- End completeTicket [{}] ----\n", username);
         });
 
         inComplete.addActionListener(e -> {
+            logger.info("---- Start inComplete [{}] ----", username);
             if (unfinishedTicket == null) {
                 Ticket ticket = Main.getBucket().peek();
 
@@ -160,29 +155,39 @@ public class EmployeeView extends JFrame {
                     ticketsArea.setText("");
                 }
             }
+            logger.info("---- End inComplete [{}] ----\n", username);
         });
 
         logout.addActionListener(e -> {
+            logger.info("---- Start logout [{}] ----", username);
             this.dispose();
             LoginModel model = new LoginModel();
             LoginView view = new LoginView();
             LoginController controller = new LoginController(model, view);
             controller.startGUI();
+            logger.info("---- End logout [{}] ----\n", username);
         });
 
-        updateTicket.addActionListener(e -> listView.setListData(updateTickets(username)));
+        updateTicket.addActionListener(e -> {
+            logger.info("---- Start updateTicket [{}] ----", username);
+            listView.setListData(updateTickets(username));
+            logger.info("---- End updateTicket [{}] ----\n", username);
+        });
 
         getTicketButton.addActionListener(e -> {
+            logger.info("---- Start getTicket [{}] ----", username);
             Ticket ticket = Main.getBucket().peek();
             if (ticket == null) {
-                logger.info("Ticket was not found, searched by: {}", username);
+                logger.info("Ticket not found for [{}]", username);
                 ticketsArea.setText("Ticket was not found");
             } else {
                 ticketsArea.setText(ticket.printTicket());
             }
+            logger.info("---- End getTicket [{}] ----\n", username);
         });
 
         finishTicket.addActionListener(e -> {
+            logger.info("---- Start finishTicket [{}] ----", username);
             controller.changeStatus("Complete", unfinishedTicket, username);
             unfinishedTicket = null;
 
@@ -192,14 +197,19 @@ public class EmployeeView extends JFrame {
             finishTicket.setEnabled(false);
             completeTicket.setEnabled(true);
             inComplete.setEnabled(true);
+            logger.info("---- End finishTicket [{}] ----\n", username);
         });
+
+        logger.info("---- End EmployeeView constructor [{}] ----\n", username);
     }
 
     public String[] updateTickets(String username) {
+        logger.info("---- Start updateTickets [{}] ----", username);
         Ticket[] userTicketsList = getTickets(username);
 
-        if (userTicketsList == null) {
-            logger.error("No tickets found");
+        if (userTicketsList == null || userTicketsList.length == 0) {
+            logger.warn("No tickets found for [{}]", username);
+            logger.info("---- End updateTickets [{}] ----\n", username);
             return new String[]{"There are no tickets"};
         }
 
@@ -208,11 +218,16 @@ public class EmployeeView extends JFrame {
             Ticket ticket = userTicketsList[i];
             userTickets[i] = "(ID: " + ticket.getTicketID() + ") (Status: " + ticket.getStatus() + ") (User: " + ticket.getUserID() + ")";
         }
+
+        logger.info("---- End updateTickets [{}] ----\n", username);
         return userTickets;
     }
 
     public Ticket[] getTickets(String username) {
-        return db.getEmployeetickets(username);
+        logger.info("---- Start getTickets [{}] ----", username);
+        Ticket[] tickets = db.getEmployeetickets(username);
+        logger.info("---- End getTickets [{}] ----\n", username);
+        return tickets;
     }
 
     public void setVisibleUI(boolean visible) {
