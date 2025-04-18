@@ -5,31 +5,65 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.Emberalive.ticket.Ticket;
 
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
+
 import java.sql.*;
-import java.time.LocalDate;
+
 
 public class Db_Access {
     private static final Logger logger = LogManager.getLogger(Db_Access.class);
-    private static final String URL = "jdbc:postgresql://86.19.219.159:5432/itticketing";
-    private static final String USER = "samuel";
-    private static final String PASSWORD = "QwErTy1243!";
+    private static final HikariDataSource dataSource;
+
+    static {
+        HikariConfig config = new HikariConfig();
+        config.setJdbcUrl("jdbc:postgresql://86.19.219.159:5432/itticketing"); // ✅ Replace with your DB
+        config.setUsername("samuel"); // ✅ Replace
+        config.setPassword("QwErTy1243"); // ✅ Replace
+
+        config.setMaximumPoolSize(10); // Limit number of connections
+        config.setMinimumIdle(2);
+        config.setIdleTimeout(30000); // 30s
+        config.setMaxLifetime(600000); // 10min
+        config.setConnectionTimeout(30000); // 30s wait before timing out
+
+        dataSource = new HikariDataSource(config);
+    }
+
+
+//    private static final String URL = "jdbc:postgresql://86.19.219.159:5432/itticketing";
+//    private static final String USER = "samuel";
+//    private static final String PASSWORD = "QwErTy1243!";
 
     public static Connection getConnection() {
-        logger.info("---- Start getConnection ----");
         Connection conn = null;
         try {
-            conn = DriverManager.getConnection(URL, USER, PASSWORD);
-            if (conn != null && conn.isValid(2)) {
-                logger.info("Database connection established!");
-                conn.setAutoCommit(false);
-            } else {
-                logger.warn("Database connection not valid!");
-            }
+            conn = dataSource.getConnection();
         } catch (SQLException e) {
-            logger.error("Database error: {}", e.getMessage());
+            logger.error("Error with connecting to Database: {}",e);
         }
-        logger.info("---- End getConnection ----\n");
+//        logger.info("---- Start getConnection ----");
+//        Connection conn = null;
+//        try {
+//            conn = DriverManager.getConnection(URL, USER, PASSWORD);
+//            if (conn != null && conn.isValid(2)) {
+//                logger.info("Database connection established!");
+//                conn.setAutoCommit(false);
+//            } else {
+//                logger.warn("Database connection not valid!");
+//            }
+//        } catch (SQLException e) {
+//            logger.error("Database error: {}", e.getMessage());
+//        }
+//        logger.info("---- End getConnection ----\n");
+//        return conn;
         return conn;
+    }
+
+    public static void shutDown () {
+        if (dataSource != null) {
+            dataSource.close();
+        }
     }
 
     public void insertTicket(Ticket ticket) {
