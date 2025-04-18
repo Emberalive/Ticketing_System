@@ -6,7 +6,6 @@ import org.Emberalive.ticket.Ticket;
 import org.Emberalive.db_access.Db_Access;
 
 public class Simple_Queue {
-    Db_Access db = new Db_Access();
     private static final Logger logger = LogManager.getLogger(Simple_Queue.class);
     private final Ticket[] queue;
     private int front;

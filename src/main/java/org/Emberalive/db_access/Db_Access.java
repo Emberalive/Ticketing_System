@@ -19,9 +19,9 @@ public class Db_Access {
         HikariConfig config = new HikariConfig();
         config.setJdbcUrl("jdbc:postgresql://86.19.219.159:5432/itticketing"); // ✅ Replace with your DB
         config.setUsername("samuel"); // ✅ Replace
-        config.setPassword("QwErTy1243"); // ✅ Replace
+        config.setPassword("QwErTy1243!"); // ✅ Replace
 
-        config.setMaximumPoolSize(10); // Limit number of connections
+        config.setMaximumPoolSize(5); // Limit number of connections
         config.setMinimumIdle(2);
         config.setIdleTimeout(30000); // 30s
         config.setMaxLifetime(600000); // 10min
