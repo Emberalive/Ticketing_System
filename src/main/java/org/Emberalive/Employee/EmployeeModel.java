@@ -9,7 +9,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
 
 public class EmployeeModel {
     private static final Logger logger = LogManager.getLogger(EmployeeModel.class);
@@ -81,6 +80,7 @@ public class EmployeeModel {
         }
 
         try {
+            conn.setAutoCommit(false);
             PreparedStatement ps = conn.prepareStatement(
                     "UPDATE ticket SET status = ?, employee = ? WHERE id = ?"
             );

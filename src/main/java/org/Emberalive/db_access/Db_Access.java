@@ -72,6 +72,7 @@ public class Db_Access {
         if (conn != null) {
             try {
                 logger.info("Inserting ticket...{}", ticket.getTicketID());
+                conn.setAutoCommit(false);
 
                 PreparedStatement stmnt = conn.prepareStatement(
                         "INSERT INTO ticket (ID, issue, priority, status, username, date) VALUES (?, ?, ?, ?, ?, ?)"

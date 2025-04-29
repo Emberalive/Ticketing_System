@@ -45,6 +45,8 @@ public class EmployeeView extends JFrame {
     public EmployeeView(String username) {
         logger.info("---- Start EmployeeView constructor [{}] ----", username);
 
+        unfinishedTicket = model.getActiveTicket(username);
+
         setTitle("Employee Dashboard");
         setSize(720, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
