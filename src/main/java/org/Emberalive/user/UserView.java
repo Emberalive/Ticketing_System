@@ -165,6 +165,9 @@ public class UserView extends JFrame {
     private void handleTicketSelection(String username) {
         String selected = listView.getSelectedValue();
         if (selected != null) {
+            if (selected.equals("There are no tickets")) {
+                return;
+            }
             int id = Integer.parseInt(selected.split("ID: ")[1].split("\\)")[0].trim());
             String status = selected.split("Status: ")[1].split("\\)")[0].trim();
 

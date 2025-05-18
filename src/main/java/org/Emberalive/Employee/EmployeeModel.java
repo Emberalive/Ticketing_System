@@ -1,5 +1,6 @@
 package org.Emberalive.Employee;
 
+import org.Emberalive.dataStructures.bucket.Bucket_Queue;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.Emberalive.ticket.Ticket;
@@ -13,10 +14,10 @@ import java.sql.SQLException;
 public class EmployeeModel {
     private static final Logger logger = LogManager.getLogger(EmployeeModel.class);
 
-    public Ticket getActiveTicket(String username) {
+    public Bucket_Queue getActiveTickets(String username) {
         logger.info("---- Start getActiveTicket [{}] ----", username);
         Connection conn = Db_Access.getConnection();
-        Ticket ticket = null;
+        Bucket_Queue unfinsed_tickets = new Bucket_Queue();
 
         if (conn == null) {
             logger.warn("getActiveTicket aborted: DB connection was null for user: {}", username);
@@ -36,10 +37,10 @@ public class EmployeeModel {
             int rowCount = rs.getRow();
             rs.beforeFirst();
 
-            if (rowCount == 1) {
+            if (rowCount > 0) {
                 logger.info("1 active ticket found for employee: {}", username);
                 while (rs.next()) {
-                    ticket = new Ticket(
+                    Ticket ticket = new Ticket(
                             rs.getString("issue"),
                             rs.getInt("priority"),
                             rs.getString("status"),
@@ -49,11 +50,10 @@ public class EmployeeModel {
                             rs.getDate("date").toLocalDate()
                     );
                     logger.info("Retrieved ticket: {}", ticket.loggTicket());
+                    unfinsed_tickets.enqueue(ticket);
                 }
-            } else if (rowCount == 0) {
-                logger.info("No active tickets found for employee: {}", username);
             } else {
-                logger.warn("Employee: {} has {} active tickets (expected 1)", username, rowCount);
+                logger.warn("Employee: {} has no active tickets", username);
             }
         } catch (SQLException e) {
             logger.error("SQL error retrieving active ticket for {}: {}", username, e.getMessage());
@@ -67,7 +67,7 @@ public class EmployeeModel {
         }
 
         logger.info("---- End getActiveTicket [{}] ----\n", username);
-        return ticket;
+        return unfinsed_tickets;
     }
 
     public void updateTicketStatus(Ticket ticket, String newStatus, String username) {

@@ -1,5 +1,6 @@
 package org.Emberalive.Employee;
 
+import org.Emberalive.dataStructures.bucket.Bucket_Queue;
 import org.Emberalive.ticket.Ticket;
 
 public class EmployeeController {
@@ -19,7 +20,7 @@ public class EmployeeController {
         model.updateTicketStatus(ticket, operation, username);
     }
 
-    public Ticket startActiveTicket(String username) {
-        return model.getActiveTicket(username);
+    public Bucket_Queue startActiveTicket(String username) {
+        return model.getActiveTickets(username);
     }
 }

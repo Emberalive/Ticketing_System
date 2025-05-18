@@ -41,12 +41,13 @@ public class EmployeeView extends JFrame {
 
     private JList<String> listView;
     private Ticket unfinishedTicket;
-    private Bucket_Queue unfinished_ticket = new Bucket_Queue();
+    private Bucket_Queue unfinished_ticket;
 
     public EmployeeView(String username) {
         logger.info("---- Start EmployeeView constructor [{}] ----", username);
 
-        unfinishedTicket = model.getActiveTicket(username);
+        unfinished_ticket = controller.startActiveTicket(username);
+//        unfinishedTicket = model.getActiveTicket(username);
 
         setTitle("Employee Dashboard");
         setSize(720, 600);
@@ -73,11 +74,12 @@ public class EmployeeView extends JFrame {
         completeTicket.setBounds(35, 180, 150, 30);
         inComplete.setBounds(195, 180, 150, 30);
 
-        if (unfinishedTicket != null) {
-            logger.info("Setting the unfinishedTicket [{}]", unfinishedTicket.loggTicket());
-            activeTicket.setText(unfinishedTicket.printTicket());
-            inComplete.setEnabled(false);
-            completeTicket.setEnabled(false);
+        if (!unfinished_ticket.isEmpty()) {
+            Ticket first_unfinished = unfinished_ticket.peek();
+            logger.info("Setting the unfinishedTicket [{}]", first_unfinished.loggTicket());
+            activeTicket.setText(first_unfinished.printTicket());
+//            inComplete.setEnabled(false);
+//            completeTicket.setEnabled(false);
         } else {
             activeTicket.setText("No active ticket");
             finishTicket.setEnabled(false);
@@ -139,26 +141,25 @@ public class EmployeeView extends JFrame {
 
         inComplete.addActionListener(e -> {
             logger.info("---- Start inComplete [{}] ----", username);
-            if (unfinishedTicket == null) {
-                Ticket ticket = Main.getBucket().peek();
+            Ticket ticket = Main.getBucket().peek();
 
-                if (ticket == null) {
-                    JOptionPane.showMessageDialog(this, "No Ticket found!");
-                } else {
-                    unfinishedTicket = ticket;
-                    Main.getBucket().dequeue();
-                    controller.changeStatus("Active", ticket, username);
+            if (ticket == null) {
+                JOptionPane.showMessageDialog(this, "No Ticket found!");
+            } else {
+                unfinished_ticket.enqueue(ticket);
+                Main.getBucket().dequeue();
+                controller.changeStatus("Active", ticket, username);
 
-                    listView.setListData(updateTickets(username));
-                    activeTicket.setText(ticket.printTicket());
+                listView.setListData(updateTickets(username));
+                activeTicket.setText(unfinished_ticket.peek().printTicket());
 
-                    completeTicket.setEnabled(false);
-                    inComplete.setEnabled(false);
-                    finishTicket.setEnabled(true);
-                    ticketsArea.setText("");
-                }
+//                completeTicket.setEnabled(false);
+//                inComplete.setEnabled(false);
+                finishTicket.setEnabled(true);
+                ticketsArea.setText("No ticket Selected");
+                logger.info("---- End inComplete [{}] ----\n", username);
             }
-            logger.info("---- End inComplete [{}] ----\n", username);
+
         });
 
         logout.addActionListener(e -> {
@@ -191,15 +192,20 @@ public class EmployeeView extends JFrame {
 
         finishTicket.addActionListener(e -> {
             logger.info("---- Start finishTicket [{}] ----", username);
-            controller.changeStatus("Complete", unfinishedTicket, username);
-            unfinishedTicket = null;
+            controller.changeStatus("Complete", unfinished_ticket.peek(), username);
+            unfinished_ticket.dequeue();
 
             listView.setListData(updateTickets(username));
-            activeTicket.setText("No Active Ticket");
-
-            finishTicket.setEnabled(false);
-            completeTicket.setEnabled(true);
-            inComplete.setEnabled(true);
+            Ticket newest_ticket = unfinished_ticket.peek();
+            if (newest_ticket != null) {
+                activeTicket.setText(newest_ticket.printTicket());
+//                finishTicket.setEnabled(false);
+//                completeTicket.setEnabled(true);
+                inComplete.setEnabled(true);
+            } else {
+                activeTicket.setText("No active ticket's");
+                finishTicket.setEnabled(false);
+            }
             logger.info("---- End finishTicket [{}] ----\n", username);
         });
 
