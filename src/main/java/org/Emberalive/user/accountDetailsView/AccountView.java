@@ -1,4 +1,4 @@
-package org.Emberalive.accountDetailsView;
+package org.Emberalive.user.accountDetailsView;
 
 import org.Emberalive.login.LoginController;
 import org.Emberalive.login.LoginModel;
@@ -106,6 +106,7 @@ public class AccountView extends JFrame {
                 newPassword.setEnabled(true);
                 changePasswordButton.setEnabled(true);
                 verifyPassField.setText("");
+                verifyPassField.setEnabled(false);
             }
             logger.info("---- End verifyPassword listener ----\n");
         });
@@ -127,6 +128,7 @@ public class AccountView extends JFrame {
                     confirmPassword.setEnabled(false);
                     newPassword.setEnabled(false);
                     changePasswordButton.setEnabled(false);
+                    verifyPassField.setEnabled(true);
                 } else {
                     JOptionPane.showMessageDialog(AccountView.this, "Password was not changed!");
                 }

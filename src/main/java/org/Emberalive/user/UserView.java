@@ -1,8 +1,8 @@
 package org.Emberalive.user;
 
 import org.Emberalive.Main;
-import org.Emberalive.accountDetailsView.AccountModel;
-import org.Emberalive.accountDetailsView.AccountView;
+import org.Emberalive.user.accountDetailsView.AccountModel;
+import org.Emberalive.user.accountDetailsView.AccountView;
 import org.Emberalive.db_access.Db_Access;
 import org.Emberalive.login.LoginController;
 import org.Emberalive.login.LoginModel;

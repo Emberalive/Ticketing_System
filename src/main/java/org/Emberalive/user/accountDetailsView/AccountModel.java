@@ -1,10 +1,7 @@
-package org.Emberalive.accountDetailsView;
+package org.Emberalive.user.accountDetailsView;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.Emberalive.db_access.Db_Access;
-import org.Emberalive.login.LoginController;
-import org.Emberalive.login.LoginModel;
-import org.Emberalive.login.LoginView;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
