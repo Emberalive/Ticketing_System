@@ -49,6 +49,8 @@ public class DeleteTicketModel {
                     ticket = new Ticket(issue, priority, status, user, employee, ticketID, date);
                 } else {
                     logger.info("No ticket found with ID: {} for user: {}", ticketID, username);
+                    logger.info("OR");
+                    logger.info("checking if a deleted ticket has been deleted");
                 }
             }
 

@@ -41,6 +41,7 @@ public class EmployeeView extends JFrame {
 
     private JList<String> listView;
     private Ticket unfinishedTicket;
+    private Bucket_Queue unfinished_ticket = new Bucket_Queue();
 
     public EmployeeView(String username) {
         logger.info("---- Start EmployeeView constructor [{}] ----", username);

@@ -192,6 +192,13 @@ public class Bucket_Queue {
         return bucket;
     }
 
+    public boolean isEmpty() {
+        return priority_1.isEmpty() &&
+                priority_2.isEmpty() &&
+                priority_3.isEmpty() &&
+                priority_4.isEmpty();
+    }
+
     public void log_ifEmpty() {
         logger.warn("There are no tickets to dequeue");
     }
