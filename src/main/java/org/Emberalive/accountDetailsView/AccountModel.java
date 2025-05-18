@@ -22,8 +22,9 @@ public class AccountModel {
         this.view = view;
     }
 
-    public void startGUI() {
+    public AccountView startGUI() {
         this.view.setVisible(true);
+        return this.view;
     }
 
     public String getAccountDetails(String username) {

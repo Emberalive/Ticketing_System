@@ -26,11 +26,14 @@ public class UserView extends JFrame {
     private final userSearchTicketModel searchTicketModel = new userSearchTicketModel();
 
     private userSearchTicket userSearchTicket;
+    private AccountView accountView = null;
+
     private JTextField searchField;
-    private JList<String> listView;
-    private JLabel userLabel;
+    private final JList<String> listView;
+    private final JLabel userLabel;
 
     public UserView(String username) {
+
         // Frame setup
         setTitle("User Dashboard");
         setSize(720, 400);
@@ -69,9 +72,15 @@ public class UserView extends JFrame {
             dispose();
             if (userSearchTicket != null) {
                 searchTicketModel.FinishGUI(userSearchTicket);
-            } else {
+            }else {
                 logger.warn("No open search window to close");
             }
+
+             if (accountView != null) {
+                accountView.dispose();
+            } else {
+                 logger.warn("No account view to close");
+             }
             LoginModel model = new LoginModel();
             LoginView view = new LoginView();
             LoginController controller = new LoginController(model, view);
@@ -80,7 +89,7 @@ public class UserView extends JFrame {
 
         JButton accountBtn = new JButton("Account");
         accountBtn.addActionListener(e -> {
-            AccountView accountView = new AccountView(username, this);
+            accountView = new AccountView(username, this);
             AccountModel accountModel = new AccountModel(accountView);
             accountModel.startGUI();
             logger.info("Opening Account Page for User: {}", username);
