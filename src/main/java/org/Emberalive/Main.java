@@ -21,6 +21,8 @@ public class Main {
 
 //         Start the GUI through the controller
         controller.startGUI();
+
+
     }
     public static Bucket_Queue getBucket() {
         return bucket_queue;
