@@ -24,7 +24,8 @@ public class Simple_Queue {
     public void enQueue(Ticket ticket) {
         logger.info("---- Start enQueue ----");
         if (isFull()) {
-            logger.warn("Queue is full! Cannot enqueue Ticket {}", ticket.loggTicket());
+            logger.warn("Queue is full! Cannot " +
+                    "enqueue Ticket {}", ticket.loggTicket());
             logger.info("---- End enQueue ----\n");
             return;
         }
@@ -43,9 +44,6 @@ public class Simple_Queue {
             return;
         }
         Ticket ticket = queue[front];
-        int ticketID = ticket.getTicketID();
-//        db.updateStatusWhenCompleted(ticketID, "Completed");
-
         front = (front + 1) % capacity;
         size--;
         logger.info("Dequeued Ticket {}", ticket.loggTicket());
@@ -84,10 +82,6 @@ public class Simple_Queue {
         logger.warn("Ticket not found: {}", ticketID);
         logger.info("---- End searchTicket [{}] ----\n", ticketID);
         return null;
-    }
-
-    public int getSize() {
-        return size;
     }
 
     public boolean isEmpty() {

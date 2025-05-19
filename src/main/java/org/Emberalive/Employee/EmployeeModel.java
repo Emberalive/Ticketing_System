@@ -38,7 +38,7 @@ public class EmployeeModel {
             rs.beforeFirst();
 
             if (rowCount > 0) {
-                logger.info("1 active ticket found for employee: {}", username);
+                logger.info("{} Active ticket's found for employee: {}", rowCount, username);
                 while (rs.next()) {
                     Ticket ticket = new Ticket(
                             rs.getString("issue"),
