@@ -8,7 +8,6 @@ import org.Emberalive.Employee.EmployeeModel;
 import org.Emberalive.Employee.EmployeeView;
 import org.Emberalive.db_access.Db_Access;
 import org.Emberalive.user.UserController;
-import org.Emberalive.user.UserModel;
 import org.Emberalive.user.UserView;
 
 import javax.swing.*;
@@ -73,9 +72,8 @@ public class LoginModel {
             } else if (role.equals("user")) {
                 logger.info("Opening User: {}'s Account", username);
                 //initialize the UserController to start the GUI
-                UserModel userModel = new UserModel();
                 UserView userView = new UserView(username);
-                UserController userController = new UserController(userModel, userView);
+                UserController userController = new UserController(userView);
 
                 loginView.setVisible(false);
 

@@ -12,7 +12,7 @@ A basic Java-based Ticketing System application, built with Maven. This project 
 
 ## Project Structure
 
-```bash
+```
 Ticketing_System
 ├── LICENSE
 ├── logs
@@ -64,7 +64,6 @@ Ticketing_System
 │       │           │   │   ├── userSearchTicket.java
 │       │           │   │   └── userSearchTicketModel.java
 │       │           │   ├── UserController.java
-│       │           │   ├── UserModel.java
 │       │           │   └── UserView.java
 │       │           └── Utils
 │       │               └── Styling.java
@@ -73,73 +72,10 @@ Ticketing_System
 │           └── log4j2.xml
 ├── target
 │   ├── classes
-│   │   ├── database.sql
-│   │   ├── log4j2.xml
-│   │   ├── logs
-│   │   │   └── application.log
-│   │   ├── org
-│   │   │   └── Emberalive
-│   │   │       ├── account
-│   │   │       │   ├── IT_employee.class
-│   │   │       │   └── User.class
-│   │   │       ├── dataStructures
-│   │   │       │   ├── bucket
-│   │   │       │   │   ├── Bucket_Queue.class
-│   │   │       │   │   └── Simple_Queue.class
-│   │   │       │   ├── priority_queue
-│   │   │       │   │   └── Priority_Queue_List.class
-│   │   │       │   └── sortedList
-│   │   │       │       └── Sorted_List.class
-│   │   │       ├── db_access
-│   │   │       │   └── Db_Access.class
-│   │   │       ├── Employee
-│   │   │       │   ├── EmployeeController.class
-│   │   │       │   ├── EmployeeModel.class
-│   │   │       │   ├── EmployeeView$1.class
-│   │   │       │   └── EmployeeView.class
-│   │   │       ├── login
-│   │   │       │   ├── LoginController.class
-│   │   │       │   ├── LoginModel.class
-│   │   │       │   └── LoginView.class
-│   │   │       ├── Main.class
-│   │   │       ├── register
-│   │   │       │   ├── RegisterController.class
-│   │   │       │   ├── RegisterModel.class
-│   │   │       │   └── RegisterView.class
-│   │   │       ├── ticket
-│   │   │       │   └── Ticket.class
-│   │   │       ├── user
-│   │   │       │   ├── accountDetailsView
-│   │   │       │   │   ├── AccountModel.class
-│   │   │       │   │   └── AccountView.class
-│   │   │       │   ├── DeleteTicket
-│   │   │       │   │   ├── DeleteTicketModel.class
-│   │   │       │   │   └── DeleteTicketView.class
-│   │   │       │   ├── search
-│   │   │       │   │   ├── userSearchTicket.class
-│   │   │       │   │   └── userSearchTicketModel.class
-│   │   │       │   ├── UserController.class
-│   │   │       │   ├── UserModel.class
-│   │   │       │   ├── UserView$1.class
-│   │   │       │   └── UserView.class
-│   │   │       └── Utils
-│   │   │           └── Styling.class
-│   │   ├── pom.xml
-│   │   ├── src
-│   │   │   └── main
-│   │   │       ├── java
-│   │   │       │   └── org
-│   │   │       │       └── Emberalive
-│   │   │       │           └── dataStructures
-│   │   │       │               └── bucket
-│   │   │       │                   └── readMe.md
-│   │   │       └── resources
-│   │   │           ├── database.sql
-│   │   │           └── log4j2.xml
-│   │   └── Ticket_System.iml
-│   └── generated-sources
-│       └── annotations
+│   ├── generated-sources
+│   └── Ticket_System.iml
 └── Ticket_System.iml
+
 
 ```
 
