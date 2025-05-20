@@ -22,11 +22,6 @@ an employee should not be able to set their own password an dusername, just thou
 how i wwould set it up for this kind of application. 
 ```
 
-
-
-
-    
-
 ## Features
 
 - Ticket creation and management
@@ -107,9 +102,10 @@ Ticketing_System
 
 ### Prerequisites
 
-- Java JDK 1.8 or higher
+- Java 17 or above
 - Maven 3.6+
 - IntelliJ IDEA (optional but recommended)
+- postgresql-42.7.5.jar as a library, the library is stored in the db_access package
 
 ### Build the Project
 
