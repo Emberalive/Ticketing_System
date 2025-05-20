@@ -19,9 +19,9 @@ public class Db_Access {
 
     static {
         HikariConfig config = new HikariConfig();
-        config.setJdbcUrl(dotenv.get("JDBC_URL")); // ✅ Replace with your DB
-        config.setUsername(dotenv.get("DB_USERNAME")); // ✅ Replace
-        config.setPassword(dotenv.get("DB_PASSWORD")); // ✅ Replace
+        config.setJdbcUrl(dotenv.get("JDBC_URL"));
+        config.setUsername(dotenv.get("DB_USERNAME"));
+        config.setPassword(dotenv.get("DB_PASSWORD"));
 
         config.setMaximumPoolSize(5); // Limit number of connections
         config.setMinimumIdle(2);
@@ -92,42 +92,6 @@ public class Db_Access {
             logger.warn("insertTicket aborted: connection was null.");
         }
         logger.info("---- End insertTicket ----\n");
-    }
-
-    public void updateStatusWhenCompleted(int ticketID, String status) {
-        logger.info("---- Start updateStatusWhenCompleted [{}] ----", ticketID);
-        Connection conn = getConnection();
-        if (conn != null) {
-            try {
-                PreparedStatement stmnt = conn.prepareStatement(
-                        "UPDATE ticket SET status = ? WHERE id = ?"
-                );
-                stmnt.setString(1, status);
-                stmnt.setInt(2, ticketID);
-
-                stmnt.executeUpdate();
-                conn.commit();
-                logger.info("Updated ticket [{}] status to '{}'", ticketID, status);
-            } catch (SQLException e) {
-                logger.error("Error updating ticket status: {}", e.getMessage());
-                try {
-                    conn.rollback();
-                    logger.warn("Transaction rolled back.");
-                } catch (SQLException rollbackEx) {
-                    logger.error("Rollback error: {}", rollbackEx.getMessage());
-                }
-            } finally {
-                try {
-                    conn.close();
-                    logger.info("Connection closed.");
-                } catch (SQLException close) {
-                    logger.error("Closing connection error: {}", close.getMessage());
-                }
-            }
-        } else {
-            logger.warn("updateStatusWhenCompleted aborted: connection was null.");
-        }
-        logger.info("---- End updateStatusWhenCompleted [{}] ----\n", ticketID);
     }
 
     public Ticket[] getUserTickets(String username) {

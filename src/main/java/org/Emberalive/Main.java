@@ -14,21 +14,29 @@ public class Main {
 
         bucket_queue = setBucket();
 
-//         Initialize the model, view, and controller
-        LoginModel model = new LoginModel();
-        LoginView view = new LoginView();
-        LoginController controller = new LoginController(model, view);
+        if (bucket_queue != null) {
+            //         Initialize the model, view, and controller
+            LoginModel model = new LoginModel();
+            LoginView view = new LoginView();
+            LoginController controller = new LoginController(model, view);
 
 //         Start the GUI through the controller
-        controller.startGUI();
-
-
+            controller.startGUI();
+        } else {
+            System.out.println("You may need to set up the postgresql library, this is outlined in the pre-requisites in the 'README.md'");
+            System.exit(1);
+        }
     }
     public static Bucket_Queue getBucket() {
         return bucket_queue;
     }
 
     public static Bucket_Queue setBucket() {
-        return Bucket_Queue.fillFromDB(bucket_queue);
+        try {
+            return Bucket_Queue.fillFromDB(bucket_queue);
+        }catch(Exception e) {
+            System.out.println("Error while filling bucket: " + e.getMessage());
+        }
+        return null;
     }
 }
