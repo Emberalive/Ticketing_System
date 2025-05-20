@@ -29,6 +29,8 @@ public class Db_Access {
         config.setMaxLifetime(600000); // 10min
         config.setConnectionTimeout(30000); // 30s wait before timing out
 
+        config.setAutoCommit(false);
+
         dataSource = new HikariDataSource(config);
     }
 

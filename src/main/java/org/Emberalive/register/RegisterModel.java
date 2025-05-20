@@ -18,11 +18,12 @@ public class RegisterModel {
 
     // registering the User into the database
     public boolean register(String username, String password, String role) {
+        logger.info("---- registering user started ----");
         boolean success = false;
         Connection conn = Db_Access.getConnection();
         if (conn != null) {
             try {
-                logger.info("\nCreating an account with username: {} and role: {}", username, role);
+                logger.info("Creating an account with username: {} and role: {}", username, role);
                 //create the insert statement to insert the User to the database
                 PreparedStatement pstmt = conn.prepareStatement("INSERT INTO users (username, password, role) VALUES (?, ?, ?)");
                 //setting the username and password of the User for the query
@@ -33,8 +34,9 @@ public class RegisterModel {
                 pstmt.executeUpdate();
                 conn.commit();
 
-                logger.info("\nThe new User has been inserted into the database");
+                logger.info("The new User has been inserted into the database");
                 success = true;
+                logger.info("---- registering user ended ----");
             } catch (SQLException e) {
                 try {
                     conn.rollback(); // Rollback in case of error
@@ -43,16 +45,18 @@ public class RegisterModel {
                     logger.error("\nDatabase err: {}", String.valueOf(rollbackEx));
                 }
                 logger.error("\nDatabase err: {}", String.valueOf(e));
+                logger.info("---- registering user ended ----");
             } finally {
                 try {
                     conn.close();
-                    logger.info("\nConnection closed");
+                    logger.info("Connection closed");
                 } catch (SQLException e) {
                     logger.warn("Database error when closing connection: {}", String.valueOf(e));   ;
                 }
             }
         } else {
-            logger.info("\nConnection failed");
+            logger.info("Connection failed");
+            logger.info("---- registering user ended ----");
         }
         return success;
     }

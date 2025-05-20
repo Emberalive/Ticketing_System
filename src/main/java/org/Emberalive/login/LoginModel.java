@@ -21,6 +21,7 @@ public class LoginModel {
     Db_Access db = new Db_Access();
 
     public void login(String username, String password, LoginView loginView) {
+        logger.info("---- Login started ----");
         logger.info("Login attempt for User: {}", username);
         Connection conn = db.getConnection();
         String hashedPassword = "";
@@ -32,14 +33,17 @@ public class LoginModel {
             if (rs.next()) {
                 hashedPassword = rs.getString(2);
                 role = rs.getString(3);
+                logger.info("---- Login Ended ----");
             } else {
                 logger.warn("No User found with username: {}", username);
                 JOptionPane.showMessageDialog(loginView, "No User found with username: "+ username);
+                logger.info("---- Login Ended ----");
 
                 return;
             }
         } catch (SQLException e){
             logger.error("\nDatabase err: {}", String.valueOf(e));
+            logger.info("---- Login Ended ----");
         } finally {
             try {
                 conn.close();
@@ -50,10 +54,12 @@ public class LoginModel {
         verifyUser(username, hashedPassword, password, loginView, role);
     }
     public void verifyUser(String username, String hashedPassword, String password, LoginView loginView, String role) {
+        logger.info("---- Verify User Started ----");
         logger.info("Verifying User: {}", username);
 
         if (hashedPassword == null || hashedPassword.trim().isEmpty()) {
             logger.warn("\nThere is no account with username: {}", username);
+            logger.info("---- Verify User Ended ----");
             return;
         }
 
@@ -79,9 +85,11 @@ public class LoginModel {
 
                 userController.startGUI();
             }
+            logger.info("---- Verify User Ended ----");
         } else {
             JOptionPane.showMessageDialog(loginView, "Invalid Password");
             logger.info("Login failed: incorrect password for User: {}", username);
+            logger.info("---- Verify User Ended ----");
         }
     }
 }

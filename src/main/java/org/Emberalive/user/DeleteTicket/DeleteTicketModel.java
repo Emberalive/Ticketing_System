@@ -63,6 +63,7 @@ public class DeleteTicketModel {
 
 
     public static void deleteTicket(int ticketID, String status, String username, UserView userView) {
+        logger.info("---- started delete ticket ----");
         Connection conn = Db_Access.getConnection();
         if (conn != null) {
             logger.info("Attempting to deleting ticket: {}", ticketID);
@@ -87,8 +88,10 @@ public class DeleteTicketModel {
 //                                userView.updateUserTickets(username);
                             } else {
                                 logger.info("Found more than one ticket in the Database with ID: {} and Status: {}", ticketID, status);
+                                logger.info("---- end of delete ticket ----");
                                 conn.rollback();
                             }
+                            logger.info("---- end of delete ticket ----");
                         } catch (SQLException delete) {
                             logger.error("Error Deleting ticket: {} Error: {}", ticketID, delete.getMessage());
                         }
@@ -96,6 +99,7 @@ public class DeleteTicketModel {
                 }
             } catch (SQLException e) {
                 logger.error("Database Error, deleting ticket: {}", e.getMessage());
+                logger.info("---- end of delete ticket ----");
             } finally {
                 try {
                     conn.close();
