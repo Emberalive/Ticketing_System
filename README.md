@@ -3,6 +3,30 @@
 
 A basic Java-based Ticketing System application, built with Maven. This project is designed to manage and track support tickets, and can be extended to suit help desk or customer service workflows.
 
+## Login's
+**There is already several accounts that have been set up**
+
+- username: user, Pswd: pass Role: user
+#### Employees
+
+- Username: Olivia, pswd: password
+- Username: Lucas, pswd: password
+- Username: Mia, pswd: password
+- Username: Sophia, pswd: password
+- Username: Ethan, pswd: password
+
+```
+These users and passwords are already set in the database, feel free to use these to log in.
+you are able to register a user, you can register a user however not an employee, as realistically a user or
+an employee should not be able to set their own password an dusername, just though i would show
+how i wwould set it up for this kind of application. 
+```
+
+
+
+
+    
+
 ## Features
 
 - Ticket creation and management
